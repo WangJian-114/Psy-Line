@@ -1,0 +1,56 @@
+/*
+======================
+Footer
+======================
+*/
+
+.footer {
+  margin-top: 70px;
+  padding: 60px 10px;
+  border-top:1px solid #aaa;
+  background: #252525;
+}
+  
+.footer .footer-box .menu h3{
+  font-size: 18px;
+  color: #CCCCCC;
+  margin: 0 0 30px 0!important;
+}
+  
+.footer-box {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+}
+  
+@media (max-width: 760px ) {
+  .footer-box {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+  }
+}
+  
+.footer .footer-box .menu li {
+  margin-bottom: 10px;
+}
+  
+.footer .footer-box .menu a{
+  font-size: 13px;
+  text-decoration: none;
+  color: #97858d;
+  transition: all .3s ease;
+}
+  
+.footer .footer-box .menu i {
+  margin-right: 10px;
+  font-size: 17px;
+}
+  
+.not-active { 
+  pointer-events: none; 
+  cursor: default; 
+} 
+  
+.footer .footer-box .menu a:hover{
+  color:var(--red);
+}

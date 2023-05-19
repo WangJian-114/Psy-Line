@@ -1,0 +1,82 @@
+
+.about_container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+} 
+
+.left_section {
+  background-image: url("img/slide3.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  flex: 8;
+  color: #ffffff;
+  text-align: left;
+}
+
+
+.left_content {
+  margin: 0 auto;
+  max-width: 550px;
+}
+
+.left_section .left_content h3 {
+  padding: 70px 40px 0px 0px ;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.left_section .left_content p
+{
+  text-align: left;
+  padding: 90px 40px 0px 0px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #138f7a;
+}
+
+.left_section .left_content button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 12px;
+  background-color: #434343;
+  color: #C7999D;
+  border: none;
+  padding: 10px 25px;
+  transition: all 0.4s ease;
+  box-shadow: rgb(0 0 0 / 60%) 0px 1px 4px 0px;
+}
+
+.left_section .left_content button:hover {
+  color: white;
+  background-color: rgba(199,153,157,1);
+  background-color: #4D8076;
+}
+
+.right_section {
+  height: 450px;
+  background-image: url("img/calendar.jpg");
+  background-position: center;
+  background-size: cover;
+  flex: 6;
+}
+
+.right_section p {
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 18px;
+  text-align: left;
+  color: #00C9A7;
+  font-weight: 700;
+}
+
+@media  (max-width:768px) {
+  .about_container {
+    display: block;
+  }
+
+  .left_section {
+    padding: 0px 30px 20px 30px;
+  }
+}

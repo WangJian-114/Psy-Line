@@ -1,0 +1,74 @@
+/*
+======================
+teame Section
+======================
+*/
+
+.team_container {
+  margin-top: 70px;
+  background-color: #4fa6a1;
+}
+
+.team_content {
+  padding: 30px 30px 50px 30px;
+}
+
+.team_content .heading {
+  color: #fff;
+}
+
+.heading h3, p{
+  text-align: center;
+}
+
+.heading h3 {
+  margin:0;
+}
+
+.heading  p{
+  padding: 0 0 30px 0 ;
+  margin-bottom: 20px;
+}
+
+.team_card_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team_card {
+  flex-basis: calc(24% - 10px);
+  max-width: 24%;
+  box-sizing: border-box;
+  padding: 40px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.team_card img {
+  /* width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto; */
+}
+
+.team_card picture .profesional_name {
+  padding: 15px;
+  font-weight: 700;
+}
+
+
+.team_card .professional_description {
+  color: #999;
+  font-size: 14px;
+}
+
+@media  (max-width:768px) {
+  .team_card{
+    flex: 100%;
+    max-width: 100%;
+  }
+}

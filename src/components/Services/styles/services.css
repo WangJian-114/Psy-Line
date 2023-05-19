@@ -1,0 +1,126 @@
+/*
+======================
+Servicio Section
+======================
+*/
+
+.services_container {
+  margin-top: 30px;
+  padding: 20px;
+}
+    
+.services_container .service_title {
+  text-align: center;
+  font-size: 24px;
+  color: #5a5a5a;
+}
+    
+.services_container .flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services_container .flex p {
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+.services_container .flex img {
+  width: 5%;
+}
+    
+.card_container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service_card {
+  text-align: center;
+  border: 1px solid #e1e1e1;
+  background-color:#f5f3f3;
+  transition: all .3s ease;
+  border-radius: 7px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+    
+.card_container .service_card {
+  flex-basis: calc(25% - 15px);
+  height: 450px;
+  padding: 30px;
+  transition: .3s all ease;
+}
+
+.card_container .service_card:hover {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 6px 11px -8px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 6px 11px -8px rgba(0,0,0,1);
+  box-shadow: 0px 6px 11px -8px rgba(0,0,0,1);
+}
+
+.card_container .service_card h4 {
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.card_container .service_card p {
+  margin-top: 50px;
+}
+    
+.card_container .service_card span {
+  margin: 30px auto 0 auto;
+  background-color: var(--verde);
+  width: 16px;
+  height: 4px;
+}
+
+.card_container .service_card h4, .card_container .service_card p
+{
+  text-align: center;
+}
+
+.card_container .service_card img {
+  width: 45%;
+  margin: 40px auto 30px;
+}
+
+@media  (max-width:480px) {
+  .service_card {
+    flex: 100%!important;
+    max-width: 100%;
+    
+  }
+
+  .card_container .service_card img {
+    width: 25%;
+  }
+
+  .services_container .flex img {
+    width: 17%;
+  }
+
+  .services_container .service_title {
+    text-align: center;
+    font-size: 24px;
+    color: #5a5a5a;
+  }
+}
+
+@media  (max-width:768px) {
+
+  .card_container .service_card {
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 25px;  
+  }
+
+  .card_container .service_card img {
+    width: 30%;
+  }
+}

@@ -3,8 +3,9 @@
 @import url('./components/Services/styles/services.css');
 @import url('./components/AboutUs/styles/aboutUs.css');
 @import url('./components/MentalHealthArticles/styles/mentalHealthArticles.css');
-@import url('./components/Team//styles/team.css');
-@import url('./components/Carousel//styles/carousel.css');
+@import url('./components/Team/styles/team.css');
+@import url('./components/Carousel/styles/carousel.css');
+@import url('./components/SearchTitle/styles/searchTitle.css');
 
 
 

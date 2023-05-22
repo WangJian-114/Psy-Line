@@ -5,6 +5,7 @@ import Login from './Pages/Login'
 import Register from './Pages/Register'
 import HomePage from './Pages/HomePage'
 import SearchPage from './Pages/SearchPage'
+import MainHomePage from './Pages/MainHomePage'
 
 function App() {
 
@@ -17,6 +18,8 @@ function App() {
         </Route>
         <Route path="home" element={<HomePage />} />
         <Route path="search" element={<SearchPage />} />
+        <Route path="main" element={<MainHomePage />} />
+
       </Routes>
     </BrowserRouter>
   )

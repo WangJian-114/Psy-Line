@@ -9,9 +9,9 @@ const NavigationBar = () => {
             <img src="img\psyline-removebg-preview 15 (1).png" className="logo-navcontainer" alt="logo"/>
             <h1 className="nombre_psyline">PsyLine</h1>
           </div>
-          <div className="div_fondo_icono">
+          <button className="boton_opciones">
             <FiSettings color='white' fontSize={26} />
-          </div>
+          </button>
         </nav>
       </div>
     </>

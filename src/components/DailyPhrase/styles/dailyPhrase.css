@@ -44,7 +44,6 @@
 }
 
 .div_frase{
-
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -61,4 +60,21 @@
   order: 1;
   flex-grow: 0;
 
+}
+
+.frase{
+  width: 600px;
+  height: 87px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 180%;
+
+  color: #000000;
+  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }

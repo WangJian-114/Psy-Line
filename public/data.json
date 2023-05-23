@@ -1,0 +1,30 @@
+[
+    {
+      "nombre": "Juan",
+      "apellido": "Perez",
+      "especialidad": "psicoanalisis",
+      "consulta": "consultaVirtual",
+      "ubicacion": "Palermo",
+      "descripcion": "Especialista en psicoanálisis virtual",
+      "foto": "img/client-img1-1.jpg"
+    },
+    {
+      "nombre": "María",
+      "apellido": "Lopez",
+      "especialidad": "terapiaCognitivaConductual",
+      "consulta": "consultaPresencial",
+      "ubicacion": "Recoleta",
+      "descripcion": "Terapeuta cognitivo-conductual en Recoleta",
+      "foto": "img/client-img1-2.jpg"
+    },
+    {
+      "nombre": "Pedro",
+      "apellido": "Gonzalez",
+      "especialidad": "terapiaFamiliar",
+      "consulta": "ambas",
+      "ubicacion": "Caballito",
+      "descripcion": "Terapia familiar presencial y virtual",
+      "foto": "img/client-img1-3.jpg"
+    }
+]
+  

@@ -84,7 +84,7 @@ const BuscarPersonas = () => {
             <h3>{persona.nombre} {persona.apellido}</h3>
             <p>Especialidad: {persona.especialidad}</p>
             <p>Descripción: {persona.descripcion}</p>
-            <img src={persona.foto} alt={persona.nombre} />
+            <img src={persona.foto} alt={persona.nombre} className='persona_imagen' />
           </div>
         ))}
       </div>

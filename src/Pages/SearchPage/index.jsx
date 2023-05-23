@@ -1,7 +1,7 @@
 import BuscarPersonas from "../../components/Search";
 
 
-const App = () => {
+const Search = () => {
     return (
       <div>
         <BuscarPersonas />

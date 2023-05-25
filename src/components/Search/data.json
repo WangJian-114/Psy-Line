@@ -1,28 +1,31 @@
 [
     {
-      "nombre": "Juan",
+      "nombre": "Maria",
       "apellido": "Perez",
       "especialidad": "psicoanalisis",
       "consulta": "consultaVirtual",
       "ubicacion": "Palermo",
+      "precio": "2500",
       "descripcion": "Especialista en psicoanálisis virtual",
       "foto": "img/client-img1-1.jpg"
     },
     {
-      "nombre": "María",
+      "nombre": "Juan",
       "apellido": "Lopez",
       "especialidad": "terapiaCognitivaConductual",
       "consulta": "consultaPresencial",
       "ubicacion": "Recoleta",
+      "precio": "3000",
       "descripcion": "Terapeuta cognitivo-conductual en Recoleta",
       "foto": "img/client-img1-2.jpg"
     },
     {
-      "nombre": "Pedro",
+      "nombre": "Analia",
       "apellido": "Gonzalez",
       "especialidad": "terapiaFamiliar",
       "consulta": "ambas",
-      "ubicacion": "Caballito",
+      "ubicacion": "Zona Sur",
+      "precio": "1000",
       "descripcion": "Terapia familiar presencial y virtual",
       "foto": "img/client-img1-3.jpg"
     }

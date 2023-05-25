@@ -3,6 +3,8 @@ import './styles/search.css';
 import data from './data.json';
 
 const BuscarPersonas = () => {
+  const [filtroPrecioMin, setFiltroPrecioMin] = useState('');
+  const [filtroPrecioMax, setFiltroPrecioMax] = useState('');
   const [filtroConsulta, setFiltroConsulta] = useState('');
   const [filtroEspecialidad, setFiltroEspecialidad] = useState('');
   const [filtroUbicacion, setFiltroUbicacion] = useState('');
@@ -25,7 +27,9 @@ const BuscarPersonas = () => {
       if (
         (filtroConsulta === 'ambas' || persona.consulta === filtroConsulta) &&
         (filtroEspecialidad === '' || persona.especialidad === filtroEspecialidad) &&
-        (filtroUbicacion === '' || persona.ubicacion === filtroUbicacion)
+        (filtroUbicacion === '' || persona.ubicacion === filtroUbicacion) &&
+        (filtroPrecioMin === '' || persona.precio >= filtroPrecioMin) &&
+        (filtroPrecioMax === '' || persona.precio <= filtroPrecioMax)
       ) {
         return true;
       }
@@ -72,8 +76,31 @@ const BuscarPersonas = () => {
               <option value="Palermo">Palermo</option>
               <option value="Recoleta">Recoleta</option>
               <option value="Caballito">Caballito</option>
+              <option value="Zona Norte">Palermo</option>
+              <option value="Zona Oeste">Recoleta</option>
+              <option value="Zona Este">Caballito</option>
+              <option value="Zona Sur">Palermo</option>
             </select>
           </label>
+        </div>
+      </div>
+      <div className='filtro-container'>
+        <div className="filtro-container">
+          <label htmlFor="precioMin">Precio Mínimo:</label>
+          <input
+            type="number"
+            id="precioMin"
+            value={filtroPrecioMin}
+            onChange={(e) => setFiltroPrecioMin(e.target.value)}
+          />
+
+          <label htmlFor="precioMax">Precio Máximo:</label>
+          <input
+            type="number"
+            id="precioMax"
+            value={filtroPrecioMax}
+            onChange={(e) => setFiltroPrecioMax(e.target.value)}
+          />
         </div>
 
         <button onClick={buscarPersonas}>Buscar</button>
@@ -84,6 +111,7 @@ const BuscarPersonas = () => {
           <div key={persona.nombre}>
             <h3>{persona.nombre} {persona.apellido}</h3>
             <p>Especialidad: {persona.especialidad}</p>
+            <p>Precio: {persona.precio}</p>
             <p>Descripción: {persona.descripcion}</p>
             <img src={persona.foto} alt={persona.nombre} className='persona-img' />
           </div>

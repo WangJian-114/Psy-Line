@@ -1,4 +1,22 @@
-.persona_imagen {
-    width: '100px';
-    height: '100px';
-}
+.seccion-pagina{
+    position: absolute;
+    width: 1143px;
+    height: 1363px;
+    left: 296px;
+    top: 70px;
+  }
+
+  .filtro-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filtro-item {
+    margin-right: 10px;
+  }
+  
+  .persona-img {
+    width: 200px; /* Define el ancho deseado para la imagen */
+    height: auto; /* Ajusta automáticamente la altura proporcionalmente */
+    object-fit: cover; /* Ajusta la imagen para que se ajuste al tamaño definido sin perder proporciones */
+  }

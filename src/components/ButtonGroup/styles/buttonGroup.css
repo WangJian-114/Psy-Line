@@ -1,0 +1,42 @@
+.div_opciones{
+    
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 265px;
+  height: 306px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+
+}
+
+button {
+
+    /* esto se aplica a todos los botones */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 32px;
+    gap: 10px;
+  
+    width: 265px;
+    height: 51px;
+  
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+    background-color: #ECF6F6;
+
+}
+  
+button.active {
+
+    background: #41A6A6;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-weight: bold;
+}

@@ -4,7 +4,6 @@ import AuthLayout from './layouts/AuthLayout'
 import LoginPage from './Pages/LoginPage'
 import Register from './Pages/Register'
 import HomePage from './Pages/HomePage'
-import SearchPage from './Pages/SearchPage'
 import MainHomePage from './Pages/MainHomePage'
 
 function App() {

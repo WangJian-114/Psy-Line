@@ -1,3 +1,7 @@
 .highlighted span {
     color: var(--verde)!important;
 }
+
+.tree {
+    filter: brightness(0.7);
+}

@@ -11,7 +11,7 @@ const Carousel = () => {
                         <img src="img/slide2.jpg" className="d-block w-100" alt="..."/>
                     </div>
                     <div className="carousel-item">
-                        <img src="img/slide3.jpg" className="d-block w-100" alt="..."/>
+                        <img src="img/slide3.jpg" className="d-block w-100 tree" alt="..."/>
                     </div>
                 </div>
                 <div className="contenido-hero-home">

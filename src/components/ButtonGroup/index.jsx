@@ -1,39 +1,37 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+
 
 const ButtonGroup = () => {
 
   const navigate = useNavigate();
+  const location = useLocation();
+  const miOpcion = location.state?.miOpcion;
+  const [activeButton, setActiveButton] = useState(miOpcion);
 
-  const [activeButton, setActiveButton] = useState(1);
-  
   const handleClick = (buttonId) => {
-  
     setActiveButton(buttonId);
-
     if (buttonId === 1) {
-      navigate('/main');
+      navigate('/main',{state:{miOpcion:buttonId}});
     } 
-
     if (buttonId === 2) {
-      navigate('/search');
+      navigate('/search',{state:{miOpcion:buttonId}});
     }
-
   };
 
   return (
     <div>
       <div className='div_opciones'>      
         <button
-          className={activeButton === 1 ? 'active' : ''}
           onClick={() => handleClick(1)}
+          className={activeButton === 1 ? 'active' : ''}
         >
           Inicio
         </button>
 
         <button
-          className={activeButton === 2 ? 'active' : ''}
           onClick={() => handleClick(2)}
+          className={activeButton === 2 ? 'active' : ''}
         >
           Buscar Psicólogo
         </button>

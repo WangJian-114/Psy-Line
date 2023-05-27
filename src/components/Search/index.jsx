@@ -22,22 +22,21 @@ const BuscarPersonas = () => {
     setFiltroUbicacion(event.target.value);
   };
 
-  const buscarPersonas = () => {
+
+  function buscarPersonas() {
     const resultadosFiltrados = data.filter((persona) => {
-      if (
-        (filtroConsulta === 'ambas' || persona.consulta === filtroConsulta) &&
+      if ((filtroConsulta === 'ambas' || persona.consulta === filtroConsulta) &&
         (filtroEspecialidad === '' || persona.especialidad === filtroEspecialidad) &&
         (filtroUbicacion === '' || persona.ubicacion === filtroUbicacion) &&
         (filtroPrecioMin === '' || persona.precio >= filtroPrecioMin) &&
-        (filtroPrecioMax === '' || persona.precio <= filtroPrecioMax)
-      ) {
+        (filtroPrecioMax === '' || persona.precio <= filtroPrecioMax)) {
         return true;
       }
       return false;
     });
 
     setResultados(resultadosFiltrados);
-  };
+  }
 
   return (
     <div className='seccion-pagina'>
@@ -63,9 +62,9 @@ const BuscarPersonas = () => {
             <select value={filtroEspecialidad} onChange={handleFiltroEspecialidadChange}>
               <option value="">Todas</option>
               <option value="psicoanalisis">Psicoanálisis</option>
-              <option value="terapiaCognitivaConductual">Terapia Cognitiva-Conductual</option>
-              <option value="terapiaFamiliar">Terapia Familiar</option>
-              <option value="terapiaGrupal">Terapia Grupal</option>
+              <option value="terapia Cognitiva Conductual">Terapia Cognitiva-Conductual</option>
+              <option value="terapia Familiar">Terapia Familiar</option>
+              <option value="terapia Grupal">Terapia Grupal</option>
             </select>
           </div>
 
@@ -87,27 +86,27 @@ const BuscarPersonas = () => {
           </div>
       </div>
       <div className='filtro-container'>
-          <div className='filtro-etiqueta'>
-            <label htmlFor="precioMin ">Precio Mínimo:</label>
-          </div>
-          <input
-            className='filtro-input'
-            type="number"
-            id="precioMin"
-            value={filtroPrecioMin}
-            onChange={(e) => setFiltroPrecioMin(e.target.value)}
-          />
-          <div className='filtro-etiqueta'>
-            <label htmlFor="precioMax ">Precio Máximo:</label>
-          </div>
-          <input
-            className='filtro-input'
-            type="number"
-            id="precioMax"
-            value={filtroPrecioMax}
-            onChange={(e) => setFiltroPrecioMax(e.target.value)}
-          />
-        <button className='buscar-button' onClick={buscarPersonas}>Buscar</button>
+            <div className='filtro-etiqueta'> 
+              <label htmlFor="precioMin ">Precio Mínimo:</label>
+            </div> 
+            <input
+              className='filtro-input'
+              type="number"
+              id="precioMin"
+              value={filtroPrecioMin}
+              onChange={(e) => setFiltroPrecioMin(e.target.value)}
+            />
+            <div className='filtro-etiqueta'>
+              <label htmlFor="precioMax ">Precio Máximo:</label>
+            </div>
+            <input
+              className='filtro-input'
+              type="number"
+              id="precioMax"
+              value={filtroPrecioMax}
+              onChange={(e) => setFiltroPrecioMax(e.target.value)}
+            /> 
+         <button className='buscar-button' onClick={buscarPersonas}>Buscar</button>
       </div>
       <div>
         {resultados.map((persona, index) => (

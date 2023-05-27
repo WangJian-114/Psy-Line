@@ -12,7 +12,7 @@
     {
       "nombre": "Juan",
       "apellido": "Lopez",
-      "especialidad": "terapiaCognitivaConductual",
+      "especialidad": "terapia Cognitiva Conductual",
       "consulta": "consultaPresencial",
       "ubicacion": "Recoleta",
       "precio": "3000",
@@ -22,7 +22,7 @@
     {
       "nombre": "Analia",
       "apellido": "Gonzalez",
-      "especialidad": "terapiaFamiliar",
+      "especialidad": "terapia Familiar",
       "consulta": "ambas",
       "ubicacion": "Zona Sur",
       "precio": "1000",

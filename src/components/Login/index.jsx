@@ -6,12 +6,13 @@ import Switch from '@mui/material/Switch';
 
 const Login = () => {
   const navigate = useNavigate();
+  
   const [checked, setChecked] = useState(true);
 
   const handleChangePatient = (event) => {
     console.log('event ', event)
     setChecked(!checked);
-    navigate('/main');
+    navigate('/main',{state:{miOpcion:1}} );
   };
 
   const handleChangeProfesional = (event) => {

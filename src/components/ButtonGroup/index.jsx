@@ -1,10 +1,24 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ButtonGroup = () => {
-  const [activeButton, setActiveButton] = useState(1);
 
+  const navigate = useNavigate();
+
+  const [activeButton, setActiveButton] = useState(1);
+  
   const handleClick = (buttonId) => {
+  
     setActiveButton(buttonId);
+
+    if (buttonId === 1) {
+      navigate('/main');
+    } 
+
+    if (buttonId === 2) {
+      navigate('/search');
+    }
+
   };
 
   return (

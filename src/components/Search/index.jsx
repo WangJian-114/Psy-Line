@@ -43,21 +43,23 @@ const BuscarPersonas = () => {
     <div className='seccion-pagina'>
       <h1>Búsqueda de Psicólogo</h1>
       <div className='filtro-container'>
-        <div className='filtro-item'>
-          <label>
-            Filtro Consulta:
+          <div className='filtro-etiqueta'>
+            <label>Filtro Consulta: </label>
+          </div>
+          <div className='filtro-item'>
             <select value={filtroConsulta} onChange={handleFiltroConsultaChange}>
               <option value="">Todos</option>
               <option value="consultaVirtual">Consulta Virtual</option>
               <option value="consultaPresencial">Consulta Presencial</option>
               <option value="ambas">Ambas</option>
             </select>
-          </label>
-        </div>
+           </div>
 
-        <div className='filtro-item'>
-          <label>
-            Filtro Especialidad:
+        
+          <div className='filtro-etiqueta'>
+            <label>Filtro Especialidad:</label>
+          </div>
+          <div className='filtro-item'>
             <select value={filtroEspecialidad} onChange={handleFiltroEspecialidadChange}>
               <option value="">Todas</option>
               <option value="psicoanalisis">Psicoanálisis</option>
@@ -65,12 +67,13 @@ const BuscarPersonas = () => {
               <option value="terapiaFamiliar">Terapia Familiar</option>
               <option value="terapiaGrupal">Terapia Grupal</option>
             </select>
-          </label>
-        </div>
+          </div>
 
-        <div className='filtro-item'>
-          <label>
-            Filtro Ubicación:
+        
+          <div className='filtro-etiqueta'>
+            <label>Filtro Ubicación:</label>
+          </div>
+          <div className='filtro-item'>
             <select value={filtroUbicacion} onChange={handleFiltroUbicacionChange}>
               <option value="">Todas</option>
               <option value="Palermo">Palermo</option>
@@ -81,39 +84,45 @@ const BuscarPersonas = () => {
               <option value="Zona Este">Caballito</option>
               <option value="Zona Sur">Palermo</option>
             </select>
-          </label>
-        </div>
+          </div>
       </div>
       <div className='filtro-container'>
-        <div className="filtro-container">
-          <label htmlFor="precioMin">Precio Mínimo:</label>
+          <div className='filtro-etiqueta'>
+            <label htmlFor="precioMin ">Precio Mínimo:</label>
+          </div>
           <input
+            className='filtro-input'
             type="number"
             id="precioMin"
             value={filtroPrecioMin}
             onChange={(e) => setFiltroPrecioMin(e.target.value)}
           />
-
-          <label htmlFor="precioMax">Precio Máximo:</label>
+          <div className='filtro-etiqueta'>
+            <label htmlFor="precioMax ">Precio Máximo:</label>
+          </div>
           <input
+            className='filtro-input'
             type="number"
             id="precioMax"
             value={filtroPrecioMax}
             onChange={(e) => setFiltroPrecioMax(e.target.value)}
           />
-        </div>
-
-        <button onClick={buscarPersonas}>Buscar</button>
+        <button className='buscar-button' onClick={buscarPersonas}>Buscar</button>
       </div>
       <div>
-        <h2>Resultados:</h2>
-        {resultados.map((persona) => (
-          <div key={persona.nombre}>
-            <h3>{persona.nombre} {persona.apellido}</h3>
-            <p>Especialidad: {persona.especialidad}</p>
-            <p>Precio: {persona.precio}</p>
-            <p>Descripción: {persona.descripcion}</p>
-            <img src={persona.foto} alt={persona.nombre} className='persona-img' />
+        {resultados.map((persona, index) => (
+          <div className='resultado-container-rectangulo'>
+            <div className='resultado-container' key={index}>
+              <img src={persona.foto} alt={persona.nombre} className='resultado-img' />
+              <div className='resultado-container-datos'>
+                <div className='resultado-datos'>
+                  <h3>{persona.nombre} {persona.apellido}</h3>
+                  <p>Especialidad: {persona.especialidad}</p>
+                  <p>Precio: {persona.precio}</p>
+                  <p>Descripción: {persona.descripcion}</p>
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </div>

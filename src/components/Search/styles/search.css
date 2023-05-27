@@ -2,17 +2,35 @@
     position: absolute;
     width: 1143px;
     height: 1363px;
-    left: 296px;
+    left: 300px;
     top: 70px;
   }
 
   .filtro-container {
     display: flex;
     align-items: center;
+    background-color: #B3DBDB;
+    padding: 10px;
   }
-  
-  .filtro-item {
+
+  .filtro-etiqueta{
+    margin-right: 8px;
+  }  
+
+  .filtro-input{
+    margin-right: 8px;
+  }
+
+  .filtro-item select {
     margin-right: 10px;
+    border-radius: 8px;
+  }
+
+  button.buscar-button{
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+
   }
   
   .persona-img {
@@ -20,3 +38,40 @@
     height: auto; /* Ajusta automáticamente la altura proporcionalmente */
     object-fit: cover; /* Ajusta la imagen para que se ajuste al tamaño definido sin perder proporciones */
   }
+
+  .resultado-container-rectangulo{
+    border: 1px solid #B3DBDB;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .resultado-container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #B3DBDB;
+    padding: 10px;
+  }
+  
+  .resultado-img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+
+  .resultado-container-datos{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .resultado-datos p {
+    text-align: left;
+    margin: 0;
+  }
+  

@@ -4,6 +4,8 @@ import AuthLayout from './layouts/AuthLayout'
 import LoginPage from './Pages/LoginPage'
 import Register from './Pages/Register'
 import HomePage from './Pages/HomePage'
+import SearchPage from './Pages/SearchPage'
+import MainHomePage from './Pages/MainHomePage'
 
 function App() {
 
@@ -15,6 +17,9 @@ function App() {
           <Route path="register" element={<Register />} />
         </Route>
         <Route path="home" element={<HomePage />} />
+        <Route path="search" element={<SearchPage />} />
+        <Route path="main" element={<MainHomePage />} />
+
       </Routes>
     </BrowserRouter>
   )

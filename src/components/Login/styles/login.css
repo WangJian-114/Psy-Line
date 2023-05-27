@@ -11,7 +11,7 @@
 
 .login_container {
     width: 500px;
-    height: 750px;
+    height: 770px;
     background-image: linear-gradient(to bottom, #7cafff, #a0bcff, #bdc9fe, #d5d8fe, #e9e8fe, #eceeff, #f0f4ff, #f6f9ff, #ebf5ff, #def2ff, #d0effe, #c0edf9);
     border-radius:10px;
     padding: 20px 50px;
@@ -66,6 +66,11 @@
     display: flex;
     justify-content:space-between;
     align-items:center;
+}
+
+.login {
+    width: 35%;
+    padding: 0px 15px;
 }
 
 .password_link {

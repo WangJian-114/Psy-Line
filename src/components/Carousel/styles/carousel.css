@@ -5,3 +5,8 @@
 .tree {
     filter: brightness(0.7);
 }
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: 285px;
+}

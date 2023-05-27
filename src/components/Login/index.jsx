@@ -11,12 +11,12 @@ const Login = () => {
   const handleChangePatient = (event) => {
     console.log('event ', event)
     setChecked(!checked);
-    navigate('/patient');
+    navigate('/main');
   };
 
   const handleChangeProfesional = (event) => {
     setChecked(!checked);
-    navigate('/profesional');
+    navigate('/main');
   };
 
   return (
@@ -50,7 +50,7 @@ const Login = () => {
         </div>
         <div className="action_group">
           <Link to='/home'>No tenes cuenta? crear una</Link>
-          <Button variant='contained'>Login</Button>
+          <Button className="login"variant='contained'>Login</Button>
         </div>
         <Link to='/home'className='password_link'>Me olvide el password</Link>
       </div>

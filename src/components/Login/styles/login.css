@@ -1,0 +1,74 @@
+.body_container {
+    height:100vh;
+    /* background-image: linear-gradient(to bottom, #7cafff, #32c0ff, #00cefc, #00d9e6, #1ee1c9, #47e5c2, #61e9bb, #78edb4, #6ef1c4, #66f5d4, #61f8e3, #5ffbf1); */
+    background-image: url('img/slide2.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_container {
+    width: 500px;
+    height: 750px;
+    background-image: linear-gradient(to bottom, #7cafff, #a0bcff, #bdc9fe, #d5d8fe, #e9e8fe, #eceeff, #f0f4ff, #f6f9ff, #ebf5ff, #def2ff, #d0effe, #c0edf9);
+    border-radius:10px;
+    padding: 20px 50px;
+}
+
+.login_title {
+    text-align: center;
+    margin-top:20px;
+}
+
+.image_container {
+    display:flex;
+    justify-content: space-between;
+    padding: 35px 0px;
+}
+
+.image_group {
+    flex-basis: calc(50% - 20px);
+    transition: .3s all ease;
+    border: 1px solid #e1e1e1;
+    background-color:#f5f3f3;
+    transition: all .3s ease;
+    border-radius: 7px;
+}
+
+.image_group .MuiSwitch-root {
+    margin-left: 110px;
+}
+
+
+.image {
+    width: 100%;
+    padding: 20px;
+    filter: brightness(100deg);
+}
+
+.image_group:hover {
+    cursor: pointer;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 6px 11px -8px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 6px 11px -8px rgba(0,0,0,1);
+    box-shadow: 0px 6px 11px -8px rgba(0,0,0,1);
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.action_group {
+    margin-top:20px;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.password_link {
+    display: block;
+    margin-top: 10px;
+}

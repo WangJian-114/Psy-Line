@@ -4,7 +4,8 @@
 @import url('./components/AboutUs/styles/aboutUs.css');
 @import url('./components/MentalHealthArticles/styles/mentalHealthArticles.css');
 @import url('./components/Team//styles/team.css');
-@import url('./components/Carousel//styles/carousel.css');
+@import url('./components/Carousel/styles/carousel.css');
+@import url('./components/Login/styles/login.css');
 
 
 
@@ -37,18 +38,12 @@ html {
 Configuraciones Generales
 ======================
 */
-h1,h2,h3 {
-  margin: 0!important;
-}
 
-p {
-  margin-bottom: 0;
-}
 
 h2 {
-  color: #1a202d!important;
+  color: #1a202d;
   text-align: center;
-  margin-bottom: 20px !important;;
+  margin-bottom: 20px;
 }
 
 img {

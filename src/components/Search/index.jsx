@@ -42,12 +42,10 @@ const BuscarPersonas = () => {
     <div className='seccion-pagina'>
       <h1>Búsqueda de Psicólogo</h1>
       <div className='filtro-container'>
-          <div className='filtro-etiqueta'>
-            <label>Filtro Consulta: </label>
-          </div>
+
           <div className='filtro-item'>
             <select value={filtroConsulta} onChange={handleFiltroConsultaChange}>
-              <option value="">Todos</option>
+              <option value="">Modalidad de Consulta</option>
               <option value="consultaVirtual">Consulta Virtual</option>
               <option value="consultaPresencial">Consulta Presencial</option>
               <option value="ambas">Ambas</option>
@@ -55,12 +53,10 @@ const BuscarPersonas = () => {
            </div>
 
         
-          <div className='filtro-etiqueta'>
-            <label>Filtro Especialidad:</label>
-          </div>
+
           <div className='filtro-item'>
             <select value={filtroEspecialidad} onChange={handleFiltroEspecialidadChange}>
-              <option value="">Todas</option>
+              <option value="">Especialidad</option>
               <option value="psicoanalisis">Psicoanálisis</option>
               <option value="terapia Cognitiva Conductual">Terapia Cognitiva-Conductual</option>
               <option value="terapia Familiar">Terapia Familiar</option>
@@ -69,12 +65,10 @@ const BuscarPersonas = () => {
           </div>
 
         
-          <div className='filtro-etiqueta'>
-            <label>Filtro Ubicación:</label>
-          </div>
+
           <div className='filtro-item'>
             <select value={filtroUbicacion} onChange={handleFiltroUbicacionChange}>
-              <option value="">Todas</option>
+              <option value="">Localidad</option>
               <option value="Palermo">Palermo</option>
               <option value="Recoleta">Recoleta</option>
               <option value="Caballito">Caballito</option>
@@ -84,8 +78,7 @@ const BuscarPersonas = () => {
               <option value="Zona Sur">Palermo</option>
             </select>
           </div>
-      </div>
-      <div className='filtro-container'>
+
             <div className='filtro-etiqueta'> 
               <label htmlFor="precioMin ">Precio Mínimo:</label>
             </div> 
@@ -121,6 +114,7 @@ const BuscarPersonas = () => {
                   <p>Descripción: {persona.descripcion}</p>
                 </div>
               </div>
+
             </div>
           </div>
         ))}

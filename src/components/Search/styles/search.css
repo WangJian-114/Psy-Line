@@ -19,6 +19,7 @@
 
   .filtro-input{
     margin-right: 8px;
+    width: 60px;
   }
 
   .filtro-item select {
@@ -30,7 +31,9 @@
     border-radius: 8px;
     justify-content: center;
     align-items: center;
-
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    width: 200px;
+    
   }
   
   .persona-img {
@@ -56,6 +59,7 @@
     border-radius: 8px;
     background-color: #B3DBDB;
     padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
   }
   
   .resultado-img {

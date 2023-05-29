@@ -1,14 +1,13 @@
-.seccion-pagina{
-    position: absolute;
-    width: 1143px;
-    height: 1363px;
-    left: 300px;
-    top: 70px;
-  }
+.seccion-pagina {
+  padding: 90px 20px 0 20px;
+  margin-left: 297px;
+}
 
   .filtro-container {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: #B3DBDB;
     padding: 10px;
   }
@@ -27,13 +26,13 @@
     border-radius: 8px;
   }
 
-  button.buscar-button{
+  .buscar-button{
     border-radius: 8px;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-    width: 200px;
-    
+    padding: 7px 25px;
+    font-size: 14px;
   }
   
   .persona-img {

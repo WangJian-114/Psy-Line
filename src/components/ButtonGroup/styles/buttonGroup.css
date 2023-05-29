@@ -14,7 +14,7 @@
 
 }
 
-button {
+.menu_button {
 
     /* esto se aplica a todos los botones */
     display: flex;

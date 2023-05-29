@@ -1,6 +1,5 @@
 .div_menu{
-
-  position: absolute;
+  position: fixed;
   width: 297px;
   height: 100%;
   left: 0px;

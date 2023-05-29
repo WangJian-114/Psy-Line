@@ -24,40 +24,40 @@ const ButtonGroup = () => {
       <div className='div_opciones'>      
         <button
           onClick={() => handleClick(1)}
-          className={activeButton === 1 ? 'active' : ''}
+          className={`menu_button ${activeButton === 1 ? 'active' : ''}`}
         >
           Inicio
         </button>
 
         <button
           onClick={() => handleClick(2)}
-          className={activeButton === 2 ? 'active' : ''}
+          className={`menu_button ${activeButton === 2 ? 'active' : ''}`}
         >
           Buscar Psicólogo
         </button>
 
         <button
-          className={activeButton === 3 ? 'active' : ''}
+          className={`menu_button ${activeButton === 3 ? 'active' : ''}`}
           onClick={() => handleClick(3)}
         >
           Turnos
         </button>
 
         <button
-          className={activeButton === 4 ? 'active' : ''}
+          className={`menu_button ${activeButton === 4 ? 'active' : ''}`}
           onClick={() => handleClick(4)}
         >
           Diario
         </button>
         <button
-          className={activeButton === 5 ? 'active' : ''}
+          className={`menu_button ${activeButton === 5 ? 'active' : ''}`}
           onClick={() => handleClick(5)}
         >
           Arbol
         </button>
 
         <button
-          className={activeButton === 6 ? 'active' : ''}
+          className={`menu_button ${activeButton === 6 ? 'active' : ''}`}
           onClick={() => handleClick(6)}
         >
           Pagos

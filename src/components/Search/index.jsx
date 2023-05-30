@@ -1,4 +1,5 @@
 import React, { useState } from 'react'; 
+import { Link } from 'react-router-dom';
 import './styles/search.css';
 import data from './data.json';
 
@@ -40,7 +41,7 @@ const BuscarPersonas = () => {
 
   return (
     <div className='seccion-pagina'>
-      <h1>Búsqueda de Psicólogo</h1>
+      <h1>Búscar Psicólogo</h1>
       <div className='filtro-container'>
         <div className='filtro-item'>
           <select value={filtroConsulta} onChange={handleFiltroConsultaChange}>
@@ -62,7 +63,7 @@ const BuscarPersonas = () => {
         </div>
 
         <div className='filtro-item'>
-          <select value={filtroUbicacion} onChange={handleFiltroUbicacionChange}>
+          <select className='location_select' value={filtroUbicacion} onChange={handleFiltroUbicacionChange}>
             <option value="">Localidad</option>
             <option value="Palermo">Palermo</option>
             <option value="Recoleta">Recoleta</option>
@@ -73,7 +74,6 @@ const BuscarPersonas = () => {
             <option value="Zona Sur">Palermo</option>
           </select>
         </div>
-
         <div className='filtro-etiqueta'> 
           <label htmlFor="precioMin ">Precio Mínimo:</label>
         </div> 
@@ -93,9 +93,10 @@ const BuscarPersonas = () => {
           id="precioMax"
           value={filtroPrecioMax}
           onChange={(e) => setFiltroPrecioMax(e.target.value)}
-        /> 
+        />
         <button className='buscar-button' onClick={buscarPersonas}>Buscar</button>
       </div>
+
       <div>
         {resultados.map((persona, index) => (
           <div className='resultado-container-rectangulo'>
@@ -105,9 +106,10 @@ const BuscarPersonas = () => {
                 <div className='resultado-datos'>
                   <h3>{persona.nombre} {persona.apellido}</h3>
                   <p>Especialidad: {persona.especialidad}</p>
-                  <p>Precio: {persona.precio}</p>
-                  <p>Descripción: {persona.descripcion}</p>
+                  <li>Precio: {persona.precio}</li>
+                  <li>Descripción: {persona.descripcion}</li>
                 </div>
+                <Link to='/home' className="perfil_button">Ver perfil</Link>
               </div>
 
             </div>

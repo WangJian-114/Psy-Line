@@ -5,7 +5,7 @@
       "especialidad": "psicoanalisis",
       "consulta": "consultaVirtual",
       "ubicacion": "Palermo",
-      "precio": "2500",
+      "precio": 2500,
       "descripcion": "Especialista en psicoanálisis virtual",
       "foto": "img/client-img1-1.jpg"
     },
@@ -15,7 +15,7 @@
       "especialidad": "terapia Cognitiva Conductual",
       "consulta": "consultaPresencial",
       "ubicacion": "Recoleta",
-      "precio": "3000",
+      "precio": 3000,
       "descripcion": "Terapeuta cognitivo-conductual en Recoleta",
       "foto": "img/client-img1-2.jpg"
     },
@@ -25,9 +25,79 @@
       "especialidad": "terapia Familiar",
       "consulta": "ambas",
       "ubicacion": "Zona Sur",
-      "precio": "1000",
+      "precio": 1000,
       "descripcion": "Terapia familiar presencial y virtual",
       "foto": "img/client-img1-3.jpg"
+    },
+    {
+      "nombre": "Valentina",
+      "apellido": "Gonzalez",
+      "especialidad": "terapia Grupal",
+      "consulta": "consultaVirtual",
+      "ubicacion": "Caballito",
+      "precio": 800,
+      "descripcion": "Terapia familiar presencial y virtual",
+      "foto": "img/p1.jpg"
+    },
+    {
+      "nombre": "Joaquin",
+      "apellido": "Gonzalez",
+      "especialidad": "terapia Familiar",
+      "consulta": "ambas",
+      "ubicacion": "Recoleta",
+      "precio": 1500,
+      "descripcion": "Terapia familiar presencial y virtual",
+      "foto": "img/p2.jpg"
+    },
+    {
+      "nombre": "Martin",
+      "apellido": "Gonzalez",
+      "especialidad": "terapia Cognitiva Conductual",
+      "consulta": "ambas",
+      "ubicacion": "Palermo",
+      "precio": 4000,
+      "descripcion": "Terapia familiar presencial y virtual",
+      "foto": "img/p3.jpg"
+    },
+    {
+      "nombre": "Guillermo",
+      "apellido": "Gonzalez",
+      "especialidad": "psicoanalisis",
+      "consulta": "consultaVirtual",
+      "ubicacion": "Zona Oeste",
+      "precio": 1700,
+      "descripcion": "Terapia familiar presencial y virtual",
+      "foto": "img/p5.jpg"
+    },
+    {
+      "nombre": "Martina",
+      "apellido": "Gonzalez",
+      "especialidad": "terapia Familiar",
+      "consulta": "consultaPresencial",
+      "ubicacion": "Zona Norte",
+      "precio": 800,
+      "descripcion": "Terapia familiar presencial y virtual",
+      "foto": "img/p6.jpg"
+    },
+    {
+      "nombre": "Liana",
+      "apellido": "Gonzalez",
+      "especialidad": "terapia Grupal",
+      "consulta": "consultaVirtual",
+      "ubicacion": "Zona Este",
+      "precio": 2000,
+      "descripcion": "Terapia familiar presencial y virtual",
+      "foto": "img/p7.jpg"
+    },
+    {
+      "nombre": "Diana",
+      "apellido": "Gonzalez",
+      "especialidad": "terapia Familiar",
+      "consulta": "ambas",
+      "ubicacion": "Zona Sur",
+      "precio": 1500,
+      "descripcion": "Terapia familiar presencial y virtual",
+      "foto": "img/p8.jpg"
     }
 ]
   

@@ -9,7 +9,7 @@ const BuscarPersonas = () => {
   const [filtroConsulta, setFiltroConsulta] = useState('');
   const [filtroEspecialidad, setFiltroEspecialidad] = useState('');
   const [filtroUbicacion, setFiltroUbicacion] = useState('');
-  const [resultados, setResultados] = useState([]);
+  const [resultados, setResultados] = useState(data);
 
   const handleFiltroConsultaChange = (event) => {
     setFiltroConsulta(event.target.value);
@@ -23,17 +23,13 @@ const BuscarPersonas = () => {
     setFiltroUbicacion(event.target.value);
   };
 
-
   function buscarPersonas() {
-    const resultadosFiltrados = data.filter((persona) => {
-      if ((filtroConsulta === 'ambas' || persona.consulta === filtroConsulta) &&
-        (filtroEspecialidad === '' || persona.especialidad === filtroEspecialidad) &&
-        (filtroUbicacion === '' || persona.ubicacion === filtroUbicacion) &&
-        (filtroPrecioMin === '' || persona.precio >= filtroPrecioMin) &&
-        (filtroPrecioMax === '' || persona.precio <= filtroPrecioMax)) {
-        return true;
-      }
-      return false;
+    const resultadosFiltrados = data.filter(({ especialidad, consulta, ubicacion, precio }) => {
+      const cumpleConsulta = (filtroConsulta === '') ? true : consulta === filtroConsulta;
+      const cumpleEspecialidad = (filtroEspecialidad === '') ? true : especialidad === filtroEspecialidad;
+      const cumpleUbicacion = (filtroUbicacion === '') ? true : ubicacion === filtroUbicacion;
+      const cumplePrecio =  ((filtroPrecioMax === '') ? true : precio <= filtroPrecioMax) && ((filtroPrecioMin === '') ? true : precio >= filtroPrecioMin);
+      return cumpleConsulta && cumpleEspecialidad && cumpleUbicacion && cumplePrecio;
     });
 
     setResultados(resultadosFiltrados);
@@ -68,10 +64,10 @@ const BuscarPersonas = () => {
             <option value="Palermo">Palermo</option>
             <option value="Recoleta">Recoleta</option>
             <option value="Caballito">Caballito</option>
-            <option value="Zona Norte">Palermo</option>
-            <option value="Zona Oeste">Recoleta</option>
-            <option value="Zona Este">Caballito</option>
-            <option value="Zona Sur">Palermo</option>
+            <option value="Zona Norte">Zona Norte</option>
+            <option value="Zona Oeste">Zona Oeste</option>
+            <option value="Zona Este">Zona Este</option>
+            <option value="Zona Sur">Zona Sur</option>
           </select>
         </div>
         <div className='filtro-etiqueta'> 
@@ -98,8 +94,8 @@ const BuscarPersonas = () => {
       </div>
 
       <div>
-        {resultados.map((persona, index) => (
-          <div className='resultado-container-rectangulo'>
+        {(resultados.length!== 0) ? resultados.map((persona, index) => (
+          <div key={index} className='resultado-container-rectangulo'>
             <div className='resultado-container' key={index}>
               <img src={persona.foto} alt={persona.nombre} className='resultado-img' />
               <div className='resultado-container-datos'>
@@ -108,13 +104,14 @@ const BuscarPersonas = () => {
                   <p>Especialidad: {persona.especialidad}</p>
                   <li>Precio: {persona.precio}</li>
                   <li>Descripción: {persona.descripcion}</li>
+                  <li>Ubicacion: {persona.ubicacion}</li>
                 </div>
                 <Link to='/home' className="perfil_button">Ver perfil</Link>
               </div>
-
             </div>
           </div>
-        ))}
+        ))
+        : <p className='no_results_message'>no hay resultado que coinciden la busqueda</p>}
       </div>
     </div>
   );

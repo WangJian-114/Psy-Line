@@ -31,7 +31,15 @@ const BuscarPersonas = () => {
       const cumplePrecio =  ((filtroPrecioMax === '') ? true : precio <= filtroPrecioMax) && ((filtroPrecioMin === '') ? true : precio >= filtroPrecioMin);
       return cumpleConsulta && cumpleEspecialidad && cumpleUbicacion && cumplePrecio;
     });
-
+    resultadosFiltrados.sort((a, b) => {
+      if (a.sesiones_realizadas > b.sesiones_realizadas) {
+        return -1;
+      } else if (a.sesiones_realizadas < b.sesiones_realizadas) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
     setResultados(resultadosFiltrados);
   }
 
@@ -105,6 +113,7 @@ const BuscarPersonas = () => {
                   <li>Precio: {persona.precio}</li>
                   <li>Descripción: {persona.descripcion}</li>
                   <li>Ubicacion: {persona.ubicacion}</li>
+                  <span>Sesiones realizadas: {persona.sesiones_realizadas}</span>
                 </div>
                 <Link to='/home' className="perfil_button">Ver perfil</Link>
               </div>

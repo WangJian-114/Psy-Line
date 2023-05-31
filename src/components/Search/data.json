@@ -7,7 +7,8 @@
       "ubicacion": "Palermo",
       "precio": 2500,
       "descripcion": "Especialista en psicoanálisis virtual",
-      "foto": "img/client-img1-1.jpg"
+      "foto": "img/client-img1-1.jpg",
+      "sesiones_realizadas": 350
     },
     {
       "nombre": "Juan",
@@ -17,7 +18,8 @@
       "ubicacion": "Recoleta",
       "precio": 3000,
       "descripcion": "Terapeuta cognitivo-conductual en Recoleta",
-      "foto": "img/client-img1-2.jpg"
+      "foto": "img/client-img1-2.jpg",
+      "sesiones_realizadas": 300
     },
     {
       "nombre": "Analia",
@@ -27,7 +29,8 @@
       "ubicacion": "Zona Sur",
       "precio": 1000,
       "descripcion": "Terapia familiar presencial y virtual",
-      "foto": "img/client-img1-3.jpg"
+      "foto": "img/client-img1-3.jpg",
+      "sesiones_realizadas": 235
     },
     {
       "nombre": "Valentina",
@@ -37,7 +40,8 @@
       "ubicacion": "Caballito",
       "precio": 800,
       "descripcion": "Terapia familiar presencial y virtual",
-      "foto": "img/p1.jpg"
+      "foto": "img/p1.jpg",
+      "sesiones_realizadas": 198
     },
     {
       "nombre": "Joaquin",
@@ -47,7 +51,8 @@
       "ubicacion": "Recoleta",
       "precio": 1500,
       "descripcion": "Terapia familiar presencial y virtual",
-      "foto": "img/p2.jpg"
+      "foto": "img/p2.jpg",
+      "sesiones_realizadas": 103 
     },
     {
       "nombre": "Martin",
@@ -57,7 +62,8 @@
       "ubicacion": "Palermo",
       "precio": 4000,
       "descripcion": "Terapia familiar presencial y virtual",
-      "foto": "img/p3.jpg"
+      "foto": "img/p3.jpg",
+      "sesiones_realizadas": 78 
     },
     {
       "nombre": "Guillermo",
@@ -67,7 +73,8 @@
       "ubicacion": "Zona Oeste",
       "precio": 1700,
       "descripcion": "Terapia familiar presencial y virtual",
-      "foto": "img/p5.jpg"
+      "foto": "img/p5.jpg",
+      "sesiones_realizadas": 58 
     },
     {
       "nombre": "Martina",
@@ -77,7 +84,8 @@
       "ubicacion": "Zona Norte",
       "precio": 800,
       "descripcion": "Terapia familiar presencial y virtual",
-      "foto": "img/p6.jpg"
+      "foto": "img/p6.jpg",
+      "sesiones_realizadas": 28 
     },
     {
       "nombre": "Liana",
@@ -87,7 +95,8 @@
       "ubicacion": "Zona Este",
       "precio": 2000,
       "descripcion": "Terapia familiar presencial y virtual",
-      "foto": "img/p7.jpg"
+      "foto": "img/p7.jpg",
+      "sesiones_realizadas": 30 
     },
     {
       "nombre": "Diana",
@@ -97,7 +106,52 @@
       "ubicacion": "Zona Sur",
       "precio": 1500,
       "descripcion": "Terapia familiar presencial y virtual",
-      "foto": "img/p8.jpg"
+      "foto": "img/p8.jpg",
+      "sesiones_realizadas": 27
+    },
+    {
+      "nombre": "Saul",
+      "apellido": "Perez",
+      "especialidad": "psicoanalisis",
+      "consulta": "consultaVirtual",
+      "ubicacion": "Palermo",
+      "precio": 750,
+      "descripcion": "Especialista en psicoanálisis virtual",
+      "foto": "img/p9.jpg",
+      "sesiones_realizadas": 320
+    },
+    {
+      "nombre": "Juan",
+      "apellido": "Gonzalez",
+      "especialidad": "psicoanalisis",
+      "consulta": "consultaPresencial",
+      "ubicacion": "Zona Oeste",
+      "precio": 900,
+      "descripcion": "Terapia familiar presencial",
+      "foto": "img/p10.jpg",
+      "sesiones_realizadas": 56
+    },
+    {
+      "nombre": "Samuel",
+      "apellido": "Perez",
+      "especialidad": "psicoanalisis",
+      "consulta": "consultaVirtual",
+      "ubicacion": "Palermo",
+      "precio": 750,
+      "descripcion": "Especialista en psicoanálisis virtual",
+      "foto": "img/p11.jpg",
+      "sesiones_realizadas": 220
+    },
+    {
+      "nombre": "Paola",
+      "apellido": "Perez",
+      "especialidad": "psicoanalisis",
+      "consulta": "consultaVirtual",
+      "ubicacion": "Palermo",
+      "precio": 750,
+      "descripcion": "Especialista en psicoanálisis virtual",
+      "foto": "img/p12.jpg",
+      "sesiones_realizadas": 120
     }
 ]
   

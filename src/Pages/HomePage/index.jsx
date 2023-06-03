@@ -4,7 +4,6 @@ import Footer from '../../components/Footer'
 import Header from "../../components/Header/index"
 import MentalHealthArticles from "../../components/MentalHealthArticles"
 import Services from "../../components/Services"
-import Team from '../../components/Team'
 
 
 const Home = () => {
@@ -15,7 +14,6 @@ const Home = () => {
       <MentalHealthArticles />
       <Services />
       <AboutUs />
-      <Team />
       <Footer />
     </>
   )

@@ -4,7 +4,7 @@ const Services = () => {
 
             <div className="flex">
                 <img src="img/servicio-al-cliente.png" alt=""/>
-                <p className="service_title">Nuetros servicios</p>
+                <p className="service_title">Nuestro servicios</p>
             </div>
 
             <div className="container card_container">

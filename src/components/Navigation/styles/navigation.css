@@ -60,8 +60,8 @@
       
 .login_button {
   font-size: 12px;
-  background-color: #434343;
-  color: #C7999D;
+  background-color: var(--verde);
+  color: black;
   padding: 10px 15px!important;
   border-radius: 3px;
   box-shadow: rgb(0 0 0 / 60%) 0px 1px 4px 0px;

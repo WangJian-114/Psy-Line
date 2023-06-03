@@ -4,7 +4,7 @@ const ProfesionalServices = () => {
             <div className="profesional_content">
                 <div className="profesional_content_icon">
                     <img src="img/servicio-al-cliente.png" alt=""/>
-                    <h3 className="heading">Por que es tan importante cuidar tu salud</h3>
+                    <h3 className="heading">Por que es importante cuidar tu salud mental</h3>
                 </div>
 
                 <div className="profesional_service_container">

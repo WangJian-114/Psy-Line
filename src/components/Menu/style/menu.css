@@ -1,0 +1,103 @@
+.div_menu{
+  position: fixed;
+  width: 297px;
+  height: 100%;
+  left: 0px;
+  top: 64px;
+
+  background: #ECF6F6;
+
+}
+
+.div_parte_icono{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+
+  position: absolute;
+  width: 297px;
+  height: 168px;
+  left: 0px;
+  top: 93px;
+
+}
+
+
+.fondo_foto{
+
+  width: 128px;
+  height: 128px;
+
+  background: #B3DBDB;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  border-radius: 50%;
+
+}
+
+.div_nombre{
+
+  width: 294px;
+  height: 24px;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+}
+
+.div_texto{
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px 1px;
+  gap: 10px;
+
+  position: absolute;
+  width: 294px;
+  height: 24px;
+  left: 1.5px;
+  top: 144px;
+
+}
+
+.nombre{
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+
+  align-items: center;
+  text-align: center;
+
+  color: #001e28;
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+
+}
+
+.div_outside_opciones{
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px 16px;
+  gap: 10px;
+
+  position: absolute;
+  width: 297px;
+  height: 326px;
+  left: 0px;
+  top: 289px;
+
+}

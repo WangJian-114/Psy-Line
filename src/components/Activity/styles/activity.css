@@ -1,0 +1,233 @@
+.frame{
+
+position: absolute;
+width: 1143px;
+height: 1363px;
+left: 296px;
+top: 0px;
+
+}
+
+.div_activity{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+
+  position: absolute;
+  width: 1047px;
+  height: 341px;
+  left: 48px;
+  top: 382px;
+
+}
+
+.titulo{
+
+  width: 142px;
+  height: 29px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}
+
+.frame_actividad{
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 40px;
+
+  width: 1047px;
+  height: 280px;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+}
+
+.frame_botones{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+
+  width: 642.87px;
+  height: 213px;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+
+}
+
+.div_botones_superiores{
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+
+  width: 642.87px;
+  height: 122px;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+
+}
+
+.boton_turnos_confirmados{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 10px;
+
+  width: 309.43px;
+  height: 122px;
+
+  background: #2D7474;
+  border-radius: 8px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+
+}
+
+.texto{
+
+  height: 19px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ECF6F6;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}
+
+.texto_cantidad{
+
+  width: 20px;
+  height: 39px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+
+  color: #FFFFFF;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+}
+
+.boton_pagos_pendientes{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 10px;
+
+  width: 309.43px;
+  height: 122px;
+
+  background: #2D7474;
+  border-radius: 8px;
+
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+
+}
+
+
+.boton_ultimo_ingreso_diario{
+  
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 24px;
+  gap: 10px;
+
+  width: 642.87px;
+  height: 67px;
+
+  background: #2D7474;
+  border-radius: 8px;
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+
+}
+
+
+.texto_ultimo_ingreso{
+  width: 178px;
+  height: 19px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #ECF6F6;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.texto_fecha_ultimo_ingreso{
+
+  width: 95px;
+  height: 19px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #FFFFFF;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+}

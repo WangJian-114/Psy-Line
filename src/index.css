@@ -3,8 +3,16 @@
 @import url('./components/Services/styles/services.css');
 @import url('./components/AboutUs/styles/aboutUs.css');
 @import url('./components/MentalHealthArticles/styles/mentalHealthArticles.css');
-@import url('./components/Team//styles/team.css');
-@import url('./components/Carousel//styles/carousel.css');
+@import url('./components/Login/styles/login.css');
+@import url('./components/Team/styles/team.css');
+@import url('./components/Carousel/styles/carousel.css');
+@import url('./components/NavigationBar/styles/navigationbar.css');
+@import url('./components/Menu/style/menu.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('./components/DailyPhrase/styles/dailyPhrase.css');
+@import url('./components/ButtonGroup/styles/buttonGroup.css');
+@import url('./components/Activity/styles/activity.css');
 
 
 
@@ -37,18 +45,12 @@ html {
 Configuraciones Generales
 ======================
 */
-h1,h2,h3 {
-  margin: 0!important;
-}
 
-p {
-  margin-bottom: 0;
-}
 
 h2 {
-  color: #1a202d!important;
+  color: #1a202d;
   text-align: center;
-  margin-bottom: 20px !important;;
+  margin-bottom: 20px;
 }
 
 img {

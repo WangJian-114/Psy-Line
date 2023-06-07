@@ -6,6 +6,7 @@ import Register from './Pages/Register'
 import HomePage from './Pages/HomePage'
 import SearchPage from './Pages/SearchPage'
 import MainHomePage from './Pages/MainHomePage'
+import ProfessionalProfilePage from './Pages/ProfessionalProfilePage'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="search" element={<SearchPage />}/>
         <Route path="home" element={<HomePage />} />
         <Route path="main" element={<MainHomePage />} />
+        <Route path="profile" element={<ProfessionalProfilePage />} />
 
       </Routes>
     </BrowserRouter>

@@ -45,6 +45,7 @@
   width: 294px;
   height: 24px;
 
+  align-items: center;
   flex: none;
   order: 1;
   flex-grow: 0;

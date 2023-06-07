@@ -7,6 +7,7 @@ import HomePage from './Pages/HomePage'
 import SearchPage from './Pages/SearchPage'
 import MainHomePage from './Pages/MainHomePage'
 import ProfessionalProfilePage from './Pages/ProfessionalProfilePage'
+import DiaryEntryPage from './Pages/DiaryEntryPage'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="home" element={<HomePage />} />
         <Route path="main" element={<MainHomePage />} />
         <Route path="profile" element={<ProfessionalProfilePage />} />
+        <Route path="diaryentry" element={<DiaryEntryPage />} />
 
       </Routes>
     </BrowserRouter>

@@ -14,9 +14,9 @@
 @import url('./components/ButtonGroup/styles/buttonGroup.css');
 @import url('./components/Activity/styles/activity.css');
 @import url('./components/Profile/styles/profile.css');
+@import url('./components/CurrentSessions/styles/currentsessions.css');
+@import url('./components/SessionCard/styles/sessioncard.css');
 @import url('./components/DiaryEntry/styles/diaryentry.css');
-
-
 
 
 :root {

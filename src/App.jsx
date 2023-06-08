@@ -8,6 +8,7 @@ import SearchPage from './Pages/SearchPage'
 import MainHomePage from './Pages/MainHomePage'
 import ProfessionalProfilePage from './Pages/ProfessionalProfilePage'
 import DiaryEntryPage from './Pages/DiaryEntryPage'
+import SessionsPage from './Pages/SessionsPage'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="main" element={<MainHomePage />} />
         <Route path="profile" element={<ProfessionalProfilePage />} />
         <Route path="diaryentry" element={<DiaryEntryPage />} />
+        <Route path="sessions" element={<SessionsPage />} />
 
       </Routes>
     </BrowserRouter>

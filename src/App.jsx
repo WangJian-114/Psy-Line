@@ -9,6 +9,7 @@ import MainHomePage from './Pages/MainHomePage'
 import ProfessionalProfilePage from './Pages/ProfessionalProfilePage'
 import DiaryEntryPage from './Pages/DiaryEntryPage'
 import SessionsPage from './Pages/SessionsPage'
+import PaymentsPage from './Pages/PaymentsPage'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="profile" element={<ProfessionalProfilePage />} />
         <Route path="diaryentry" element={<DiaryEntryPage />} />
         <Route path="sessions" element={<SessionsPage />} />
+        <Route path="payments" element={<PaymentsPage />} />
 
       </Routes>
     </BrowserRouter>

@@ -17,6 +17,8 @@
 @import url('./components/CurrentSessions/styles/currentsessions.css');
 @import url('./components/SessionCard/styles/sessioncard.css');
 @import url('./components/DiaryEntry/styles/diaryentry.css');
+@import url('./components/MyPayments/styles/mypayments.css');
+@import url('./components/PayCard/styles/paycard.css');
 
 
 :root {

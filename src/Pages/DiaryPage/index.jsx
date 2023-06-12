@@ -1,10 +1,10 @@
-import CalendarPage from "../../components/DairyPageComponent";
+
 import NavigationBar from "../../components/NavigationBar";
 import Menu from "../../components/Menu";
-import CalendarComponent from "../../components/DairyPageComponent";
+import CalendarComponent from "../../components/DiaryPageComponent";
 
 
-const DairyP = () => {
+const DiaryP = () => {
     return (
       <div>
         <NavigationBar />
@@ -14,4 +14,4 @@ const DairyP = () => {
     );
   };
   
-  export default DairyP;
+  export default DiaryP;

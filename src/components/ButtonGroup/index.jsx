@@ -17,6 +17,11 @@ const ButtonGroup = () => {
     if (buttonId === 2) {
       navigate('/search',{state:{miOpcion:buttonId}});
     }
+    if (buttonId === 4) {
+      navigate('/diarypage',{state:{miOpcion:buttonId}});
+    }
+
+
   };
 
   return (

@@ -1,5 +1,19 @@
+import { useLocation, useNavigate } from "react-router-dom";
+
 
 const DiaryEntry = () => {
+
+  const location = useLocation();
+  const miDate = location.state?.date;
+    // Construir la URL con el valor como parámetro
+    const navigate = useNavigate();
+
+    const handleClick = (miAnimo) => {
+      const value = miAnimo; // Valor que deseas pasar
+      navigate(`/diarypage?miAnimo=${encodeURIComponent(value)}`);
+    };
+  
+
   return (
     <>
       <h1>holaaa</h1>
@@ -24,18 +38,18 @@ const DiaryEntry = () => {
               <div className="box_selecciona_estado_animo">
                 <div className="div_background_estados">
 
-                  <button className="boton_carita_1">
+                  <button className="boton_carita_1" onClick={() => handleClick(1)}>
                     <img src="img\lol.png" className="carita_1" alt="carita_1"/>
-
+                    
                   </button>
-                  <button className="boton_carita_2">
+                  <button className="boton_carita_2" onClick={() => handleClick(2)}>
                     <img src="img\smile.png" className="carita_2" alt="carita_2"/>
 
                   </button>
 
-                  <button className="boton_carita_3">
+                  <button className="boton_carita_3" onClick={() => handleClick(3)}>
                     <img src="img\shy.png" className="carita_3" alt="carita_3"/>
-
+                    
                   </button>
 
                   <button className="boton_carita_4">

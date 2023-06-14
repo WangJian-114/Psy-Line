@@ -16,6 +16,18 @@ const ButtonGroup = () => {
     } 
     if (buttonId === 2) {
       navigate('/search',{state:{miOpcion:buttonId}});
+    }   
+    if (buttonId === 3) {
+      navigate('/sessions',{state:{miOpcion:buttonId}});
+    } 
+    // if (buttonId === 4) {
+    //   navigate('/sessions',{state:{miOpcion:buttonId}});
+    // }    
+    // if (buttonId === 5) {
+    //   navigate('/main',{state:{miOpcion:buttonId}});
+    // } 
+    if (buttonId === 6) {
+      navigate('/payments',{state:{miOpcion:buttonId}});
     }
   };
 

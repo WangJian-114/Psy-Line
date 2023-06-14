@@ -1,5 +1,6 @@
 [
     {
+      "id": "1",
       "nombre": "Maria",
       "apellido": "Perez",
       "especialidad": "psicoanalisis",
@@ -11,6 +12,7 @@
       "sesiones_realizadas": 350
     },
     {
+      "id": "2",
       "nombre": "Juan",
       "apellido": "Lopez",
       "especialidad": "terapia Cognitiva Conductual",
@@ -22,6 +24,7 @@
       "sesiones_realizadas": 300
     },
     {
+      "id": "3",
       "nombre": "Analia",
       "apellido": "Gonzalez",
       "especialidad": "terapia Familiar",
@@ -33,6 +36,7 @@
       "sesiones_realizadas": 235
     },
     {
+      "id": "4",
       "nombre": "Valentina",
       "apellido": "Gonzalez",
       "especialidad": "terapia Grupal",
@@ -44,6 +48,7 @@
       "sesiones_realizadas": 198
     },
     {
+      "id": "5",
       "nombre": "Joaquin",
       "apellido": "Gonzalez",
       "especialidad": "terapia Familiar",
@@ -55,6 +60,7 @@
       "sesiones_realizadas": 103 
     },
     {
+      "id": "6",
       "nombre": "Martin",
       "apellido": "Gonzalez",
       "especialidad": "terapia Cognitiva Conductual",
@@ -66,6 +72,7 @@
       "sesiones_realizadas": 78 
     },
     {
+      "id": "7",
       "nombre": "Guillermo",
       "apellido": "Gonzalez",
       "especialidad": "psicoanalisis",
@@ -77,6 +84,7 @@
       "sesiones_realizadas": 58 
     },
     {
+      "id": "8",
       "nombre": "Martina",
       "apellido": "Gonzalez",
       "especialidad": "terapia Familiar",
@@ -88,6 +96,7 @@
       "sesiones_realizadas": 28 
     },
     {
+      "id": "9",
       "nombre": "Liana",
       "apellido": "Gonzalez",
       "especialidad": "terapia Grupal",
@@ -99,6 +108,7 @@
       "sesiones_realizadas": 30 
     },
     {
+      "id": "10",
       "nombre": "Diana",
       "apellido": "Gonzalez",
       "especialidad": "terapia Familiar",
@@ -110,6 +120,7 @@
       "sesiones_realizadas": 27
     },
     {
+      "id": "11",
       "nombre": "Saul",
       "apellido": "Perez",
       "especialidad": "psicoanalisis",
@@ -121,6 +132,7 @@
       "sesiones_realizadas": 320
     },
     {
+      "id": "12",
       "nombre": "Juan",
       "apellido": "Gonzalez",
       "especialidad": "psicoanalisis",
@@ -132,6 +144,7 @@
       "sesiones_realizadas": 56
     },
     {
+      "id": "13",
       "nombre": "Samuel",
       "apellido": "Perez",
       "especialidad": "psicoanalisis",
@@ -143,6 +156,7 @@
       "sesiones_realizadas": 220
     },
     {
+      "id": "14",
       "nombre": "Paola",
       "apellido": "Perez",
       "especialidad": "psicoanalisis",

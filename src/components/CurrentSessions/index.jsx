@@ -1,6 +1,11 @@
+import { useContext } from 'react';
+import AppointmentContext from '../../context/appointments/appointmentContext';
 import SessionCard from "../SessionCard";
 
 const CurrentSessions = () => {
+
+  const appointmentContext =  useContext(AppointmentContext);
+  const { appointments } = appointmentContext;
 
   return (
     <div>
@@ -15,8 +20,8 @@ const CurrentSessions = () => {
               <h1 className="turnos_confirmados">Turnos confirmados</h1>
             </div>
             {/* aca van a ir los componentes de turnos confirmados, pongo 1 de ejemplo (se llama SessionCard) */}
-            <SessionCard />
-            <SessionCard />
+            {/* <SessionCard />
+            <SessionCard /> */}
 
           </div>
 
@@ -25,9 +30,11 @@ const CurrentSessions = () => {
             <h1 className="titulo_turnos_pendientes">Turnos pendientes</h1>
           </div>
             {/* aca van a ir los componentes de turnos pendientes, pongo 1 de ejemplo (se llama SessionCard) */}
-            <SessionCard />
-            <SessionCard />
-
+            {appointments?.length !== 0 ? 
+              appointments.map(appointment => (
+                <SessionCard {...appointment} />
+              )): null
+            }
         </div>
 
     </div>

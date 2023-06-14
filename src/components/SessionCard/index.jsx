@@ -1,5 +1,18 @@
+import { useContext } from 'react';
+import AppointmentContext from '../../context/appointments/appointmentContext';
 
-const SessionCard = () => {
+
+
+const SessionCard = ({ id, therapist_user_name, date, status, modality }) => {
+
+  const appointmentContext =  useContext(AppointmentContext);
+  const { removeAppointments } = appointmentContext;
+
+  const deleteAppointment = (id) => {
+    console.log("eliminado...", id);
+    removeAppointments(id);
+  }
+
   return (
     <>
         <div className="div_borde_card">
@@ -10,13 +23,13 @@ const SessionCard = () => {
                   <div className="div_background_turno">
                     <div className="div_background_sombra_turno">
                       {/* nombre del psicólogo, fecha, modalidad, hardcodeado*/}
-                      <h1 className="nombre_psicologo_card">Lic. Franco Isaurralde</h1>
+                      <h1 className="nombre_psicologo_card">Lic. {therapist_user_name}</h1>
         
-                      <h1 className="fecha_turno_card">Viernes 26 de mayo de 2023 - 10:00 hs</h1>
+                      <h1 className="fecha_turno_card">{date} hs</h1>
 
-                      <h1 className="modalidad_turno">Virtual</h1>
+                      <h1 className="modalidad_turno">{modality}</h1>
 
-                      <h1 className="ha_sido_confimado_o_no">Confirmado</h1>
+                      <h1 className="ha_sido_confimado_o_no">{status}</h1>
 
                     </div>
                   </div>
@@ -27,7 +40,7 @@ const SessionCard = () => {
                   <h1 className="texto_ver_mas_info">Ver más información</h1>
                 </button>
                 
-                <button className="boton_cancelar_turno">
+                <button className="boton_cancelar_turno" onClick={() => deleteAppointment(id)}>
                   <h1 className="texto_cancelar_turno">Cancelar Turno</h1>
                 </button>
               </div>

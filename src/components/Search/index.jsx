@@ -115,7 +115,7 @@ const BuscarPersonas = () => {
                   <li>Ubicacion: {persona.ubicacion}</li>
                   <span>Sesiones realizadas: {persona.sesiones_realizadas}</span>
                 </div>
-                <Link to='/home' className="perfil_button">Ver perfil</Link>
+                <Link to={`/profile/${persona.id}`} className="perfil_button">Ver perfil</Link>
               </div>
             </div>
           </div>

@@ -3,18 +3,25 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 const DiaryEntry = () => {
 
+  // traigo los datos del parametro
   const location = useLocation();
-  const miDate = location.state?.date;
-    // Construir la URL con el valor como parámetro
-    const navigate = useNavigate();
-    let value = "smile";
-    const handleClick = (miAnimo) => {
-      value = miAnimo; // Valor que deseas pasar
+  const searchParams = new URLSearchParams(location.search);
+  const miDate = searchParams.get('date');
+  // Construir la URL con el valor como parámetro
+  const navigate = useNavigate();
+  let value = "smile";
  
-    };
-    const handleClickGuardar = (value) => {
-      navigate(`/diarypage?miAnimo=${encodeURIComponent(value)}`);
-    };
+  // esto es para manejar el evento del click en la carita
+  // guarda en la variable value para que luego sea pasada como parametro a la pagina del calendario
+  const handleClick = (miAnimo) => {
+    value = miAnimo; // Valor que deseas pasar
+  };
+
+  // esto es para manejar el evento del click en el boton guardar
+  // envia como parametro a la pagina del calendario la carita que hice click
+  const handleClickGuardar = (value) => {
+    navigate(`/diarypage?miAnimo=${encodeURIComponent(value)}`);
+  };
   
 
   return (
@@ -26,7 +33,7 @@ const DiaryEntry = () => {
             <div className="texto_e_icono_diary">
               
               <div className="div_texto_diary">
-                <h1 className="texto_titulo_diary">Diario</h1>
+                <h1 className="texto_titulo_diary">Diario dia {+ miDate}</h1>
               </div>
               <div className="div_icono_diary">
 

@@ -14,6 +14,7 @@ import PaymentsPage from './Pages/PaymentsPage'
 // Context
 import AppointmentState from './context/appointments/appointmentState';
 import ProfessionalState from './context/professional/professionalState';
+import DiaryPage from './Pages/DiaryPage'
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
             <Route path="diaryentry" element={<DiaryEntryPage />} />
             <Route path="sessions" element={<SessionsPage />} />
             <Route path="payments" element={<PaymentsPage />} />
+            <Route path="diarypage" element={<DiaryPage />} />
           </Routes>
         </BrowserRouter>
       </AppointmentState>

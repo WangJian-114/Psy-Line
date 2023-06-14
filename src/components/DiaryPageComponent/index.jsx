@@ -15,11 +15,12 @@ const CalendarComponent = () => {
   const location = useLocation();
     // Obtener el valor del parámetro de la URL
     const searchParams = new URLSearchParams(location.search);
-    const miAnimo = searchParams.get('miAnimo');
+    let miAnimo = searchParams.get('miAnimo');
     let miCarita;
     console.log ("miAnimo..:" + miAnimo);
-    if (miAnimo === null) {miCarita ="img/smile.png"}
-    if (miAnimo === 1) {miCarita ="img/lol.png"};
+    if (miAnimo == null) {miAnimo ="smile";}
+    // if (miAnimo === 1) {miCarita ="img/lol.png"};
+    miCarita = "img/" + miAnimo + ".png";
     console.log ("miCarita..:" + miCarita);
 
   const localizer = momentLocalizer(moment);
@@ -28,7 +29,7 @@ const CalendarComponent = () => {
       title: 'Lol',
       start: new Date(2023, 5, 10),
       end: new Date(2023, 5, 10),
-      image: {miCarita},
+      image: "img/smile.png",
     },
     {
       title: 'Feliz',
@@ -37,6 +38,8 @@ const CalendarComponent = () => {
       image: "img/smile.png",
     },
   ];
+  events[0].image = miCarita;
+  events[0].title = miAnimo;
   const Event = ({ event }) => {
     return (
       <div>

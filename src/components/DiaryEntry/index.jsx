@@ -38,41 +38,41 @@ const DiaryEntry = () => {
               <div className="box_selecciona_estado_animo">
                 <div className="div_background_estados">
 
-                  <button className="boton_carita_1" onClick={() => handleClick(1)}>
+                  <button className="boton_carita_1" onClick={() => handleClick("lol")}>
                     <img src="img\lol.png" className="carita_1" alt="carita_1"/>
                     
                   </button>
-                  <button className="boton_carita_2" onClick={() => handleClick(2)}>
+                  <button className="boton_carita_2" onClick={() => handleClick("smile")}>
                     <img src="img\smile.png" className="carita_2" alt="carita_2"/>
 
                   </button>
 
-                  <button className="boton_carita_3" onClick={() => handleClick(3)}>
+                  <button className="boton_carita_3" onClick={() => handleClick("shy")}>
                     <img src="img\shy.png" className="carita_3" alt="carita_3"/>
                     
                   </button>
 
-                  <button className="boton_carita_4">
+                  <button className="boton_carita_4" onClick={() => handleClick("neutral")}>
                     <img src="img\neutral.png" className="carita_4" alt="carita_4"/>
 
                   </button>
 
-                  <button className="boton_carita_5">
+                  <button className="boton_carita_5" onClick={() => handleClick("sarcastic")}>
                     <img src="img\sarcastic.png" className="carita_5" alt="carita_5"/>
 
                   </button>
 
-                  <button className="boton_carita_6">
+                  <button className="boton_carita_6" onClick={() => handleClick("angry")}>
                     <img src="img\angry.png" className="carita_6" alt="carita_6"/>
 
                   </button>
 
-                  <button className="boton_carita_7">
+                  <button className="boton_carita_7" onClick={() => handleClick("thinking")}>
                     <img src="img\thinking.png" className="carita_7" alt="carita_7"/>
 
                   </button>
 
-                  <button className="boton_carita_8">
+                  <button className="boton_carita_8" onClick={() => handleClick("sad")}>
                     <img src="img\sad.png" className="carita_8" alt="carita_8"/>
 
                   </button>

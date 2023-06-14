@@ -19,7 +19,6 @@ const CalendarComponent = () => {
     let miCarita;
     console.log ("miAnimo..:" + miAnimo);
     if (miAnimo == null) {miAnimo ="smile";}
-    // if (miAnimo === 1) {miCarita ="img/lol.png"};
     miCarita = "img/" + miAnimo + ".png";
     console.log ("miCarita..:" + miCarita);
 

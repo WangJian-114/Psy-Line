@@ -7,9 +7,12 @@ const DiaryEntry = () => {
   const miDate = location.state?.date;
     // Construir la URL con el valor como parámetro
     const navigate = useNavigate();
-
+    let value = "smile";
     const handleClick = (miAnimo) => {
-      const value = miAnimo; // Valor que deseas pasar
+      value = miAnimo; // Valor que deseas pasar
+ 
+    };
+    const handleClickGuardar = (value) => {
       navigate(`/diarypage?miAnimo=${encodeURIComponent(value)}`);
     };
   
@@ -95,7 +98,7 @@ const DiaryEntry = () => {
 
             </div>
             
-            <button className="boton_guardar_entrada_diario">
+            <button className="boton_guardar_entrada_diario" onClick={() => handleClickGuardar(value)}>
               <h1 className="texto_guardar_entrada">Guardar</h1>
             </button>
 

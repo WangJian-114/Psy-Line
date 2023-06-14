@@ -6,7 +6,7 @@ import Activity from "../../components/Activity";
 const MainHome = () => {
     return (
       <>  
-        <NavigationBar />
+        <NavigationBar showButton='true'/>
         <Menu />
         <DailyPhrase />
         <Activity />

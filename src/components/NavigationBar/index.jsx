@@ -1,6 +1,6 @@
 import { FiSettings } from 'react-icons/fi';
 
-const NavigationBar = () => {
+const NavigationBar = ({ showButton }) => {
   return (
     <>
       <div className="nav_container">
@@ -9,9 +9,9 @@ const NavigationBar = () => {
             <img src="img\psyline-removebg-preview 15 (1).png" className="logo-navcontainer" alt="logo"/>
             <h1 className="nombre_psyline">PsyLine</h1>
           </div>
-          <button className="boton_opciones">
+          {showButton && <button className="boton_opciones">
             <FiSettings color='white' fontSize={26} />
-          </button>
+          </button>}
         </nav>
       </div>
     </>

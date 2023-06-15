@@ -7,7 +7,7 @@ const ProfessionalProfile = () => {
     <>
       <div> 
         <Menu />
-        <NavigationBar />
+        <NavigationBar showButton='true'/>
         <Profile />
       </div>
     </>

@@ -20,20 +20,22 @@ top: 0px;
   width: 1047px;
   height: 341px;
   left: 48px;
-  top: 382px;
+  top: 410px;
 
 }
 
-.titulo{
+.titulo_actividad{
+
+  width: 300px;
   height: 29px;
 
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 32px;
   line-height: 29px;
 
-  color: #000000;
+  color: #0e2525;
 
   flex: none;
   order: 0;

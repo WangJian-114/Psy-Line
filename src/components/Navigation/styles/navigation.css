@@ -1,3 +1,4 @@
+
 .navigation_container {
   display: flex;
   justify-content: space-between;
@@ -22,7 +23,7 @@
       
 .navigation_container .navigation_link {
   position: relative;
-  color: var(--verde);
+  color: #c3fffe;
   font-size: 18px;
   margin-right: 35px;
 }
@@ -32,7 +33,7 @@
   display: block;
   width: 0;
   height: 2px;
-  background: var(--verde);
+  background: #c3fffe;
   transition: all .5s;
   position: absolute;
   top:30px

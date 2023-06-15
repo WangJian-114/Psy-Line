@@ -8,7 +8,7 @@ const Activity = () => {
     <div className="frame">
       <div className="div_activity">
 
-        <h1 className="titulo">Tu actividad</h1>
+        <h1 className="titulo_actividad">Tu actividad</h1>
 
         <div className="frame_actividad">
           <div className="frame_botones">

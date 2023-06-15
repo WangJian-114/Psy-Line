@@ -7,7 +7,7 @@ const DiaryEntryPage = () => {
   return (
     <div>
         <Menu />
-        <NavigationBar />
+        <NavigationBar showButton='true' />
         <DiaryEntry />
     </div>
   )

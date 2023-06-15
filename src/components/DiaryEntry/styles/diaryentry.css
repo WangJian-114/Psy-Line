@@ -1,0 +1,458 @@
+.div_diarygeneral_diary{
+
+  position: absolute;
+  width: 1143px;
+  height: 1009px;
+  left: 296px;
+  top: 0px;
+
+}
+
+.div_diario_diary{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+
+  position: absolute;
+  width: 1047px;
+  height: 671px;
+  left: 344px;
+  top: 96px;
+
+}
+
+.div_texto_titulo_diary{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 40px;
+  
+  width: 1047px;
+  height: 39px;
+    
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}
+
+.div_texto_e_icono_diary{
+  display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 131px;
+height: 39px;
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.div_texto_diary{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 32px;
+
+width: 91px;
+height: 39px;
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+.texto_titulo_diary{
+
+  width: 91px;
+  height: 39px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;  
+  
+  color: #000000;
+  
+    
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.div_estados_de_animo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 15px;
+  
+  width: 1046px;
+  height: 158px;
+    
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.div_texto_selecciona_estado_animo{
+  width: 1046px;
+height: 27px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 27px;
+/* identical to box height */
+
+text-align: center;
+
+color: #002626;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.box_selecciona_estado_animo{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 711px;
+height: 116px;
+
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+.div_box_estados{
+width: 711px;
+height: 116px;
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.div_background_estados{
+  
+  width: 711px;
+  height: 116px;
+  left: 0px;
+  top: 0px;
+  position:relative;
+  background: #F4F4F4;
+  border-radius: 30px;
+
+}
+
+.boton_carita_1{
+  /* lol 1 */
+  position:absolute;
+  width: 64.11px;
+  height: 64.14px;
+  left: 17.91px;
+  top: 25.93px;
+  
+  border-radius: 30px;
+}
+
+/* de aca para abajo estoy haciendo copy paste */
+
+.carita_1{
+  /* lol 1 */
+  width: 64.11px;
+  height: 64.14px;
+  left: 17.91px;
+  top: 25.93px;
+  
+  border-radius: 30px;
+}
+
+.boton_carita_2{
+position: absolute;
+width: 64.11px;
+height: 64.14px;
+left: 104.68px;
+top: 25.93px;
+
+border-radius: 30px;
+}
+
+.carita_2{
+  width: 64.11px;
+  height: 64.14px;
+  left: 104.68px;
+  top: 25.93px;
+  
+  border-radius: 30px;
+}
+
+.boton_carita_3{
+  position: absolute;
+width: 64.11px;
+height: 64.14px;
+left: 191.46px;
+top: 25.93px;
+
+border-radius: 30px;
+}
+
+.carita_3{
+  width: 64.11px;
+  height: 64.14px;
+  left: 191.46px;
+  top: 25.93px;
+  
+  border-radius: 30px;
+}
+
+
+.boton_carita_4{
+position: absolute;
+width: 64.11px;
+height: 64.14px;
+left: 278.24px;
+top: 25.93px;
+
+border-radius: 30px;
+}
+
+.carita_4{
+  width: 64.11px;
+  height: 64.14px;
+  left: 278.24px;
+  top: 25.93px;
+  
+  border-radius: 30px;
+}
+
+
+.boton_carita_5{
+  position: absolute;
+  width: 64.11px;
+  height: 64.14px;
+  left: 365.02px;
+  top: 25.93px;
+  
+  border-radius: 30px;
+}
+
+.carita_5{
+  width: 64.11px;
+  height: 64.14px;
+  left: 365.02px;
+  top: 25.93px;
+  
+  border-radius: 30px;
+}
+
+
+.boton_carita_6{
+  position: absolute;
+width: 64.11px;
+height: 64.14px;
+left: 451.79px;
+top: 25.93px;
+
+border-radius: 30px;
+}
+.carita_6{
+  width: 64.11px;
+  height: 64.14px;
+  left: 451.79px;
+  top: 25.93px;
+  
+  border-radius: 30px;
+}
+
+.boton_carita_7{
+  position: absolute;
+width: 64.11px;
+height: 64.14px;
+left: 538.57px;
+top: 25.93px;
+
+border-radius: 30px;
+}
+
+.carita_7{
+  width: 64.11px;
+  height: 64.14px;
+  left: 538.57px;
+  top: 25.93px;
+  
+  border-radius: 30px;
+}
+
+.boton_carita_8{
+  position: absolute;
+width: 64.11px;
+height: 64.14px;
+left: 625.35px;
+top: 25.93px;
+
+border-radius: 30px;
+}
+.carita_8{
+  width: 64.11px;
+  height: 64.14px;
+  left: 625.35px;
+  top: 25.93px;
+  
+  border-radius: 30px;
+}
+
+.div_seccion_titulo_boton_y_escritura{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 143px 0px 0px;
+  gap: 48px;
+  
+  width: 1047px;
+  height: 410px;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.div_recuadro_titulo_y_escritura{
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 15px;
+
+width: 1047px;
+height: 291px;
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.texto_diario_detallar{
+
+  width: 1047px;
+  height: 27px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;  
+  
+  color: #002626;
+  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}
+
+.div_input_diary{
+
+  box-sizing: border-box;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 16px 0px;
+  gap: 10px;
+
+  width: 1047px;
+  height: 254px;
+  
+  border: 1px solid #41A6A6;
+  border-radius: 8px;
+  
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  
+  color: #A2A2A2;
+}
+
+.input_diary {
+  width: 100%;
+  resize: none;
+  overflow: auto;
+  border: none; /* Elimina el borde */
+  outline: none; 
+}
+
+.boton_guardar_entrada_diario{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8px 32px;
+  gap: 10px;
+
+  width: 169px;
+  height: 35px;
+
+  background: #41A6A6;
+  border-radius: 8px;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+}
+
+.texto_guardar_entrada{
+  
+  width: 63px;
+  height: 19px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #FFFFFF;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}

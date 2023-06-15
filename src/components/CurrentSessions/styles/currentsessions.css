@@ -1,0 +1,176 @@
+
+.div_titulo_turnos{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 40px;
+  
+  position: absolute;
+  width: 490px;
+  height: 39px;
+  left: 344px;
+  top: 93px;  
+
+}
+
+.div_titulo_turnos_interno{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+  
+  width: 164px;
+  height: 39px;
+  
+    
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.titulo_turnos{
+
+  width: 164px;
+  height: 39px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+
+  color: #0E2424;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}
+
+.div_turnos_confirmados_outline{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 27px;
+
+  position: absolute;
+  width: 492px;
+  height: 847px;
+  left: 347px;
+  top: 164px;
+
+}
+
+.div_turnos_confirmados_titulo{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+
+  width: 492px;
+  height: 29px;
+
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.turnos_confirmados{
+
+  width: 490px;
+  height: 29px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #00655D;
+
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+}
+
+.div_texto_mis_turnos{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 40px;
+
+  width: 490px;
+  height: 39px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}
+
+.div_turnos_pendientes_outline{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 27px;
+  
+  position: absolute;
+  width: 492px;
+  height: 847px;
+  left: 889px;
+  top: 164px;
+    
+}
+
+.div_turnos_pendientes_titulo{
+
+  width: 490px;
+  height: 29px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;  
+  
+  color: #00655D;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}
+
+.titulo_turnos_pendientes{
+
+  width: 490px;
+  height: 29px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  
+  color: #00655D;
+    
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}

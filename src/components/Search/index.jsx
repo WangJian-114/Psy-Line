@@ -45,7 +45,7 @@ const BuscarPersonas = () => {
 
   return (
     <div className='seccion-pagina'>
-      <h1>Búscar Psicólogo</h1>
+      <h1 className='titulo_buscar_psicologo'>Buscar Psicólogo</h1>
       <div className='filtro-container'>
         <div className='filtro-item'>
           <select value={filtroConsulta} onChange={handleFiltroConsultaChange}>
@@ -58,8 +58,24 @@ const BuscarPersonas = () => {
 
         <div className='filtro-item'>
           <select value={filtroEspecialidad} onChange={handleFiltroEspecialidadChange}>
-            <option value="">Especialidad</option>
+            <option value="">Categorías</option>
+            <option value="adicciones">Adicciones</option>
+            <option value="analisis de sueños">Análisis de Sueños</option>
+            <option value="anorexia">Anorexia</option>
+            <option value="ansiedad">Ansiedad</option>
+            <option value="ataques de panico">Ataques de pánico</option>
+            <option value="bullying">Bullying</option>
+            <option value="dependencia emocional">Dependencia emocional</option>
+            <option value="depresion">Depresión</option>
+            <option value="duelo">Duelo</option>
+            <option value="estres">Estrés</option>
+            <option value="estres postraumatico">Estrés Postraumático</option>
+            <option value="insomnio">Insomnio</option>
+            <option value="ludopatia">Ludopatía</option>
             <option value="psicoanalisis">Psicoanálisis</option>
+            <option value="sexologia">Sexología</option>
+            <option value="suicidio">Suicidio</option>
+            <option value="tdah">Tdah</option>
             <option value="terapia Cognitiva Conductual">Terapia Cognitiva-Conductual</option>
             <option value="terapia Familiar">Terapia Familiar</option>
             <option value="terapia Grupal">Terapia Grupal</option>
@@ -79,7 +95,7 @@ const BuscarPersonas = () => {
           </select>
         </div>
         <div className='filtro-etiqueta'> 
-          <label htmlFor="precioMin ">Precio Mínimo:</label>
+          <label htmlFor="precioMin ">Valor Mínimo:</label>
         </div> 
         <input
           className='filtro-input'
@@ -89,7 +105,7 @@ const BuscarPersonas = () => {
           onChange={(e) => setFiltroPrecioMin(e.target.value)}
         />
         <div className='filtro-etiqueta'>
-          <label htmlFor="precioMax ">Precio Máximo:</label>
+          <label htmlFor="precioMax ">Valor Máximo:</label>
         </div>
         <input
           className='filtro-input'
@@ -113,14 +129,13 @@ const BuscarPersonas = () => {
                   <li>Precio: {persona.precio}</li>
                   <li>Descripción: {persona.descripcion}</li>
                   <li>Ubicacion: {persona.ubicacion}</li>
-                  <span>Sesiones realizadas: {persona.sesiones_realizadas}</span>
                 </div>
-                <Link to='/home' className="perfil_button">Ver perfil</Link>
+                <Link to={`/profile/${persona.id}`} className="perfil_button">Ver perfil</Link>
               </div>
             </div>
           </div>
         ))
-        : <p className='no_results_message'>no hay resultado que coinciden la busqueda</p>}
+        : <p className='no_results_message'>No hay resultados que coincidan con tu búsqueda</p>}
       </div>
     </div>
   );

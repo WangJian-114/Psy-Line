@@ -1,0 +1,152 @@
+.div_general_pagos{
+
+  position: absolute;
+  width: 1144px;
+  height: 1009px;
+  left: 295px;
+  top: 0px;
+
+}
+
+.div_estructura_pagos{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 27px;
+
+  position: absolute;
+  width: 1054px;
+  height: 918px;
+  left: 48px;
+  top: 96px;
+
+}
+
+.div_titulos_pagos{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+
+  width: 1047px;
+  height: 100px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}
+
+.div_mis_pagos{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+
+  width: 1047px;
+  height: 100px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}
+
+.div_interno_mis_pagos{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+
+  width: 159px;
+  height: 39px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}
+
+.titulo_mis_pagos{
+
+  width: 159px;
+  height: 39px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+
+  color: #0E2424;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}
+
+.titulo_pagos_pendientes{
+
+  width: 209px;
+  height: 29px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #00655D;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+}
+
+.titulo_pagos_realizados{
+
+  width: 204px;
+  height: 29px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #00655D;
+
+  flex: none;
+  flex-grow: 0;
+
+}
+
+.elementos_pendientes{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 27px;
+
+}
+
+.elementos_pagados{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 27px;
+  
+}

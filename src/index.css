@@ -13,7 +13,12 @@
 @import url('./components/DailyPhrase/styles/dailyPhrase.css');
 @import url('./components/ButtonGroup/styles/buttonGroup.css');
 @import url('./components/Activity/styles/activity.css');
-
+@import url('./components/Profile/styles/profile.css');
+@import url('./components/CurrentSessions/styles/currentsessions.css');
+@import url('./components/SessionCard/styles/sessioncard.css');
+@import url('./components/DiaryEntry/styles/diaryentry.css');
+@import url('./components/MyPayments/styles/mypayments.css');
+@import url('./components/PayCard/styles/paycard.css');
 
 
 :root {
@@ -120,7 +125,7 @@ color: #BBB2B2;
 
 .contenido-hero .down span {
 font-size: 100px;
-color: #C7999D;
+color: #87c0c0;
 }
 
 .contenido-hero .down span.comilla {
@@ -228,7 +233,7 @@ font-size: 60px;
 
 .contenido-hero-home .down span {
 font-size: 100px;
-color: #C7999D;
+color: #87c0c0;
 }
 
 .contenido-hero-home .down span.comilla {
@@ -275,7 +280,7 @@ color: white!important;
     
     .contenido-hero-home .down span {
     font-size: 24px;
-    color: #C7999D;
+    color: #87c0c0;
     }
     
     .contenido-hero-home .down span.comilla {

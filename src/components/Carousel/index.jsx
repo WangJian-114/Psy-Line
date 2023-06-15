@@ -16,7 +16,7 @@ const Carousel = () => {
                 </div>
                 <div className="contenido-hero-home">
                     <h3 className="up white">Servicio profesional<br/> Seguimiento ONLINE </h3>
-                    <h3 className="down white"><span className="highlighted white">"</span><span className="highlighted">PSY-Line</span><span className="comilla white">"</span></h3>
+                    <h3 className="down white"><span className="highlighted white">"</span><span className="highlighted" color="#87c0c0">PSY-Line</span><span className="comilla white">"</span></h3>
                 </div>
 
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

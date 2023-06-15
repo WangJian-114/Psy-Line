@@ -1,31 +1,44 @@
+.div_general_login_page{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 89px;
+}
+
 .body_container {
     height:100vh;
     /* background-image: linear-gradient(to bottom, #7cafff, #32c0ff, #00cefc, #00d9e6, #1ee1c9, #47e5c2, #61e9bb, #78edb4, #6ef1c4, #66f5d4, #61f8e3, #5ffbf1); */
-    background-image: url('img/slide2.jpg');
+    /* background-image: url('img/slide2.jpg'); */
+    background-color: #ECF6F6;
     background-position: center;
     background-size: cover;
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .login_container {
-    width: 500px;
-    height: 770px;
-    background-image: linear-gradient(to bottom, #7cafff, #a0bcff, #bdc9fe, #d5d8fe, #e9e8fe, #eceeff, #f0f4ff, #f6f9ff, #ebf5ff, #def2ff, #d0effe, #c0edf9);
+    position: absolute;
+    width: 1300px;
+    height: 600px;
+    background-image: linear-gradient(to bottom, #1A4242, #397171, #89b4b4, #aacccc, #cfe1e1, #e9eded, #f0f4ff, #f6f9ff, #ffffff, #ffffff, #d0effe, #c0edf9);
     border-radius:10px;
     padding: 20px 50px;
+    top: 140px;
+    display: flex;
 }
 
 .login_title {
     text-align: center;
     margin-top:20px;
+    color:white;
 }
 
 .image_container {
     display:flex;
     justify-content: space-between;
-    padding: 35px 0px;
+    padding: 35px 30px 30px 10px;
 }
 
 .image_group {
@@ -59,6 +72,7 @@
 .login_form {
     display: flex;
     flex-direction: column;
+    width: 80%;
 }
 
 .action_group {
@@ -66,6 +80,7 @@
     display: flex;
     justify-content:space-between;
     align-items:center;
+    width: 80%;
 }
 
 .login {
@@ -76,4 +91,20 @@
 .password_link {
     display: block;
     margin-top: 10px;
+}
+
+.division_parte_derecha_login{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.division_parte_izquierda_login{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

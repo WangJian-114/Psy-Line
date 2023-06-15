@@ -6,7 +6,7 @@ import Menu from "../../components/Menu";
 const Search = () => {
     return (
       <div>
-        <NavigationBar />
+        <NavigationBar showButton='true'/>
         <Menu />
         <BuscarPersonas />
       </div>

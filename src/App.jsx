@@ -10,11 +10,12 @@ import ProfessionalProfilePage from './Pages/ProfessionalProfilePage'
 import DiaryEntryPage from './Pages/DiaryEntryPage'
 import SessionsPage from './Pages/SessionsPage'
 import PaymentsPage from './Pages/PaymentsPage'
+import DiaryPage from './Pages/DiaryPage'
 
 // Context
 import AppointmentState from './context/appointments/appointmentState';
 import ProfessionalState from './context/professional/professionalState';
-import DiaryPage from './Pages/DiaryPage'
+
 
 function App() {
 

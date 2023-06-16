@@ -10,3 +10,15 @@
   line-height:39px;
   text-align: left;
 }
+
+.rbc-header {
+  background: #2d7474;
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+} 
+.rbc-toolbar-label{
+  background: #2d7474;
+  color: white;
+  
+}

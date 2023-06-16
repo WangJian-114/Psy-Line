@@ -78,15 +78,16 @@ const CalendarComponent = () => {
   // el componente Calendario hace toda la magia
   return (
     <div className='seccion_pagina_1'>
-      Calendario
-      <div style={{ height: '500px', width: '700px' }}>
+      <h2>Calendario</h2>
+      <h2>Seleccione el día para el cual quiere hacer la entrada al diario.</h2>
+      <div style={{ height: '600px', width: '800px' }}>
         <Calendar
          localizer={localizer}
          events={events}
          startAccessor="start"
          endAccessor="end"
          components={{event:Event, month:{dateHeader: CustomMonthDay}}}
-         views={['month','week','day']}
+         views={['month']}
         />
       </div>
     </div>

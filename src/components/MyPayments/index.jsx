@@ -29,7 +29,7 @@ const MyPayments = () => {
 
               <div className="elementos_pagados">
                 <h1 className="titulo_pagos_realizados">Pagos Realizados</h1>
-                <p>No tenes nada por aca</p>
+                <p className='aun_no_hay_pagos_hechos'>Aún no hay pagos realizados.</p>
               </div>
             </div>
           </div>

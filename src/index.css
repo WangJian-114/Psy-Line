@@ -19,7 +19,8 @@
 @import url('./components/DiaryEntry/styles/diaryentry.css');
 @import url('./components/MyPayments/styles/mypayments.css');
 @import url('./components/PayCard/styles/paycard.css');
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
 
 :root {
   --verde: #0ABBB9;

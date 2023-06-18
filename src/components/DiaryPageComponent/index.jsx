@@ -78,9 +78,9 @@ const CalendarComponent = () => {
   // el componente Calendario hace toda la magia
   return (
     <div className='seccion_pagina_1'>
-      <h2>Calendario</h2>
-      <h2>Seleccione el día para el cual quiere hacer la entrada al diario.</h2>
-      <div style={{ height: '600px', width: '800px' }}>
+      <h2 className='titulo_diary_calendar'>Diario</h2>
+      <h2 className='texto_elegi_dia_escribir'>Seleccione un día para realizar una entrada en el diario:</h2>
+      <div style={{ height: '600px', width: '1200px' }}>
         <Calendar
          localizer={localizer}
          events={events}

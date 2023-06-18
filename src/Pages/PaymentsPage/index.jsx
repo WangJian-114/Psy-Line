@@ -5,7 +5,7 @@ import MyPayments from "../../components/MyPayments"
 const Payments = () => {
     return (
       <>  
-        <NavigationBar />
+        <NavigationBar showButton='true'/>
         <Menu />
         <MyPayments />
       </>    

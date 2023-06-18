@@ -20,7 +20,7 @@
   width: 1054px;
   height: 918px;
   left: 48px;
-  top: 96px;
+  top: 105px;
 
 }
 
@@ -80,7 +80,7 @@
   width: 159px;
   height: 39px;
 
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
@@ -99,7 +99,7 @@
   width: 209px;
   height: 29px;
 
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -118,7 +118,7 @@
   width: 204px;
   height: 29px;
 
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -149,4 +149,9 @@
   padding: 0px;
   gap: 27px;
   
+}
+
+.aun_no_hay_pagos_hechos{
+  color: #1a4242;
+  font-size: 20px;
 }

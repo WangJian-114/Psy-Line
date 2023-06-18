@@ -4,11 +4,12 @@ import './styles/search.css';
 import data from './data.json';
 
 const BuscarPersonas = () => {
-  const [filtroPrecioMin, setFiltroPrecioMin] = useState('');
   const [filtroPrecioMax, setFiltroPrecioMax] = useState('');
   const [filtroConsulta, setFiltroConsulta] = useState('');
   const [filtroEspecialidad, setFiltroEspecialidad] = useState('');
   const [filtroUbicacion, setFiltroUbicacion] = useState('');
+  const [filtroNombre, setFiltroNombre] = useState('');
+
   const [resultados, setResultados] = useState(data);
 
   const handleFiltroConsultaChange = (event) => {
@@ -23,13 +24,18 @@ const BuscarPersonas = () => {
     setFiltroUbicacion(event.target.value);
   };
 
+  const handleFiltroNombreChange = (event) => {
+    setFiltroConsulta(event.target.value);
+  };
+
   function buscarPersonas() {
-    const resultadosFiltrados = data.filter(({ especialidad, consulta, ubicacion, precio }) => {
+    const resultadosFiltrados = data.filter(({ especialidad, consulta, ubicacion, precio, nombre, apellido }) => {
       const cumpleConsulta = (filtroConsulta === '') ? true : consulta === filtroConsulta;
       const cumpleEspecialidad = (filtroEspecialidad === '') ? true : especialidad === filtroEspecialidad;
       const cumpleUbicacion = (filtroUbicacion === '') ? true : ubicacion === filtroUbicacion;
-      const cumplePrecio =  ((filtroPrecioMax === '') ? true : precio <= filtroPrecioMax) && ((filtroPrecioMin === '') ? true : precio >= filtroPrecioMin);
-      return cumpleConsulta && cumpleEspecialidad && cumpleUbicacion && cumplePrecio;
+      const cumplePrecio =  ((filtroPrecioMax === '') ? true : precio <= filtroPrecioMax);
+      const cumpleNombre = ((filtroNombre === '') ? true : (nombre + ' ' + apellido).toLowerCase().includes(filtroNombre.toLowerCase()));
+      return cumpleConsulta && cumpleEspecialidad && cumpleUbicacion && cumplePrecio && cumpleNombre;
     });
     resultadosFiltrados.sort((a, b) => {
       if (a.sesiones_realizadas > b.sesiones_realizadas) {
@@ -47,6 +53,9 @@ const BuscarPersonas = () => {
     <div className='seccion-pagina'>
       <h1 className='titulo_buscar_psicologo'>Buscar Psicólogo</h1>
       <div className='filtro-container'>
+
+          
+
         <div className='filtro-item'>
           <select value={filtroConsulta} onChange={handleFiltroConsultaChange}>
             <option value="">Modalidad de Consulta</option>
@@ -94,26 +103,25 @@ const BuscarPersonas = () => {
             <option value="Zona Sur">Zona Sur</option>
           </select>
         </div>
-        <div className='filtro-etiqueta'> 
-          <label htmlFor="precioMin ">Valor Mínimo:</label>
-        </div> 
-        <input
-          className='filtro-input'
-          type="number"
-          id="precioMin"
-          value={filtroPrecioMin}
-          onChange={(e) => setFiltroPrecioMin(e.target.value)}
-        />
-        <div className='filtro-etiqueta'>
-          <label htmlFor="precioMax ">Valor Máximo:</label>
-        </div>
+
         <input
           className='filtro-input'
           type="number"
           id="precioMax"
+          placeholder="Valor Máximo"
           value={filtroPrecioMax}
           onChange={(e) => setFiltroPrecioMax(e.target.value)}
         />
+
+        <input
+          className='filtro-inputnombre'
+          type="text"
+          id="fnombre"
+          placeholder="Nombre y/o Apellido"
+          value={filtroNombre}
+          onChange={(e) => setFiltroNombre(e.target.value)}
+        />
+        
         <button className='buscar-button' onClick={buscarPersonas}>Buscar</button>
       </div>
 
@@ -125,10 +133,10 @@ const BuscarPersonas = () => {
               <div className='resultado-container-datos'>
                 <div className='resultado-datos'>
                   <h3>{persona.nombre} {persona.apellido}</h3>
-                  <p>Especialidad: {persona.especialidad}</p>
-                  <li>Precio: {persona.precio}</li>
-                  <li>Descripción: {persona.descripcion}</li>
-                  <li>Ubicacion: {persona.ubicacion}</li>
+                  <p>Modalidad: {persona.especialidad}</p> {/* aca yo pondria si la sesion es virtual y presencial o cual */}
+                  <li>Valor: {persona.precio}</li>
+                  <li>Cateogrias: {persona.descripcion}</li> {/* aca tiene que ir las especialidades puestas con una , en medio tipo Especialidad: Depresión, Ansiedad, etc. */}
+                  <li>Ubicacion: {persona.ubicacion}</li> 
                 </div>
                 <Link to={`/profile/${persona.id}`} className="perfil_button">Ver perfil</Link>
               </div>

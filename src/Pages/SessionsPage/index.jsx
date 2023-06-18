@@ -5,7 +5,7 @@ import CurrentSessions from "../../components/CurrentSessions";
 const Sessions = () => {
     return (
       <div>
-        <NavigationBar />
+        <NavigationBar showButton='true'/>
         <Menu />
         <CurrentSessions />        
       </div>

@@ -189,8 +189,8 @@ flex-grow: 0;
 .boton_carita_8.marcado
 {
   /* Agrega aquí los estilos para el botón marcado */
-  border: 2px solid blue;
-  background-color: lightblue;
+  border: 2px solid #cab55c ;
+  background-color: #cab55c ;
   /* Otros estilos... */
 }
 /* de aca para abajo estoy haciendo copy paste */

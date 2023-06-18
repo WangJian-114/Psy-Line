@@ -1,8 +1,11 @@
 .seccion_pagina_1{
-  padding: 90px 20px 0 20px;
-  margin-left: 400px;
-
+  padding: 105px 20px 0 20px;
+  margin-left: 320px;
+  display: flex;
+  flex-direction: column;
 }
+
+
 .seccion-pagina h2 {
   margin: 28px 0px 43px 0px;
   font-family: 600;
@@ -17,8 +20,56 @@
   padding: 10px;
   font-size: 12px;
 } 
+
+.rbc-toolbar{
+  justify-content: flex-start;
+}
+
+.rbc-toolbar .rbc-toolbar-label {
+  flex-grow: 0;
+  padding: 0px 0px 0px 350px;
+}
+
 .rbc-toolbar-label{
-  background: #2d7474;
-  color: white;
+  color: #0E2424;
+  font-size: 22px;
+  font-family: 'Manrope';
+  font-weight: bold;
   
+}
+
+.titulo_diary_calendar{
+
+    width: 60px;
+    height: 39px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    color: #0E2424;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.texto_elegi_dia_escribir{
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  position: relative;
+  text-align: left;
+  left: 360px;
+  color: #448c8c;
+}
+
+.rbc-event, .rbc-day-slot .rbc-background-event {
+  background-color: #d19160;
+}
+
+.rbc-event.rbc-selected, .rbc-day-slot .rbc-selected.rbc-background-event{
+  background-color: #c77434;
+
 }

@@ -6,12 +6,13 @@ import axios from 'axios';
 import ProfessionalContext from '../../context/professional/professionalContext';
 
 const BuscarPersonas = () => {
-  const [filtroPrecioMin, setFiltroPrecioMin] = useState('');
   const [filtroPrecioMax, setFiltroPrecioMax] = useState('');
   const [filtroConsulta, setFiltroConsulta] = useState('');
   const [filtroEspecialidad, setFiltroEspecialidad] = useState('');
   const [filtroUbicacion, setFiltroUbicacion] = useState('');
-  const [resultados, setResultados] = useState();
+  const [filtroNombre, setFiltroNombre] = useState('');
+
+  const [resultados, setResultados] = useState(data);
 
   const professionalContext =  useContext(ProfessionalContext);
   const { professionalList, professional, getProfessional, getAllProfessionals } = professionalContext;
@@ -27,13 +28,18 @@ const BuscarPersonas = () => {
     setFiltroUbicacion(event.target.value);
   };
 
+  const handleFiltroNombreChange = (event) => {
+    setFiltroConsulta(event.target.value);
+  };
+
   function buscarPersonas() {
-    const resultadosFiltrados = data.filter(({ especialidad, consulta, ubicacion, precio }) => {
+    const resultadosFiltrados = data.filter(({ especialidad, consulta, ubicacion, precio, nombre, apellido }) => {
       const cumpleConsulta = (filtroConsulta === '') ? true : consulta === filtroConsulta;
       const cumpleEspecialidad = (filtroEspecialidad === '') ? true : especialidad === filtroEspecialidad;
       const cumpleUbicacion = (filtroUbicacion === '') ? true : ubicacion === filtroUbicacion;
-      const cumplePrecio =  ((filtroPrecioMax === '') ? true : precio <= filtroPrecioMax) && ((filtroPrecioMin === '') ? true : precio >= filtroPrecioMin);
-      return cumpleConsulta && cumpleEspecialidad && cumpleUbicacion && cumplePrecio;
+      const cumplePrecio =  ((filtroPrecioMax === '') ? true : precio <= filtroPrecioMax);
+      const cumpleNombre = ((filtroNombre === '') ? true : (nombre + ' ' + apellido).toLowerCase().includes(filtroNombre.toLowerCase()));
+      return cumpleConsulta && cumpleEspecialidad && cumpleUbicacion && cumplePrecio && cumpleNombre;
     });
     resultadosFiltrados.sort((a, b) => {
       if (a.sesiones_realizadas > b.sesiones_realizadas) {
@@ -71,6 +77,9 @@ const BuscarPersonas = () => {
     <div className='seccion-pagina'>
       <h1 className='titulo_buscar_psicologo'>Buscar Psicólogo</h1>
       <div className='filtro-container'>
+
+          
+
         <div className='filtro-item'>
           <select value={filtroConsulta} onChange={handleFiltroConsultaChange}>
             <option value="">Modalidad de Consulta</option>
@@ -118,26 +127,25 @@ const BuscarPersonas = () => {
             <option value="Zona Sur">Zona Sur</option>
           </select>
         </div>
-        <div className='filtro-etiqueta'> 
-          <label htmlFor="precioMin ">Valor Mínimo:</label>
-        </div> 
-        <input
-          className='filtro-input'
-          type="number"
-          id="precioMin"
-          value={filtroPrecioMin}
-          onChange={(e) => setFiltroPrecioMin(e.target.value)}
-        />
-        <div className='filtro-etiqueta'>
-          <label htmlFor="precioMax ">Valor Máximo:</label>
-        </div>
+
         <input
           className='filtro-input'
           type="number"
           id="precioMax"
+          placeholder="Valor Máximo"
           value={filtroPrecioMax}
           onChange={(e) => setFiltroPrecioMax(e.target.value)}
         />
+
+        <input
+          className='filtro-inputnombre'
+          type="text"
+          id="fnombre"
+          placeholder="Nombre y/o Apellido"
+          value={filtroNombre}
+          onChange={(e) => setFiltroNombre(e.target.value)}
+        />
+        
         <button className='buscar-button' onClick={buscarPersonas}>Buscar</button>
       </div>
 
@@ -149,10 +157,10 @@ const BuscarPersonas = () => {
               <div className='resultado-container-datos'>
                 <div className='resultado-datos'>
                   <h3>{persona.name} {persona.last_name}</h3>
-                  <p>Especialidad: {persona.specialty}</p>
-                  <li>Precio: {persona.appointment_price}</li>
-                  <li>Descripción: {persona.bio}</li>
-                  <li>Ubicacion: {persona.practice_area}</li>
+                  <p>Modalidad: {persona.appointment_modality}</p> {/* aca yo pondria si la sesion es virtual y presencial o cual */}
+                  <li>Valor: {persona.appointment_price}</li>
+                  <li>Cateogrias: {persona.specialty}</li> {/* aca tiene que ir las especialidades puestas con una , en medio tipo Especialidad: Depresión, Ansiedad, etc. */}
+                  <li>Ubicacion: {persona.practice_area}</li> 
                 </div>
                 <Link to={`/profile/${persona.user_name}`} className="perfil_button">Ver perfil</Link>
               </div>

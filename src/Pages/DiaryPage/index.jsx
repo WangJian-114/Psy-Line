@@ -7,7 +7,7 @@ import CalendarComponent from "../../components/DiaryPageComponent";
 const DiaryP = () => {
     return (
       <div>
-        <NavigationBar />
+        <NavigationBar showButton='true'/>
         <Menu />
         <CalendarComponent />
       </div>

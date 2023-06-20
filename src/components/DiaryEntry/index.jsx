@@ -1,3 +1,5 @@
+
+import React, {useState} from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 
@@ -9,12 +11,16 @@ const DiaryEntry = () => {
   const miDate = searchParams.get('date');
   // Construir la URL con el valor como parámetro
   const navigate = useNavigate();
-  let value = "smile";
+
  
+  // marcar carita presionada
+  const [estadoSeleccionado, setEstadoSeleccionado] = useState(null);
+
+
   // esto es para manejar el evento del click en la carita
   // guarda en la variable value para que luego sea pasada como parametro a la pagina del calendario
   const handleClick = (miAnimo) => {
-    value = miAnimo; // Valor que deseas pasar
+    setEstadoSeleccionado(miAnimo); // estado de la carita si esta marcada o no
   };
 
   // esto es para manejar el evento del click en el boton guardar
@@ -23,6 +29,8 @@ const DiaryEntry = () => {
     navigate(`/diarypage?miAnimo=${encodeURIComponent(value)}`);
   };
   
+ 
+
 
   return (
     <>
@@ -48,41 +56,41 @@ const DiaryEntry = () => {
               <div className="box_selecciona_estado_animo">
                 <div className="div_background_estados">
 
-                  <button className="boton_carita_1" onClick={() => handleClick("lol")}>
+                  <button className={`boton_carita_1 ${estadoSeleccionado === "lol" ? 'marcado' : '' } ` } onClick={() => handleClick("lol")}>
                     <img src="img\lol.png" className="carita_1" alt="carita_1"/>
                     
                   </button>
-                  <button className="boton_carita_2" onClick={() => handleClick("smile")}>
+                  <button className={`boton_carita_2 ${estadoSeleccionado === "smile" ? 'marcado' : '' } `} onClick={() => handleClick("smile")}>
                     <img src="img\smile.png" className="carita_2" alt="carita_2"/>
 
                   </button>
 
-                  <button className="boton_carita_3" onClick={() => handleClick("shy")}>
+                  <button className={`boton_carita_3 ${estadoSeleccionado === "shy" ? 'marcado' : ''} `} onClick={() => handleClick("shy")}>
                     <img src="img\shy.png" className="carita_3" alt="carita_3"/>
                     
                   </button>
 
-                  <button className="boton_carita_4" onClick={() => handleClick("neutral")}>
+                  <button className={`boton_carita_4 ${estadoSeleccionado === "neutral" ? 'marcado' : ''} `} onClick={() => handleClick("neutral")}>
                     <img src="img\neutral.png" className="carita_4" alt="carita_4"/>
 
                   </button>
 
-                  <button className="boton_carita_5" onClick={() => handleClick("sarcastic")}>
+                  <button className={`boton_carita_5 ${estadoSeleccionado === "sarcastic" ? 'marcado' : ''} `} onClick={() => handleClick("sarcastic")}>
                     <img src="img\sarcastic.png" className="carita_5" alt="carita_5"/>
 
                   </button>
 
-                  <button className="boton_carita_6" onClick={() => handleClick("angry")}>
+                  <button className={`boton_carita_6 ${estadoSeleccionado === "angry" ? 'marcado' : ''} `} onClick={() => handleClick("angry")}>
                     <img src="img\angry.png" className="carita_6" alt="carita_6"/>
 
                   </button>
 
-                  <button className="boton_carita_7" onClick={() => handleClick("thinking")}>
+                  <button className={`boton_carita_7 ${estadoSeleccionado === "thinking" ? 'marcado' : '' } `} onClick={() => handleClick("thinking")}>
                     <img src="img\thinking.png" className="carita_7" alt="carita_7"/>
 
                   </button>
 
-                  <button className="boton_carita_8" onClick={() => handleClick("sad")}>
+                  <button className={`boton_carita_8 ${estadoSeleccionado === "sad" ? 'marcado' : '' } `} onClick={() => handleClick("sad")}>
                     <img src="img\sad.png" className="carita_8" alt="carita_8"/>
 
                   </button>
@@ -105,7 +113,7 @@ const DiaryEntry = () => {
 
             </div>
             
-            <button className="boton_guardar_entrada_diario" onClick={() => handleClickGuardar(value)}>
+            <button className="boton_guardar_entrada_diario" onClick={() => handleClickGuardar(estadoSeleccionado)}>
               <h1 className="texto_guardar_entrada">Guardar</h1>
             </button>
 

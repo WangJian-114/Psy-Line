@@ -179,6 +179,20 @@ flex-grow: 0;
   border-radius: 30px;
 }
 
+.boton_carita_1.marcado,
+.boton_carita_2.marcado,
+.boton_carita_3.marcado,
+.boton_carita_4.marcado,
+.boton_carita_5.marcado,
+.boton_carita_6.marcado,
+.boton_carita_7.marcado,
+.boton_carita_8.marcado
+{
+  /* Agrega aquí los estilos para el botón marcado */
+  border: 2px solid #cab55c ;
+  background-color: #cab55c ;
+  /* Otros estilos... */
+}
 /* de aca para abajo estoy haciendo copy paste */
 
 .carita_1{
@@ -456,3 +470,5 @@ flex-grow: 0;
   flex-grow: 0;
 
 }
+
+

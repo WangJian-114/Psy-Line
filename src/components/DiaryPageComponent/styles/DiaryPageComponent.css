@@ -66,10 +66,10 @@
 }
 
 .rbc-event, .rbc-day-slot .rbc-background-event {
-  background-color: #d19160;
+  background-color: #70acac;
 }
 
 .rbc-event.rbc-selected, .rbc-day-slot .rbc-selected.rbc-background-event{
-  background-color: #c77434;
+  background-color: #448383;
 
 }

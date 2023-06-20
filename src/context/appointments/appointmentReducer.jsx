@@ -15,9 +15,10 @@ export default (state, action) => {
             }
         
         case PROFESSIONAL_APPOINTMENT:
+            console.log('Accion professional_appointment: ', action.payload);
             return {
                 ...state,
-                professionalAppointments:state.appointments.filter(appointment => appointment.id_professional == action.payload),
+                professionalAppointments:state.appointments.filter(appointment => appointment.therapist_user_name == action.payload),
             }
 
         default:

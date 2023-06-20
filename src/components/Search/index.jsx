@@ -1,7 +1,9 @@
-import React, { useState } from 'react'; 
+import React, { useState, useContext, useEffect } from 'react'; 
 import { Link } from 'react-router-dom';
 import './styles/search.css';
 import data from './data.json';
+import axios from 'axios';
+import ProfessionalContext from '../../context/professional/professionalContext';
 
 const BuscarPersonas = () => {
   const [filtroPrecioMin, setFiltroPrecioMin] = useState('');
@@ -9,8 +11,10 @@ const BuscarPersonas = () => {
   const [filtroConsulta, setFiltroConsulta] = useState('');
   const [filtroEspecialidad, setFiltroEspecialidad] = useState('');
   const [filtroUbicacion, setFiltroUbicacion] = useState('');
-  const [resultados, setResultados] = useState(data);
+  const [resultados, setResultados] = useState();
 
+  const professionalContext =  useContext(ProfessionalContext);
+  const { professionalList, professional, getProfessional, getAllProfessionals } = professionalContext;
   const handleFiltroConsultaChange = (event) => {
     setFiltroConsulta(event.target.value);
   };
@@ -41,6 +45,26 @@ const BuscarPersonas = () => {
       }
     });
     setResultados(resultadosFiltrados);
+  }
+
+  const getProfessionals = async () => {
+    try {
+      const response = await axios.get('http://localhost:8081/api/v1/therapists');
+      setResultados(response.data);
+      console.log("Lista de profesionales: ", response.data);
+      getAllProfessionals();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getProfessionals();
+    // eslint-disable-next-line
+  }, [])
+
+  if (resultados === undefined) {
+    return (<p>Cargando...</p>)
   }
 
   return (
@@ -118,19 +142,19 @@ const BuscarPersonas = () => {
       </div>
 
       <div>
-        {(resultados.length!== 0) ? resultados.map((persona, index) => (
+        {(resultados?.length!== 0) ? resultados.map((persona, index) => (
           <div key={index} className='resultado-container-rectangulo'>
             <div className='resultado-container' key={index}>
               <img src={persona.foto} alt={persona.nombre} className='resultado-img' />
               <div className='resultado-container-datos'>
                 <div className='resultado-datos'>
-                  <h3>{persona.nombre} {persona.apellido}</h3>
-                  <p>Especialidad: {persona.especialidad}</p>
-                  <li>Precio: {persona.precio}</li>
-                  <li>Descripción: {persona.descripcion}</li>
-                  <li>Ubicacion: {persona.ubicacion}</li>
+                  <h3>{persona.name} {persona.last_name}</h3>
+                  <p>Especialidad: {persona.specialty}</p>
+                  <li>Precio: {persona.appointment_price}</li>
+                  <li>Descripción: {persona.bio}</li>
+                  <li>Ubicacion: {persona.practice_area}</li>
                 </div>
-                <Link to={`/profile/${persona.id}`} className="perfil_button">Ver perfil</Link>
+                <Link to={`/profile/${persona.user_name}`} className="perfil_button">Ver perfil</Link>
               </div>
             </div>
           </div>

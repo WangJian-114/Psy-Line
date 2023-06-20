@@ -1,17 +1,26 @@
 import React, { useReducer } from 'react';
-import professionalData from '../../components/Search/data.json';
 import professionalContext from './professionalContext';
 import professionalReducer from './professionalReducer';
-import { GET_PROFESSIONAL } from '../types';
-
-// import clienteAxios from '../../config/axio';
-
+import { GET_PROFESSIONAL, GET_ALL_PROFESSIONAL } from '../types';
+import axios from 'axios';
 
 const ProfessionalState = props => {
 
     const initialState = {
-        professionalList: professionalData,
+        professionalList: [],
         professional: null
+    }
+
+    const getAllProfessionals = async () => {
+        try {
+            const response = await axios.get('http://localhost:8081/api/v1/therapists');
+            dispatch({
+                type: GET_ALL_PROFESSIONAL,
+                payload: response.data,
+            })  
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     const [state, dispatch] = useReducer(professionalReducer, initialState);
@@ -29,6 +38,7 @@ const ProfessionalState = props => {
                 professionalList:state.professionalList,
                 professional:state.professional,
                 getProfessional,
+                getAllProfessionals,
             }}
         >
             {props.children}

@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-
+import axios from 'axios';
 import appointmentContext from './appointmentContext';
 import appointmentReducer from './appointmentReducer';
 import { GET_APPOINTMENT,
@@ -34,11 +34,17 @@ const AppointmentState = props => {
         })
     }
 
-    const addAppointment = (appointment) => {
-        dispatch({
-            type: ADD_APPOINTMENT,
-            payload: appointment
-        })
+    const addAppointment = async (appointment) => {
+        try {
+            const response = await axios.post('http://localhost:8081/api/v1/appointments', appointment);
+            console.log('ADD APPOINTMENT: ', response);
+            dispatch({
+                type: ADD_APPOINTMENT,
+                payload: response.data
+            }) 
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return(

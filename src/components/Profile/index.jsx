@@ -81,7 +81,7 @@ const Profile = () => {
                             </div>
                             <div className="div_cita_y_contactar">
                                 {professionalAppointments.length !== 0 ?
-                                    professionalAppointments.slice(0,3).map(appointment => (
+                                    professionalAppointments.map(appointment => (
                                         <div className="div_cita">
                                             <div className="encuadre_cita">
                                                 <h1 className="texto_cita_programada_para">Cita programada para</h1>
@@ -96,10 +96,10 @@ const Profile = () => {
                            
                                 <div className="div_botones">
                                     <Button className="boton_contratar_profesional">
-                                        <h1 className="texto_boton_contratar_profesional">Contactar profesional</h1>
+                                        Contactar profesional
                                     </Button>
-                                    <Button className="boton_pedir_cita" onClick={addNewAppointment}>
-                                        <h1 className="texto_boton_pedir_cita">Pedir cita</h1>
+                                    <Button disabled={professionalAppointments.length !== 0}          className="boton_pedir_cita" onClick={addNewAppointment}>
+                                        Pedir cita
                                     </Button>
                                 </div>
                             </div>

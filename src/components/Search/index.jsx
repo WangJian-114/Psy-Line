@@ -1,8 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react'; 
 import { Link } from 'react-router-dom';
 import './styles/search.css';
-import data from './data.json';
-import axios from 'axios';
 import ProfessionalContext from '../../context/professional/professionalContext';
 
 const BuscarPersonas = () => {
@@ -12,10 +10,8 @@ const BuscarPersonas = () => {
   const [filtroUbicacion, setFiltroUbicacion] = useState('');
   const [filtroNombre, setFiltroNombre] = useState('');
 
-  const [resultados, setResultados] = useState(data);
-
   const professionalContext =  useContext(ProfessionalContext);
-  const { professionalList, professional, getProfessional, getAllProfessionals } = professionalContext;
+  const { professionalList, getFilterResults, getAllProfessionals } = professionalContext;
   const handleFiltroConsultaChange = (event) => {
     setFiltroConsulta(event.target.value);
   };
@@ -32,44 +28,17 @@ const BuscarPersonas = () => {
     setFiltroConsulta(event.target.value);
   };
 
-  function buscarPersonas() {
-    const resultadosFiltrados = data.filter(({ especialidad, consulta, ubicacion, precio, nombre, apellido }) => {
-      const cumpleConsulta = (filtroConsulta === '') ? true : consulta === filtroConsulta;
-      const cumpleEspecialidad = (filtroEspecialidad === '') ? true : especialidad === filtroEspecialidad;
-      const cumpleUbicacion = (filtroUbicacion === '') ? true : ubicacion === filtroUbicacion;
-      const cumplePrecio =  ((filtroPrecioMax === '') ? true : precio <= filtroPrecioMax);
-      const cumpleNombre = ((filtroNombre === '') ? true : (nombre + ' ' + apellido).toLowerCase().includes(filtroNombre.toLowerCase()));
-      return cumpleConsulta && cumpleEspecialidad && cumpleUbicacion && cumplePrecio && cumpleNombre;
-    });
-    resultadosFiltrados.sort((a, b) => {
-      if (a.sesiones_realizadas > b.sesiones_realizadas) {
-        return -1;
-      } else if (a.sesiones_realizadas < b.sesiones_realizadas) {
-        return 1;
-      } else {
-        return 0;
-      }
-    });
-    setResultados(resultadosFiltrados);
+  const buscarPersonas = () => {
+    getFilterResults(filtroPrecioMax, filtroConsulta, filtroEspecialidad, filtroUbicacion, filtroNombre);
+    setResultados(professionalList);
   }
 
-  const getProfessionals = async () => {
-    try {
-      const response = await axios.get('http://localhost:8081/api/v1/therapists');
-      setResultados(response.data);
-      console.log("Lista de profesionales: ", response.data);
-      getAllProfessionals();
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
-    getProfessionals();
+    getAllProfessionals();
     // eslint-disable-next-line
   }, [])
 
-  if (resultados === undefined) {
+  if (professionalList.length === 0) {
     return (<p>Cargando...</p>)
   }
 
@@ -83,9 +52,9 @@ const BuscarPersonas = () => {
         <div className='filtro-item'>
           <select value={filtroConsulta} onChange={handleFiltroConsultaChange}>
             <option value="">Modalidad de Consulta</option>
-            <option value="consultaVirtual">Consulta Virtual</option>
-            <option value="consultaPresencial">Consulta Presencial</option>
-            <option value="ambas">Ambas</option>
+            <option value="VIRTUAL">Consulta Virtual</option>
+            <option value="IN_PERSON">Consulta Presencial</option>
+            <option value="HYBRID">Ambas</option>
           </select>
         </div>
 
@@ -105,26 +74,26 @@ const BuscarPersonas = () => {
             <option value="estres postraumatico">Estrés Postraumático</option>
             <option value="insomnio">Insomnio</option>
             <option value="ludopatia">Ludopatía</option>
-            <option value="psicoanalisis">Psicoanálisis</option>
+            <option value="PSYCHOANALYSIS">Psicoanálisis</option>
             <option value="sexologia">Sexología</option>
             <option value="suicidio">Suicidio</option>
             <option value="tdah">Tdah</option>
-            <option value="terapia Cognitiva Conductual">Terapia Cognitiva-Conductual</option>
-            <option value="terapia Familiar">Terapia Familiar</option>
-            <option value="terapia Grupal">Terapia Grupal</option>
+            <option value="COGNITIVE_BEHAVIORAL_THERAPY">Terapia Cognitiva-Conductual</option>
+            <option value="FAMILY_THERAPY">Terapia Familiar</option>
+            <option value="GROUP_THERAPY">Terapia Grupal</option>
           </select>
         </div>
 
         <div className='filtro-item'>
           <select className='location_select' value={filtroUbicacion} onChange={handleFiltroUbicacionChange}>
             <option value="">Localidad</option>
-            <option value="Palermo">Palermo</option>
-            <option value="Recoleta">Recoleta</option>
-            <option value="Caballito">Caballito</option>
-            <option value="Zona Norte">Zona Norte</option>
-            <option value="Zona Oeste">Zona Oeste</option>
-            <option value="Zona Este">Zona Este</option>
-            <option value="Zona Sur">Zona Sur</option>
+            <option value="PALERMO">Palermo</option>
+            <option value="RECOLETA">Recoleta</option>
+            <option value="CABALLITO">Caballito</option>
+            <option value="BELGRANO">Belgrano</option>
+            <option value="ALMAGRO">Almagro</option>
+            <option value="AGRONOMIA">Agronomia</option>
+            <option value="PARQUE_AVELLANEDA">Parque avellaneda</option>
           </select>
         </div>
 
@@ -150,7 +119,7 @@ const BuscarPersonas = () => {
       </div>
 
       <div>
-        {(resultados?.length!== 0) ? resultados.map((persona, index) => (
+        {(professionalList?.length!== 0) ? professionalList.map((persona, index) => (
           <div key={index} className='resultado-container-rectangulo'>
             <div className='resultado-container' key={index}>
               <img src={persona.foto} alt={persona.nombre} className='resultado-img' />

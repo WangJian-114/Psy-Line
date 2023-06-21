@@ -1,4 +1,4 @@
-import { GET_PROFESSIONAL, GET_ALL_PROFESSIONAL } from '../types';
+import { GET_PROFESSIONAL, GET_ALL_PROFESSIONAL, GET_FILTER_PROFESSIONAL } from '../types';
 
 export default (state, action) => {
     switch(action.type) {
@@ -11,6 +11,12 @@ export default (state, action) => {
             }
         
         case GET_ALL_PROFESSIONAL:
+            return {
+                ...state,
+                professionalList: action.payload
+            }
+
+        case GET_FILTER_PROFESSIONAL: 
             return {
                 ...state,
                 professionalList: action.payload

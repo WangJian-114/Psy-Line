@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import professionalContext from './professionalContext';
 import professionalReducer from './professionalReducer';
-import { GET_PROFESSIONAL, GET_ALL_PROFESSIONAL } from '../types';
+import { GET_PROFESSIONAL, GET_ALL_PROFESSIONAL, GET_FILTER_PROFESSIONAL } from '../types';
 import axios from 'axios';
 
 const ProfessionalState = props => {
@@ -32,6 +32,21 @@ const ProfessionalState = props => {
         })
     }
 
+    const getFilterResults = async (max_price, modality, specialty, practice_area, name) => {
+        try {
+            console.log('url: ',`http://localhost:8081/api/v1/therapists?practice_area=${practice_area}&max_price=${max_price}&modality=${modality}&specialty=${specialty}`)
+            const response = await axios.get(`http://localhost:8081/api/v1/therapists?practice_area=${practice_area}&max_price=${max_price}&modality=${modality}&specialty=${specialty}`);
+
+            console.log('response: ', response);
+            dispatch({
+                type: GET_FILTER_PROFESSIONAL,
+                payload: response.data,
+            })  
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     return(
         <professionalContext.Provider
             value={{
@@ -39,6 +54,7 @@ const ProfessionalState = props => {
                 professional:state.professional,
                 getProfessional,
                 getAllProfessionals,
+                getFilterResults,
             }}
         >
             {props.children}

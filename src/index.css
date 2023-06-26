@@ -21,6 +21,10 @@
 @import url('./components/PayCard/styles/paycard.css');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+@import url('./components/GardenDesign/styles/gardenDesign.css');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('./components/ActivityForGarden/styles/activityForGarden.css');
+
 
 :root {
   --verde: #0ABBB9;

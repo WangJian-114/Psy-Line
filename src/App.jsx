@@ -11,6 +11,7 @@ import DiaryEntryPage from './Pages/DiaryEntryPage'
 import SessionsPage from './Pages/SessionsPage'
 import PaymentsPage from './Pages/PaymentsPage'
 import DiaryPage from './Pages/DiaryPage'
+import GardenPage from './Pages/GardenPage'
 
 // Context
 import AppointmentState from './context/appointments/appointmentState';
@@ -36,6 +37,8 @@ function App() {
             <Route path="sessions" element={<SessionsPage />} />
             <Route path="payments" element={<PaymentsPage />} />
             <Route path="diarypage" element={<DiaryPage />} />
+            <Route path="gardenpage" element={<GardenPage />} />
+
           </Routes>
         </BrowserRouter>
       </AppointmentState>

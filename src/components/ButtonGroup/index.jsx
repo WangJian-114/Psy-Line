@@ -70,7 +70,7 @@ const ButtonGroup = () => {
           className={`menu_button ${activeButton === 5 ? 'active' : ''}`}
           onClick={() => handleClick(5)}
         >
-          Arbol
+          Jardín
         </button>
 
         <button

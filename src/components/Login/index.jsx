@@ -50,7 +50,7 @@ const Login = () => {
               />
             </div>
           </div>
-          <p>Hola!<br/> Por favor completa tus datos para empezar</p>
+          <p className='mensaje_login'>Hola!<br/> Por favor completa tus datos para empezar</p>
         </div>
         </div> 
         

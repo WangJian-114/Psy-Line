@@ -13,7 +13,6 @@ const Home = () => {
       <Carousel />
       <MentalHealthArticles />
       <Services />
-      <AboutUs />
       <Footer />
     </>
   )

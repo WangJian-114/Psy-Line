@@ -3,10 +3,14 @@ import ActivityForGarden from '../ActivityForGarden';
 
 const GardenDesign = ({ ...props }) => {
 
-    const [isSelected, setIsSelected] = useState(false);
+    //const [isSelected, setIsSelected] = useState(false);
+    const [completedTasks, setCompletedTasks] = useState(0);
+  
+    const handleTaskCompletion = () => {
+        setCompletedTasks(completedTasks + 1);
 
-    const toggleButtonGarden = () => {
-    setIsSelected(!isSelected);
+    // const toggleButtonGarden = () => {
+    // setIsSelected(!isSelected);
   };
 
 
@@ -19,7 +23,7 @@ const GardenDesign = ({ ...props }) => {
   
             </div>
 
-            <img className="frame-29-1-1" src="img\foto_jardin_1.png" />
+            <img className="frame-29-1-1" src={`img/${completedTasks}_jardin.png`} />
         </div>
 
         <div className="frame-1377">
@@ -34,22 +38,27 @@ const GardenDesign = ({ ...props }) => {
 
             <div className="frame-1378">
             
-            <ActivityForGarden /> {/* tarea 1 */}
-
-            <ActivityForGarden /> {/* tarea 2 */}
-            <ActivityForGarden /> {/* tarea 3 */}
-            <ActivityForGarden /> {/* tarea 3 */}
-            <ActivityForGarden /> {/* tarea 3 */}
-            <ActivityForGarden /> {/* tarea 3 */}
-            <ActivityForGarden /> {/* tarea 3 */}
-
+            <ActivityForGarden onTaskCompletion={handleTaskCompletion} /> {/* tarea 1 */}
+            <ActivityForGarden onTaskCompletion={handleTaskCompletion} /> {/* tarea 2 */}
+            <ActivityForGarden onTaskCompletion={handleTaskCompletion} /> {/* tarea 3 */}
+            <ActivityForGarden onTaskCompletion={handleTaskCompletion} /> {/* tarea 4 */}
+            <ActivityForGarden onTaskCompletion={handleTaskCompletion} /> {/* tarea 5 */}
+            <ActivityForGarden onTaskCompletion={handleTaskCompletion} /> {/* tarea 6 */}
+            <ActivityForGarden onTaskCompletion={handleTaskCompletion} /> {/* tarea 7 */}
+            <ActivityForGarden onTaskCompletion={handleTaskCompletion} /> {/* tarea 8 */}
+            <ActivityForGarden onTaskCompletion={handleTaskCompletion} /> {/* tarea 9 */}
+            <ActivityForGarden onTaskCompletion={handleTaskCompletion} /> {/* tarea 10 */}
+            <ActivityForGarden onTaskCompletion={handleTaskCompletion} /> {/* tarea 11 */}
+            <ActivityForGarden onTaskCompletion={handleTaskCompletion} /> {/* tarea 12 */}
+            <ActivityForGarden onTaskCompletion={handleTaskCompletion} /> {/* tarea 13 */}
+            <ActivityForGarden onTaskCompletion={handleTaskCompletion} /> {/* tarea 14 */}
 
             </div>
         </div>
         </div>
-        <button className="boton_guardar_actividades">
+{/*         <button className="boton_guardar_actividades">
             <div className="guardar_actividades">Guardar</div>
-        </button>
+        </button> */}
     </div>
   );
 

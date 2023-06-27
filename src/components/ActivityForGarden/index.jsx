@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 
 
-const activityForGarden = () => {
+const activityForGarden = ({ onTaskCompletion }) => {
 
     const [isSelected, setIsSelected] = useState(false);
 
     const toggleButtonGarden = () => {
     setIsSelected(!isSelected);
+    if (!isSelected) {
+        onTaskCompletion(); // Llamada a la función para aumentar el contador de tareas completadas
+      }
+    
   };
 
 
     return (
         <div>
        <div className="frame-13782">
-                <div className="nombre-de-tarea-3">Nombre de tarea 3</div>
+                <div className="nombre-de-tarea-3">Nombre de tarea</div>
 
                 <button 
                     className={`frame-1379 ${isSelected ? 'selected' : ''}`}

@@ -46,13 +46,13 @@ const DiaryEntry = () => {
 
   // esto es para manejar el evento del click en el boton guardar
   // envia como parametro a la pagina del calendario la carita que hice click
-  const handleClickGuardar = () => {
+  const handleClickGuardar = async () => {
     const journal = {
       date: moment(miDate, 'DD/MM/YYYY').format('YYYY-MM-DD'),
       emotion: estadoSeleccionado.toUpperCase(),
       description: description,
     };
-    addDiary(journal)
+    await addDiary(journal);
     navigate('/diarypage');
   };
   

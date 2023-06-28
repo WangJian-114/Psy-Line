@@ -15,7 +15,7 @@ const Profile = () => {
     const professionalContext =  useContext(ProfessionalContext);
 
     const { appointments, professionalAppointments, addAppointment,getProfessionalAppointments } = appointmentContext;
-    const { professionalList, professional, getProfessional } = professionalContext;
+    const { professionalList, professional, getProfessional, getAllProfessionals } = professionalContext;
     const [date, setDate] = useState(dayjs('2022-04-17'));
     const [time, setTime] = useState();
 
@@ -37,6 +37,7 @@ const Profile = () => {
     console.log('professionalList: ', professionalList.length === 0, professionalList);
 
     useEffect(() => {
+        getAllProfessionals();
         getProfessional(id);
         getProfessionalAppointments(id);
     // eslint-disable-next-line
@@ -44,6 +45,9 @@ const Profile = () => {
 
 
 
+    if (professionalList.length === 0) {
+        return (<p>Cargando...</p>)
+    }
     if(!professional) return <p>Cargando...</p>;
 
     return (

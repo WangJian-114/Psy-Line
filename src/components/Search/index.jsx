@@ -2,8 +2,12 @@ import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './styles/search.css';
 import ProfessionalContext from '../../context/professional/professionalContext';
+import { useTranslation } from 'react-i18next';
+import '../../i18n/config';
+
 
 const BuscarPersonas = () => {
+  const { t } = useTranslation();
   const [filtroPrecioMax, setFiltroPrecioMax] = useState('');
   const [filtroConsulta, setFiltroConsulta] = useState('');
   const [filtroEspecialidad, setFiltroEspecialidad] = useState('');
@@ -12,6 +16,7 @@ const BuscarPersonas = () => {
 
   const professionalContext =  useContext(ProfessionalContext);
   const { professionalList, getFilterResults, getAllProfessionals } = professionalContext;
+
   const handleFiltroConsultaChange = (event) => {
     setFiltroConsulta(event.target.value);
   };
@@ -35,6 +40,7 @@ const BuscarPersonas = () => {
 
   useEffect(() => {
     getAllProfessionals();
+    // getPatientData();
     // eslint-disable-next-line
   }, [])
 

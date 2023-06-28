@@ -6,7 +6,7 @@ const NavigationBar = ({ showButton }) => {
       <div className="nav_container">
         <nav className="nav">
           <div className="nav_logoytexto">
-            <img src="img\psyline-removebg-preview 15 (1).png" className="logo-navcontainer" alt="logo"/>
+            <img src="../img\psyline-removebg-preview 15 (1).png" className="logo-navcontainer" alt="logo"/>
             <h1 className="nombre_psyline">PsyLine</h1>
           </div>
           {showButton && <button className="boton_opciones">

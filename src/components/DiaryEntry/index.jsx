@@ -1,21 +1,42 @@
 
-import React, {useState} from "react";
+import React, {useState, useContext, useEffect} from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import PatientContext from '../../context/patient/patientContext';
+import DiaryContext from '../../context/diary/diaryContext';
+import moment from 'moment';
+import 'moment/locale/es';
 
 
 const DiaryEntry = () => {
+
+  const [state, setState] = useState(null);
 
   // traigo los datos del parametro
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const miDate = searchParams.get('date');
+  console.log('midare: ' + miDate);
   // Construir la URL con el valor como parámetro
   const navigate = useNavigate();
 
+  const patientContext =  useContext(PatientContext);
+  const { journalNormal } = patientContext;
+  const diaryContext =  useContext(DiaryContext);
+  const { journal, addDiary } = diaryContext;
+ 
  
   // marcar carita presionada
   const [estadoSeleccionado, setEstadoSeleccionado] = useState(null);
+  const [description, setDescription] = useState(null);
 
+  const handleDescriptionChange = (event) => {
+    setDescription(event.target.value);
+  };
+
+  const buscarEstado = () => {
+    const objetoEncontrado = journalNormal.find((obj) => moment(obj.date).format('DD/MM/YYYY') === miDate);
+    setState(objetoEncontrado);
+  }
 
   // esto es para manejar el evento del click en la carita
   // guarda en la variable value para que luego sea pasada como parametro a la pagina del calendario
@@ -25,12 +46,22 @@ const DiaryEntry = () => {
 
   // esto es para manejar el evento del click en el boton guardar
   // envia como parametro a la pagina del calendario la carita que hice click
-  const handleClickGuardar = (value) => {
-    navigate(`/diarypage?miAnimo=${encodeURIComponent(value)}`);
+  const handleClickGuardar = () => {
+    const journal = {
+      date: moment(miDate, 'DD/MM/YYYY').format('YYYY-MM-DD'),
+      emotion: estadoSeleccionado.toUpperCase(),
+      description: description,
+    };
+    addDiary(journal)
+    navigate('/diarypage');
   };
   
- 
+  useEffect(() => {
+    buscarEstado();
+    // eslint-disable-next-line
+  }, [])
 
+  if(miDate!=='' && state === null) return <p>cargando...</p> 
 
   return (
     <>
@@ -41,7 +72,7 @@ const DiaryEntry = () => {
             <div className="texto_e_icono_diary">
               
               <div className="div_texto_diary">
-                <h1 className="texto_titulo_diary">Diario dia {+ miDate}</h1>
+                <h1 className="texto_titulo_diary">Diario dia { miDate.split('/')[0]}</h1>
               </div>
               <div className="div_icono_diary">
 
@@ -107,13 +138,20 @@ const DiaryEntry = () => {
 
               <div className="div_input_diary">
 
-                <textarea className="input_diary" type="text" rows="12"  placeholder="Escribe aquí..." />
+                <textarea 
+                  className="input_diary" 
+                  type="text" 
+                  rows="12"  
+                  placeholder="Escribe aquí..."
+                  value={description}
+                  onChange={handleDescriptionChange}
+                />
                 
               </div>
 
             </div>
             
-            <button className="boton_guardar_entrada_diario" onClick={() => handleClickGuardar(estadoSeleccionado)}>
+            <button className="boton_guardar_entrada_diario" onClick={() => handleClickGuardar()}>
               <h1 className="texto_guardar_entrada">Guardar</h1>
             </button>
 

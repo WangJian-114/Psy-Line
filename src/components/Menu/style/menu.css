@@ -25,29 +25,19 @@
 
 
 .fondo_foto{
-
   width: 128px;
   height: 128px;
-
   background: #B3DBDB;
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
   border-radius: 50%;
+}
 
+.fondo_foto img {
+  border-radius: 50%;
 }
 
 .div_nombre{
-
   width: 294px;
   height: 24px;
-
-  align-items: center;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-
 }
 
 .div_texto{

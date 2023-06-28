@@ -15,31 +15,37 @@ import DiaryPage from './Pages/DiaryPage'
 // Context
 import AppointmentState from './context/appointments/appointmentState';
 import ProfessionalState from './context/professional/professionalState';
+import PatientState from './context/patient/patientState';
+import DiaryState from './context/diary/diaryState';
 
 
 function App() {
 
   return (
-    <ProfessionalState>
-      <AppointmentState>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/login" element={<AuthLayout />}>
-              <Route index element={<LoginPage />} />
-              <Route path="register" element={<Register />} />
-            </Route>
-            <Route path="search" element={<SearchPage />}/>
-            <Route path="home" element={<HomePage />} />
-            <Route path="main" element={<MainHomePage />} />
-            <Route path="profile/:id" element={<ProfessionalProfilePage />} />
-            <Route path="diaryentry" element={<DiaryEntryPage />} />
-            <Route path="sessions" element={<SessionsPage />} />
-            <Route path="payments" element={<PaymentsPage />} />
-            <Route path="diarypage" element={<DiaryPage />} />
-          </Routes>
-        </BrowserRouter>
-      </AppointmentState>
-    </ProfessionalState>
+    <DiaryState>
+      <PatientState>
+        <ProfessionalState>
+          <AppointmentState>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/login" element={<AuthLayout />}>
+                  <Route index element={<LoginPage />} />
+                  <Route path="register" element={<Register />} />
+                </Route>
+                <Route path="search" element={<SearchPage />}/>
+                <Route path="home" element={<HomePage />} />
+                <Route path="main" element={<MainHomePage />} />
+                <Route path="profile/:id" element={<ProfessionalProfilePage />} />
+                <Route path="diaryentry" element={<DiaryEntryPage />} />
+                <Route path="sessions" element={<SessionsPage />} />
+                <Route path="payments" element={<PaymentsPage />} />
+                <Route path="diarypage" element={<DiaryPage />} />
+              </Routes>
+            </BrowserRouter>
+          </AppointmentState>
+        </ProfessionalState>
+      </PatientState>
+    </DiaryState>
   )
 }
 

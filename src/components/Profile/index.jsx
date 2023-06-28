@@ -14,7 +14,7 @@ const Profile = () => {
     const appointmentContext =  useContext(AppointmentContext);
     const professionalContext =  useContext(ProfessionalContext);
 
-    const { appointments, professionalAppointments, addAppointment,getProfessionalAppointments } = appointmentContext;
+    const { appointments, professionalAppointments, addAppointment, getProfessionalAppointments } = appointmentContext;
     const { professionalList, professional, getProfessional, getAllProfessionals } = professionalContext;
     const [date, setDate] = useState(dayjs('2022-04-17'));
     const [time, setTime] = useState();

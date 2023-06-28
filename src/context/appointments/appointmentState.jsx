@@ -8,9 +8,6 @@ import { GET_APPOINTMENT,
          ADD_APPOINTMENT 
         } from '../types';
 
-// import clienteAxios from '../../config/axio';
-
-
 const AppointmentState = props => {
 
     const initialState = {
@@ -27,11 +24,20 @@ const AppointmentState = props => {
         })
     }
 
-    const getProfessionalAppointments = (id) => {
-        dispatch({
-            type: PROFESSIONAL_APPOINTMENT,
-            payload: id
-        })
+    const getProfessionalAppointments = async (id) => {
+        console.log('Hola Ehecute');
+        try {
+            const response = await axios.get(`http://localhost:8081/api/v1/appointments/therapist/jperez`);
+            console.log('getProfessionalAppointments: ', response);
+            dispatch({
+                type: PROFESSIONAL_APPOINTMENT,
+                payload: id
+            });
+        } catch (error) {
+            console.log(error);
+        }
+
+
     }
 
     const addAppointment = async (appointment) => {

@@ -40,7 +40,6 @@ const BuscarPersonas = () => {
 
   useEffect(() => {
     getAllProfessionals();
-    // getPatientData();
     // eslint-disable-next-line
   }, [])
 
@@ -128,7 +127,7 @@ const BuscarPersonas = () => {
         {(professionalList?.length!== 0) ? professionalList.map((persona, index) => (
           <div key={index} className='resultado-container-rectangulo'>
             <div className='resultado-container' key={index}>
-              <img src={persona.foto} alt={persona.nombre} className='resultado-img' />
+              <img src="img/p1.png" alt={persona.nombre} className='resultado-img' />
               <div className='resultado-container-datos'>
                 <div className='resultado-datos'>
                   <h3>{persona.name} {persona.last_name}</h3>

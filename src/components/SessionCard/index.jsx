@@ -3,7 +3,7 @@ import AppointmentContext from '../../context/appointments/appointmentContext';
 
 
 
-const SessionCard = ({ id, therapist_user_name, date, status, modality }) => {
+const SessionCard = ({ id, therapist_user_name,  date_time, status, type }) => {
 
   const appointmentContext =  useContext(AppointmentContext);
   const { removeAppointments } = appointmentContext;
@@ -25,9 +25,9 @@ const SessionCard = ({ id, therapist_user_name, date, status, modality }) => {
                       {/* nombre del psicólogo, fecha, modalidad, hardcodeado*/}
                       <h1 className="nombre_psicologo_card">Lic. {therapist_user_name}</h1>
         
-                      <h1 className="fecha_turno_card">{date} hs</h1>
+                      <h1 className="fecha_turno_card">{date_time} hs</h1>
 
-                      <h1 className="modalidad_turno">{modality}</h1>
+                      <h1 className="modalidad_turno">{type}</h1>
 
                       <h1 className="ha_sido_confimado_o_no">{status}</h1>
 

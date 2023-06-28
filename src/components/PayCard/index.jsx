@@ -1,5 +1,5 @@
 
-const PayCard = ({therapist_user_name, date, status, modality, image }) => {
+const PayCard = ({therapist_user_name, date_time, status, type, image }) => {
   return (
     <>
       <div className="div_alrededor_paycard">
@@ -8,14 +8,14 @@ const PayCard = ({therapist_user_name, date, status, modality, image }) => {
             <div className="div_shadow_paycard">
               <div className="div_fondo_paycard">
                 
-                <img src={`../${image}`} className="imagen_psicologo_en_pagos" alt="imagen_psicologo"/>
+                <img src={`../img/p1.png`} className="imagen_psicologo_en_pagos" alt="imagen_psicologo"/>
 
                 {/* aca están hardcodeados los datos del turno que está en pagos */}
                 <h1 className="nombre_psicologo_en_paycard">{therapist_user_name}</h1>
 
-                <h1 className="fecha_turno_en_pagos">• {date}</h1>
+                <h1 className="fecha_turno_en_pagos">• {date_time}</h1>
 
-                <h1 className="modalidad_turno_pagos">• {modality}</h1>
+                <h1 className="modalidad_turno_pagos">• {type}</h1>
 
                 <h1 className="el_turno_es_confirmado_o_no">• {status}</h1>
 

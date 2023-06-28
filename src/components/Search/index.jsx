@@ -132,7 +132,7 @@ const BuscarPersonas = () => {
                 <div className='resultado-datos'>
                   <h3>{persona.name} {persona.last_name}</h3>
                   <p>Modalidad: {persona.appointment_modality}</p> {/* aca yo pondria si la sesion es virtual y presencial o cual */}
-                  <li>Valor: {persona.appointment_price}</li>
+                  <li>Honorarios: {persona.appointment_price}</li>
                   <li>Cateogrias: {persona.specialty}</li> {/* aca tiene que ir las especialidades puestas con una , en medio tipo Especialidad: Depresión, Ansiedad, etc. */}
                   <li>Ubicacion: {persona.practice_area}</li> 
                 </div>

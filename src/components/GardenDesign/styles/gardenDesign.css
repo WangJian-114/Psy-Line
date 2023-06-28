@@ -1,0 +1,267 @@
+.frame-1374,
+.frame-1374 * {
+  box-sizing: border-box;
+}
+.frame-1374 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  /* top: 123px; */
+  /* top: 70px; */
+  top: -10px;
+  left: 452px;
+}
+.frame-1371 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 596px;
+  position: relative;
+}
+.frame-1366 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 1047px;
+  height: 31px;
+  position: relative;
+}
+.frame-45 {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-46 {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.jard-n {
+  color: #4f8160;
+  text-align: left;
+  font-family: 'Manrope';
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  position: relative;
+  left: 362px;
+  top: 87px;
+  /* top: 105px; */
+}
+
+.frame-29-1-1 {
+  flex-shrink: 0;
+  width: 860px;
+  height: 568px;
+  position: relative;
+}
+.frame-1377 {
+  margin: -15px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-1375 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 1054px;
+  position: relative;
+}
+.por-favor-selecciona-las-actividades-que-has-realizado-y-presiona-guardar-para-ver-el-avance-en-el-jard-n {
+  color: #476331;
+  text-align: center;
+  font: 400 16px "Manrope", sans-serif;
+  position: relative;
+  align-self: stretch;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.line-5 {
+  border-style: solid;
+  border-color: #bababa;
+  border-width: 1px 0 0 0;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 0px;
+  position: relative;
+}
+.frame-1378 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  max-height: 146px; /* Cambia el valor según el tamaño deseado */
+  overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido excede el tamaño */
+  overflow-x: hidden; /* Oculta cualquier desplazamiento horizontal */  
+  white-space: nowrap; /* Evita que el contenido se divida en varias líneas */
+}
+.frame-1376 {
+  background: var(--_200, #ecf6f6);
+  padding: 12px 24px 10px 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 1054px;
+  position: relative;
+}
+.nombre-de-tarea-1 {
+  color: #000000;
+  text-align: left;
+  font: 400 18px "Manrope", sans-serif;
+  position: relative;
+}
+
+.frame-1379 {
+  box-shadow: inset 0 0 0 2px #41a6a6;
+  border-radius: 4px;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.frame-1379.selected {
+  background: var(--_500, #41a6a6);
+}
+
+
+
+.check {
+  flex-shrink: 0;
+  position: relative;
+  overflow: visible;
+}
+.frame-13772 {
+  background: #ffffff;
+  padding: 12px 24px 10px 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 1054px;
+  position: relative;
+}
+.nombre-de-tarea-2 {
+  color: #000000;
+  text-align: left;
+  font: 400 18px "Manrope", sans-serif;
+  position: relative;
+}
+.check2 {
+  flex-shrink: 0;
+  position: relative;
+  overflow: visible;
+}
+.frame-13782 {
+  background: var(--_200, #ecf6f6);
+  padding: 12px 24px 10px 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 1054px;
+  position: relative;
+}
+.nombre-de-tarea-3 {
+  color: #000000;
+  text-align: left;
+  font: 400 18px "Manrope", sans-serif;
+  position: relative;
+}
+.check3 {
+  flex-shrink: 0;
+  position: relative;
+  overflow: visible;
+}
+.frame-13792 {
+  background: #ffffff;
+  padding: 16px 24px 16px 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 1054px;
+  position: relative;
+}
+.nombre-de-tarea-4 {
+  color: #000000;
+  text-align: left;
+  font: 400 16px "Inter", sans-serif;
+  position: relative;
+}
+.frame-13793 {
+  border-radius: 4px;
+  border-style: solid;
+  border-color: var(--_500, #41a6a6);
+  border-width: 1px;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.check4 {
+  flex-shrink: 0;
+  position: relative;
+  overflow: visible;
+}
+.boton_guardar_actividades {
+  background: var(--_500, #41a6a6);
+  border-radius: 8px;
+  padding: 8px 32px 8px 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100px;
+  top:775px;
+  left: 1560px;
+}
+.guardar_actividades {
+  color: #ffffff;
+  text-align: left;
+  font: 600 16px "Inter", sans-serif;
+}

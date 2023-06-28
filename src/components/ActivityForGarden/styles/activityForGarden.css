@@ -1,0 +1,36 @@
+.frame-13782 {
+  background: var(--_200, #ecf6f6);
+  padding: 12px 24px 10px 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 1054px;
+  position: relative;
+}
+
+.nombre-de-tarea-3 {
+  color: #000000;
+  text-align: left;
+  font: 400 18px "Manrope", sans-serif;
+  position: relative;
+}
+
+.frame-1379 {
+    box-shadow: inset 0 0 0 2px #41a6a6;
+    border-radius: 4px;
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+  }
+  
+.frame-1379.selected {
+    background: var(--_500, #41a6a6);
+}
+

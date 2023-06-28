@@ -23,9 +23,9 @@ const ButtonGroup = () => {
     // if (buttonId === 4) {
     //   navigate('/sessions',{state:{miOpcion:buttonId}});
     // }    
-    // if (buttonId === 5) {
-    //   navigate('/main',{state:{miOpcion:buttonId}});
-    // } 
+     if (buttonId === 5) {
+       navigate('/gardenpage',{state:{miOpcion:buttonId}});
+     } 
     if (buttonId === 6) {
       navigate('/payments',{state:{miOpcion:buttonId}});
     }
@@ -70,7 +70,7 @@ const ButtonGroup = () => {
           className={`menu_button ${activeButton === 5 ? 'active' : ''}`}
           onClick={() => handleClick(5)}
         >
-          Arbol
+          Jardín
         </button>
 
         <button

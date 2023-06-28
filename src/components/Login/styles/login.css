@@ -22,7 +22,7 @@
     position: absolute;
     width: 1300px;
     height: 600px;
-    background-image: linear-gradient(to bottom, #1A4242, #397171, #89b4b4, #aacccc, #cfe1e1, #e9eded, #f0f4ff, #f6f9ff, #ffffff, #ffffff, #d0effe, #c0edf9);
+    background-image: linear-gradient(to bottom, #1A4242, #397171, #89b4b4, #aacccc, #cfe1e1, #e3e3e3, #e3e3e3, #e3e3e3, #8ccebf, #348f7b, #1d715e, #13715c);
     border-radius:10px;
     padding: 20px 50px;
     top: 140px;
@@ -108,3 +108,8 @@
     align-items: center;
     justify-content: center;
 }
+
+.mensaje_login{
+    color: #ECF6F6;
+}
+

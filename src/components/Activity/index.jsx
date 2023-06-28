@@ -24,7 +24,7 @@ const Activity = () => {
             </div>
             <div className="div_boton_inferior">
               <button className="boton_ultimo_ingreso_diario">
-                <h1 className="texto_ultimo_ingreso">Último ingreso al diario</h1>
+                <h1 className="texto_ultimo_ingreso">Ingresa tu actividad en el diario</h1>
                 {/* <h1 className="texto_fecha_ultimo_ingreso">25/03/2023</h1> esta hardcodeado */}
               </button>
             </div>

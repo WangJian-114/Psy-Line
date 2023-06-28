@@ -32,10 +32,10 @@ const ProfessionalState = props => {
         })
     }
 
-    const getFilterResults = async (max_price, modality, specialty, practice_area, name) => {
+    const getFilterResults = async (max_price, modality, specialty, practice_area, name, therapy_treatment) => {
         try {
             console.log('url: ',`http://localhost:8081/api/v1/therapists?practice_area=${practice_area}&max_price=${max_price}&modality=${modality}&specialty=${specialty}`)
-            const response = await axios.get(`http://localhost:8081/api/v1/therapists?practice_area=${practice_area}&max_price=${max_price}&modality=${modality}&specialty=${specialty}`);
+            const response = await axios.get(`http://localhost:8081/api/v1/therapists?practice_area=${practice_area}&max_price=${max_price}&modality=${modality}&therapy_treatment=${specialty}`);
 
             console.log('response: ', response);
             dispatch({

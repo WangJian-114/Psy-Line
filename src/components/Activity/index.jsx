@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import AppointmentContext from '../../context/appointments/appointmentContext';
 
 const Activity = () => {
@@ -17,10 +18,10 @@ const Activity = () => {
                 <h1 className="texto">Turnos confirmados:</h1>
                 <h1 className="texto_cantidad">0</h1> {/* esta hardcodeado */}
               </button>
-              <button className="boton_pagos_pendientes">
+              <Link to='/payments' className="boton_pagos_pendientes">
                 <h1 className="texto">Pagos pendientes:</h1>
                 <h1 className="texto_cantidad"> {appointments.length}</h1> {/* esta hardcodeado */}
-              </button>
+              </Link>
             </div>
             <div className="div_boton_inferior">
               <button className="boton_ultimo_ingreso_diario">

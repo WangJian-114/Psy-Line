@@ -58,34 +58,34 @@ const BuscarPersonas = () => {
           <select value={filtroConsulta} onChange={handleFiltroConsultaChange}>
             <option value="">Modalidad de Consulta</option>
             <option value="VIRTUAL">Consulta Virtual</option>
-            <option value="IN_PERSON">Consulta Presencial</option>
-            <option value="HYBRID">Ambas</option>
+            <option value="PRESENCIAL">Consulta Presencial</option>
+            <option value="HIBRIDO">Ambas</option>
           </select>
         </div>
 
         <div className='filtro-item'>
           <select value={filtroEspecialidad} onChange={handleFiltroEspecialidadChange}>
             <option value="">Categorías</option>
-            <option value="adicciones">Adicciones</option>
-            <option value="analisis de sueños">Análisis de Sueños</option>
-            <option value="anorexia">Anorexia</option>
-            <option value="ansiedad">Ansiedad</option>
-            <option value="ataques de panico">Ataques de pánico</option>
-            <option value="bullying">Bullying</option>
-            <option value="dependencia emocional">Dependencia emocional</option>
-            <option value="depresion">Depresión</option>
-            <option value="duelo">Duelo</option>
-            <option value="estres">Estrés</option>
-            <option value="estres postraumatico">Estrés Postraumático</option>
-            <option value="insomnio">Insomnio</option>
-            <option value="ludopatia">Ludopatía</option>
-            <option value="PSYCHOANALYSIS">Psicoanálisis</option>
-            <option value="sexologia">Sexología</option>
-            <option value="suicidio">Suicidio</option>
-            <option value="tdah">Tdah</option>
-            <option value="COGNITIVE_BEHAVIORAL_THERAPY">Terapia Cognitiva-Conductual</option>
-            <option value="FAMILY_THERAPY">Terapia Familiar</option>
-            <option value="GROUP_THERAPY">Terapia Grupal</option>
+            <option value="ADICCIONES">Adicciones</option>
+            <option value="ANALISIS_DE_SUEÑO">Análisis de Sueños</option>
+            <option value="ANOREXIA">Anorexia</option>
+            <option value="ANSIEDAD">Ansiedad</option>
+            <option value="ATAQUE_DE_PANICO">Ataques de pánico</option>
+            <option value="BULLYING">Bullying</option>
+            <option value="DEPENDENCIA_EMOCIONAL">Dependencia emocional</option>
+            <option value="DEPRESION">Depresión</option>
+            <option value="DUELO">Duelo</option>
+            <option value="ESTRES">Estrés</option>
+            <option value="TRASTORNO_POR_ESTRES_POSTRAUMATICO">Estrés Postraumático</option>
+            <option value="INSOMNIO">Insomnio</option>
+            <option value="LUDOPATIA">Ludopatía</option>
+            <option value="PSICOANALISIS">Psicoanálisis</option>
+            <option value="SEXOLOGIA">Sexología</option>
+            <option value="SUICIDIO">Suicidio</option>
+            <option value="TDAH">Tdah</option>
+            <option value="COGNITIVO_CONDUCTUAL">Terapia Cognitiva-Conductual</option>
+            <option value="TERAPIA_FAMILIAR">Terapia Familiar</option>
+            <option value="TERAPIA_GRUPAL">Terapia Grupal</option>
           </select>
         </div>
 
@@ -124,19 +124,19 @@ const BuscarPersonas = () => {
       </div>
 
       <div>
-        {(professionalList?.length!== 0) ? professionalList.map((persona, index) => (
-          <div key={index} className='resultado-container-rectangulo'>
-            <div className='resultado-container' key={index}>
-              <img src="img/p1.png" alt={persona.nombre} className='resultado-img' />
+        {(professionalList?.length!== 0) ? professionalList.map(({name, last_name,appointment_price, appointment_modality, therapy_treatments, practice_area, user_name }) => (
+          <div key={user_name} className='resultado-container-rectangulo'>
+            <div className='resultado-container' key={user_name}>
+              <img src="img/p1.png" alt={name} className='resultado-img' />
               <div className='resultado-container-datos'>
                 <div className='resultado-datos'>
-                  <h3>{persona.name} {persona.last_name}</h3>
-                  <p>Modalidad: {persona.appointment_modality}</p> {/* aca yo pondria si la sesion es virtual y presencial o cual */}
-                  <li>Honorarios: {persona.appointment_price}</li>
-                  <li>Cateogrias: {persona.specialty}</li> {/* aca tiene que ir las especialidades puestas con una , en medio tipo Especialidad: Depresión, Ansiedad, etc. */}
-                  <li>Ubicacion: {persona.practice_area}</li> 
+                  <h3>{name} {last_name}</h3>
+                  <p>Modalidad: {appointment_modality}</p> {/* aca yo pondria si la sesion es virtual y presencial o cual */}
+                  <li>Honorarios: {appointment_price}</li>
+                  <li>Categorias: {(therapy_treatments[0]) ? therapy_treatments[0].therapy_treatment : ''} - {(therapy_treatments[1]) ? therapy_treatments[1].therapy_treatment : ''} - {(therapy_treatments[2]) ? therapy_treatments[2].therapy_treatment : ''} - {(therapy_treatments[3]) ? therapy_treatments[3].therapy_treatment : ''} ...</li>
+                  <li>Ubicacion: {practice_area}</li> 
                 </div>
-                <Link to={`/profile/${persona.user_name}`} className="perfil_button">Ver perfil</Link>
+                <Link to={`/profile/${user_name}`} className="perfil_button">Ver perfil</Link>
               </div>
             </div>
           </div>

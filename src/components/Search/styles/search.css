@@ -105,14 +105,19 @@
   }
 
   .resultado-container-datos {
-    width: 1000px;
+    max-width: 1000px;
     display: flex;
     align-items: center;
     justify-content:space-between;
   }
 
+  .resultado-container-datos li {
+    width: 500px;
+  }
+
   .perfil_button {
-    margin-right: 100px;
+    margin-right: 30px;
+    margin-left: 70px;
     background-color: #3b9898;
     padding: 8px 32px;
     color: white;

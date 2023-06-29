@@ -70,9 +70,9 @@ const Profile = () => {
                         {professional && <ProfessionalCard professional={professional[0]} />}
                         <div className="div_biografia">
                             {/* la bio tambien se extrae del profesional X */}
-                            <h1 className="texto_biografia">Licenciada en psicología de la UBA. 
-                            Realicé la Especialización en Terapia Cognitiva-conductual abordando desde este marco teórico crisis... 
-                            (Biografía)</h1>
+                            <p className="texto_biografia">
+                            {professional[0].bio}
+                            (Biografía)</p>
                     
                         </div>
                     </div>

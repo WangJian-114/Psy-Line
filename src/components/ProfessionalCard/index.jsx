@@ -9,7 +9,7 @@ const ProfessionalCard = ({professional}) => {
             <div className='resultado-datos'>
               <h3>{professional.name} {professional.last_name}</h3>
               <p>Especialidad: {professional.specialty}</p>
-              <li>Honorarios: {professional.appointment_price}</li>
+              <li>Honorarios: ${professional.appointment_price}</li>
               {/* <li>Modalidades: {professional.bio}</li> */}
               <li>Ubicacion: {professional.practice_area}</li>
             </div>

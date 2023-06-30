@@ -43,7 +43,7 @@ const BuscarPersonas = () => {
     // eslint-disable-next-line
   }, [])
 
-  if (professionalList.length === 0) {
+  if (!professionalList) {
     return (<p>Cargando...</p>)
   }
 
@@ -106,7 +106,7 @@ const BuscarPersonas = () => {
           className='filtro-input'
           type="number"
           id="precioMax"
-          placeholder="Valor Máximo"
+          placeholder="Honorario Máximo"
           value={filtroPrecioMax}
           onChange={(e) => setFiltroPrecioMax(e.target.value)}
         />
@@ -132,7 +132,7 @@ const BuscarPersonas = () => {
                 <div className='resultado-datos'>
                   <h3>{name} {last_name}</h3>
                   <p>Modalidad: {appointment_modality}</p> {/* aca yo pondria si la sesion es virtual y presencial o cual */}
-                  <li>Honorarios: ${appointment_price}</li>
+                  <li>Honorarios: ${appointment_price} ARS</li>
                   <li>Categorias: {(therapy_treatments[0]) ? therapy_treatments[0].therapy_treatment : ''} - {(therapy_treatments[1]) ? therapy_treatments[1].therapy_treatment : ''} - {(therapy_treatments[2]) ? therapy_treatments[2].therapy_treatment : ''} - {(therapy_treatments[3]) ? therapy_treatments[3].therapy_treatment : ''} ...</li>
                   <li>Ubicacion: {practice_area}</li> 
                 </div>

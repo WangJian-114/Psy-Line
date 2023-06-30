@@ -7,7 +7,7 @@ import axios from 'axios';
 const ProfessionalState = props => {
 
     const initialState = {
-        professionalList: [],
+        professionalList: undefined,
         professional: null
     }
 

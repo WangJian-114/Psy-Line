@@ -1,4 +1,5 @@
 import { useState, useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import dayjs from 'dayjs';
 import { Button } from "@mui/base";
@@ -23,9 +24,10 @@ const Profile = () => {
         const appointment = {
             id:  Math.floor(Math.random() * 100),
             date_time: `${moment(date.$d).format('YYYY-MM-DD')}T${moment(time.$d).format('HH:mm:ss')}`,
+            invoice: 'nose que poner',
             price: professional[0].appointment_price,
             paid: false,
-            status: "PENDING",
+            status: "Pendiente",
             type: professional[0].appointment_modality,
             therapist_user_name: professional[0].user_name,
             patient_user_name: "pJuanetes",
@@ -54,10 +56,10 @@ const Profile = () => {
         <>
             <div className="div_contenido_perfil">
                 <div className="div_titulo_e_icono_pagina">
-                    <Button className="boton_atras">
+                    <Link to='/search' className="boton_atras">
                         <FiChevronLeft fontSize={36}/>
                         {/* falta agregarle el comportamiento de que vuelva para atras */}
-                    </Button>
+                    </Link>
                     <div className="div_titulo">
                         <h1 className="titulo">Información del profesional</h1>
                     </div>

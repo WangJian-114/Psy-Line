@@ -10,7 +10,7 @@ const DailyPhrase = () => {
 
   const obtenerFrase = async () => {
     try {
-      const response = await axios.get('http://localhost:8081/api/v1/quotes/'+contador);
+      const response = await axios.get(`http://localhost:8081/api/v1/quotes/${contador}`);
       console.log('Response quote: ', response.data);
       setFrase(response.data.quote);
     } catch (error) {
@@ -24,10 +24,13 @@ const DailyPhrase = () => {
   }, [contador]);
 
   const cambiarFrase = () => {
+    console.log('Click');
     if(contador === 19){
       setContador(1);
+      obtenerFrase();
     } else {
-    setContador((prevContador) => prevContador + 1);
+      setContador((prevContador) => prevContador + 1);
+      obtenerFrase();
     }
   };
 
@@ -38,7 +41,7 @@ const DailyPhrase = () => {
         <div className="div_frase">
           <h1 className="frase">Frase del dia: <br /> “{frase}”.</h1>
         </div>
-        <button type="button" className='cambiar_frase_button' onClick={() => cambiarFrase()}>Cambiar frase</button>
+        <button type="button" className='cambiar_frase_button' onClick={cambiarFrase}>Cambiar frase</button>
       </div>
     </div>
   );

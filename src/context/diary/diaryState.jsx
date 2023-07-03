@@ -38,12 +38,21 @@ const DiaryState = props => {
         }
     }
 
+    const deleteDiary = async (diaryId) => {
+        try {
+            const response = await axios.delete(`http://localhost:8081/api/v1/patients/pJuanetes/journal/${diaryId}`);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     return(
         <diaryContext.Provider
             value={{
                 journal:state.journal,
                 addDiary,
                 putDiary,
+                deleteDiary,
             }}
         >
             {props.children}

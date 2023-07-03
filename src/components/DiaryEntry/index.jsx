@@ -23,12 +23,12 @@ const DiaryEntry = () => {
   const patientContext =  useContext(PatientContext);
   const { journalNormal } = patientContext;
   const diaryContext =  useContext(DiaryContext);
-  const { putDiary, addDiary } = diaryContext;
+  const { deleteDiary, putDiary, addDiary } = diaryContext;
  
  
   // marcar carita presionada
   const [estadoSeleccionado, setEstadoSeleccionado] = useState(null);
-  const [description, setDescription] = useState(null);
+  const [description, setDescription] = useState('');
 
   const handleDescriptionChange = (event) => {
     setDescription(event.target.value);
@@ -37,6 +37,7 @@ const DiaryEntry = () => {
   const buscarEstado = () => {
     const objetoEncontrado = journalNormal.find((obj) => moment(obj.date).format('DD/MM/YYYY') === miDate);
     setState(objetoEncontrado);
+    setDescription(objetoEncontrado?.description);
   }
 
   // esto es para manejar el evento del click en la carita
@@ -67,6 +68,11 @@ const DiaryEntry = () => {
     }
     navigate('/diarypage');
   };
+
+  const handleDelete = async() => {
+    await deleteDiary(diaryId);
+    navigate('/diarypage');
+  }
   
   useEffect(() => {
     buscarEstado();
@@ -167,6 +173,9 @@ const DiaryEntry = () => {
               <h1 className="texto_guardar_entrada">Guardar</h1>
             </button>
 
+            <button className="boton_guardar_entrada_diario btn_eliminar" onClick={() => handleDelete()}>
+              <h1 className="texto_guardar_entrada">Eliminar</h1>
+            </button>
           </div>
         
         </div>

@@ -339,7 +339,13 @@ border-radius: 30px;
   border-radius: 30px;
 }
 
+.btn_eliminar {
+  background-color: red!important;
+  color: white;
+}
+
 .div_seccion_titulo_boton_y_escritura{
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

@@ -25,11 +25,25 @@ const DiaryState = props => {
         }
     }
 
+    const putDiary = async (journal) => {
+        try {
+            const response = await axios.patch('http://localhost:8081/api/v1/patients/pJuanetes/journal', journal);
+            console.log('putDiary response: ', response);
+            dispatch({
+                type: SET_PATIEN_JOURNAL,
+                payload: response.data
+            }) 
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     return(
         <diaryContext.Provider
             value={{
                 journal:state.journal,
                 addDiary,
+                putDiary,
             }}
         >
             {props.children}

@@ -15,14 +15,15 @@ const DiaryEntry = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const miDate = searchParams.get('date');
-  console.log('midare: ' + miDate);
+  const diaryId = searchParams.get('id');
+  console.log('midate: ' + miDate);
   // Construir la URL con el valor como parámetro
   const navigate = useNavigate();
 
   const patientContext =  useContext(PatientContext);
   const { journalNormal } = patientContext;
   const diaryContext =  useContext(DiaryContext);
-  const { journal, addDiary } = diaryContext;
+  const { putDiary, addDiary } = diaryContext;
  
  
   // marcar carita presionada
@@ -52,7 +53,18 @@ const DiaryEntry = () => {
       emotion: estadoSeleccionado.toUpperCase(),
       description: description,
     };
-    await addDiary(journal);
+    const putJournal = {
+      id: diaryId, 
+      date: moment(miDate, 'DD/MM/YYYY').format('YYYY-MM-DD'),
+      emotion: estadoSeleccionado.toUpperCase(),
+      description: description,
+    };
+    if(diaryId){
+      await putDiary(putJournal);
+      console.log('Console debo hacer un put');
+    } else {
+      await addDiary(journal);
+    }
     navigate('/diarypage');
   };
   

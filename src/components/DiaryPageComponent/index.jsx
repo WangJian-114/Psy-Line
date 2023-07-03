@@ -35,18 +35,20 @@ const CalendarComponent = () => {
   // fin cambio de idioma
 
   const Event = ({ event }) => {
-    console.log('Evento: ', event.image);
+    console.log('Evento: ', event);
     return (
-      <div>
-        <div>{event.title}</div>
+      // <p>Hola</p>
+      <Link to={`/diaryentry?date=${moment(event.end).format('DD/MM/YYYY')}&id=${event.id}`}>
+        <div className="emotion">{event.title}</div>
         <img src={event.image} style={{ width: '30px', height: '30px' }} alt="Event" />
-      </div>
+      </Link>
     );
   };
 
 
   // Aqui defino como va a ser el formato a mostrar enla celda de cada dia
   const CustomMonthDay = ({date}) => {
+  
     const formattedDate = moment(date).format('DD');
     // agrego que el numero del dia sea un link que va a pasar como parametro el numero del dia a la pantalla del diario
     const linkTo = `/diaryentry?date=${moment(date).format('DD/MM/YYYY')}`;

@@ -100,16 +100,18 @@
 
 .div_calendario_y_cita{
   display: flex;
-  max-width: 1200px;
+  /* max-width: 1200px; */
+  justify-content: space-between;
 }
 
 .div_calendario{
-  padding: 20px;
+  flex-basis: 65%;
 }
 
 .div_cita_y_contactar{
   margin-top:30px;
-  margin-left: 150px;
+  flex-basis: 30%;
+  margin-left: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

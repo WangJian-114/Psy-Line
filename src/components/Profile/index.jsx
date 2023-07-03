@@ -7,6 +7,7 @@ import moment from 'moment';
 import { FiChevronLeft } from "react-icons/fi";
 import ProfessionalCard from "../ProfessionalCard";
 import Calendar from "../Calendar";
+import BigCalendar from "../BigCalendar/index";
 import AppointmentContext from '../../context/appointments/appointmentContext';
 import ProfessionalContext from '../../context/professional/professionalContext';
 
@@ -36,7 +37,6 @@ const Profile = () => {
         console.log(appointment);
         addAppointment(appointment);
     }
-    console.log('professionalList: ', professionalList.length === 0, professionalList);
 
     useEffect(() => {
         getAllProfessionals();
@@ -83,7 +83,8 @@ const Profile = () => {
                         <div className="div_calendario_y_cita">
                             <div className="div_calendario">
                             {/* aca dentro va a ir el calendario */}
-                                <Calendar date={date} setDate={setDate} time={time} setTime={setTime}/>
+                                {/* <Calendar date={date} setDate={setDate} time={time} setTime={setTime}/> */}
+                                <BigCalendar therapist_user_name={professional[0].user_name} professional={professional[0]} />
                             </div>
                             <div className="div_cita_y_contactar">
                                 {professionalAppointments.length !== 0 ?

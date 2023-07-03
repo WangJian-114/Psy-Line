@@ -24,6 +24,7 @@
 @import url('./components/GardenDesign/styles/gardenDesign.css');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('./components/ActivityForGarden/styles/activityForGarden.css');
+@import url('./components/BigCalendar/style.css');
 
 
 :root {

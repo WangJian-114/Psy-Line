@@ -21,4 +21,4 @@ const Calendar = ({date, setDate, time, setTime }) => {
   );
   }
   
-  export default Calendar;
+export default Calendar;

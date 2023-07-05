@@ -16,7 +16,7 @@ const Activity = () => {
             <div className="div_botones_superiores">
               <Link to='/sessions' className="boton_turnos_confirmados">
                 <h1 className="texto">Turnos confirmados:</h1>
-                <h1 className="texto_cantidad">0</h1> {/* esta hardcodeado */}
+                <h1 className="texto_cantidad">1</h1> {/* esta hardcodeado */}
               </Link>
               <Link to='/payments' className="boton_pagos_pendientes">
                 <h1 className="texto">Pagos pendientes:</h1>

@@ -9,95 +9,71 @@
 }
 
 .div_intro{
-
-  display: flex;
+  margin-top: 110px;
+  margin-left: 48px;
+  /* display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  gap: 28px;
+  gap: 28px; */
 
-  position: absolute;
+  /* position: absolute;
   width: 1047px;
   height: 222px;
   left: 48px;
-  top: 105px;
+  top: 105px; */
 
 }
 
 .texto_bienvenida{
-
-  width: 462px;
-  height: 39px;
-
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
   line-height: 39px;
-
   color: #0e2525;
+}
 
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  
+.div_intro h3 {
+  margin-top:50px
 }
 
 .div_frase{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 5px;
-  gap: 10px;
-
-  width: 1047px;
-  height: 151px;
-
   background: #B3DBDB;
   border-radius: 8px;
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-
+  padding: 15px;
 }
 
 .frase{
-  width: fit-content;
-  height: 100px;
-
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
   font-size: 23px;
   line-height: 180%;
-
   color: #000000;
-  
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .buttonClass {
   cursor: pointer;
 }
 
-.cambiar_frase_button {
+.div_button {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 5px;
-  gap: 10px;
+  justify-content: flex-end;
+}
 
-  width: flex;
-  height: flex;
+.cambiar_frase_button {
 
+  margin-top: 15px;
+  padding: 7px 14px;
   background: #2D7474;
   border-radius: 8px;
 
-  flex: none;
-  order: 0;
-  flex-grow: 1;
   color: #fff;
+}
+
+.cambiar_frase_button:hover{
+  transition: all .2s ease-in-out;
+  background: #B3DBDB;
+  color: #000000;
 }

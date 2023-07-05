@@ -124,10 +124,10 @@ const BuscarPersonas = () => {
       </div>
 
       <div>
-        {(professionalList?.length!== 0) ? professionalList.map(({name, last_name,appointment_price, appointment_modality, therapy_treatments, practice_area, user_name }) => (
+        {(professionalList?.length!== 0) ? professionalList.map(({name, last_name,appointment_price, appointment_modality, therapy_treatments, practice_area, user_name, picture }) => (
           <div key={user_name} className='resultado-container-rectangulo'>
             <div className='resultado-container' key={user_name}>
-              <img src="img/p1.png" alt={name} className='resultado-img' />
+              <img src={picture} alt={name} className='resultado-img' />
               <div className='resultado-container-datos'>
                 <div className='resultado-datos'>
                   <h3>{name} {last_name}</h3>

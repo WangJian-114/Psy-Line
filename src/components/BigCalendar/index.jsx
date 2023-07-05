@@ -1,84 +1,138 @@
 import { useContext, useEffect, useState }  from 'react';
-import { Calendar, momentLocalizer } from 'react-big-calendar'
+import { Calendar, momentLocalizer, dateFnsLocalizer } from 'react-big-calendar'
 import moment from 'moment'
 const localizer = momentLocalizer(moment);
 import axios from 'axios';
-import Modal from './Modal';
+import Swal from 'sweetalert2';
+import AppointmentContext from '../../context/appointments/appointmentContext';
+import ProfessionalContext from '../../context/professional/professionalContext';
+import es from 'date-fns/locale/es';
+import 'moment/locale/es';
+import format from "date-fns/format";
+import parse from "date-fns/parse";
+import startOfWeek from "date-fns/startOfWeek";
+import getDay from "date-fns/getDay";
 
 
-const BigCalendar = ({therapist_user_name, professional}) => {
+const BigCalendar = ({profesional}) => {
 
-  const { working_schedule } = professional;
-  console.log('working_schedule: ', working_schedule);
-  console.log('working_schedule123: ', moment("2023-07-24T10:00:00").toDate());
-
-  const [workingSchedule, setWorkingSchedule] = useState();
-
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-  const [timeValue, setTimeValue] = useState('');
-
-  const handleTimeChange = (event) => {
-    setTimeValue(event.target.value);
+  // cambio de idioma
+  const locales = {
+    es: es,
   };
+  const localizer = dateFnsLocalizer({
+    format,
+    parse,
+    startOfWeek,
+    getDay,
+    locales,
+  });
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    console.log('Valor del input de tiempo:', timeValue);
-    const newData = [{
-      therapist_user_name: "jperez",
-      day_of_week: "WEDNESDAY",
-      start_time: "10:11",
-      end_time: "11:11",
-    }]
+  const { user_name } = profesional;
+  console.log('CONSOLE profesional: ', profesional);
+
+  const appointmentContext =  useContext(AppointmentContext);
+  const professionalContext =  useContext(ProfessionalContext);
+  const { addAppointment} = appointmentContext;
+  const { working_schedule, professional, getProfessional } = professionalContext;
+
+  const [workingSchedule, setWorkingSchedule] = useState([]);
+
+  const addNewAppointment = (fecha) => {
+    const appointment = {
+        // id:  Math.floor(Math.random() * 100),
+        // date_time: `${moment(date.$d).format('YYYY-MM-DD')}T${moment(time.$d).format('HH:mm:ss')}`,
+        date_time: fecha,
+        price: profesional.appointment_price,
+        paid: false,
+        status: "Pendiente",
+        type: 'Virtual',
+        therapist_user_name: profesional.user_name,
+        patient_user_name: "pJuanetes",
+        // image: profesional[0].foto
+    }
+    console.log('data a postear: ', appointment);
+    addAppointment(appointment);
+  }
+
+  const formatWorkingSchedule = (schedule) => {
+    console.log("CONSOLE working_schedule.length: ", working_schedule.length);
+    const eventList = schedule.map(({id, date, start_time, end_time}) => {
+      console.log(`!!!!!!: ${date}T${start_time}`);
+      return {
+          id,
+          start: moment(`${date}T${start_time}`).toDate(),
+          end: moment(`${date}T${end_time}`).toDate(),
+          title: "Disponible",
+          data: {
+            id,
+            fecha: `${date}T${start_time}`
+          }
+      }
+    });
+    console.log('Response deleted!!!!! FORMATED:', eventList);
+    setWorkingSchedule(eventList);
+  }
+
+  const deletedAvailability = async (id) => {
     try {
-      console.log('console: ', newData);
-      const response = await axios.patch(`http://localhost:8081/api/v1/therapists/${therapist_user_name}/schedule`, newData);
-      console.log('Response put: ', response.data);
+      const response = await axios.delete(`http://localhost:8081/api/v1/therapists/${user_name}/schedule/${id}`);
+      console.log('Response deleted!!!!!: ', response.data.working_schedule
+      );
+      formatWorkingSchedule(response.data.working_schedule);
     } catch (error) {
         console.log(error);
     }
-  };
+  }
 
-  const myEventsList = [
-    {
-      start: moment("2023-07-24T10:00:00").toDate(),
-      end: moment("2023-07-24T11:00:00").toDate(),
-      title: "Disponible",
-      // data: {
-      //   type: 'ocupado'
-      // }
-    },
-    {
-      start: moment("2023-07-27T10:00:00").toDate(),
-      end: moment("2023-07-27T11:00:00").toDate(),
-      title: "Disponible",
-      // data: {
-      //   type: 'ocupado'
-      // }
-    },
-    {
-      start: moment("2023-07-30T10:00:00").toDate(),
-      end: moment("2023-07-30T11:00:00").toDate(),
-      title: "Disponible",
-    }
-  ];
+
+
+
+  const handleSubmit = async (id, fecha) => {
+    Swal.fire({
+      title: 'Generacion de Turno',
+      text: "Estas seguro que queres agendar este horario?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si!',
+      cancelButtonText: 'Cancelar',
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        deletedAvailability(id);
+        console.log('CONSOLE new professional: ', professional);
+        addNewAppointment(fecha);
+        Swal.fire(
+          'Correcto',
+          'Turno generado correctamente',
+          'success'
+        )
+      }
+    })
+  };
 
   const components = {
     event: (props) => {
-      console.log('Props: ', props.event.start);
-      return <div className="available" onClick={handleOpen}><p>{props.title}</p></div>
+      console.log('CONSOLE Props!!!: ', props.event);
+      return <div className="available" onClick={() => handleSubmit(props?.event?.data?.id, props?.event?.data?.fecha)}><p>{props.title}</p></div>
     }
   }
+
+  useEffect(() => {
+    getProfessional(user_name);
+    formatWorkingSchedule(working_schedule);
+  // eslint-disable-next-line
+  }, [])
+
+  if(!working_schedule) return <p>Cargando...</p>
   
   return(
     <div>
       <Calendar
         culture='es'
         localizer={localizer}
-        events={myEventsList}
+        events={workingSchedule}
         components={components}
         startAccessor="start"
         endAccessor="end"
@@ -92,14 +146,6 @@ const BigCalendar = ({therapist_user_name, professional}) => {
           week: "Semana",
           day: "Día"
         }}
-      />
-      <Modal 
-        open={open}
-        handleOpen={handleOpen}
-        handleClose={handleClose}
-        timeValue={timeValue}
-        handleTimeChange={handleTimeChange}
-        handleSubmit={handleSubmit}
       />
     </div>
   );

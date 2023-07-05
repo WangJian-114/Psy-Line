@@ -38,10 +38,13 @@ const DailyPhrase = () => {
     <div className="seccion_pagina">
       <div className="div_intro">
         <h1 className="texto_bienvenida">¡Te damos la Bienvenida!</h1>
+        <h3>Frase del dia: </h3>
         <div className="div_frase">
-          <h1 className="frase">Frase del dia: <br /> “{frase}”.</h1>
+          <h1 className="frase">“{frase}”.</h1>
         </div>
-        <button type="button" className='cambiar_frase_button' onClick={cambiarFrase}>Cambiar frase</button>
+        <div className="div_button">
+          <button type="button" className='cambiar_frase_button' onClick={cambiarFrase}>Cambiar frase</button>
+        </div>
       </div>
     </div>
   );

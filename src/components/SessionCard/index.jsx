@@ -3,7 +3,7 @@ import AppointmentContext from '../../context/appointments/appointmentContext';
 
 
 
-const SessionCard = ({ id, therapist_user_name,  date_time, status, type }) => {
+const SessionCard = ({ id, therapist_user_name,  date_time, status, type, name, last_name }) => {
 
   const appointmentContext =  useContext(AppointmentContext);
   const { removeAppointments } = appointmentContext;
@@ -18,18 +18,17 @@ const SessionCard = ({ id, therapist_user_name,  date_time, status, type }) => {
         <div className="div_borde_card">
           <div className="div_borde_interno_card">
             <div className="div_contenido_card">
-
               <div className="div_informacion_turno">
                   <div className="div_background_turno">
                     <div className="div_background_sombra_turno">
                       {/* nombre del psicólogo, fecha, modalidad, hardcodeado*/}
-                      <h1 className="nombre_psicologo_card">Lic. {therapist_user_name}</h1>
+                      <h1 className="nombre_psicologo_card">Lic. Juan Perez</h1>
         
-                      <h1 className="fecha_turno_card">{date_time} hs</h1>
+                      <h1 className="fecha_turno_card">•Fecha: {date_time.replace('T',' a las: ')}</h1>
 
-                      <h1 className="modalidad_turno">{type}</h1>
+                      <h1 className="modalidad_turno">•Modalidad: {type}</h1>
 
-                      <h1 className="ha_sido_confimado_o_no">{status}</h1>
+                      <h1 className="ha_sido_confimado_o_no">• Estado de turno: {status}</h1>
 
                     </div>
                   </div>

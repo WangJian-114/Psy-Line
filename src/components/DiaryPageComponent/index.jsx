@@ -82,7 +82,7 @@ const CalendarComponent = () => {
           startAccessor="start"
           endAccessor="end"
           components={{event:Event, month:{dateHeader: CustomMonthDay}}}
-          views={['month','week']}
+          views={['month']}
           messages={{
             next: "Despues",
             previous: "Atras",

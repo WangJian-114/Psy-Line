@@ -1,12 +1,8 @@
-import { useState, useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import dayjs from 'dayjs';
-import { Button } from "@mui/base";
-import moment from 'moment';
 import { FiChevronLeft } from "react-icons/fi";
 import ProfessionalCard from "../ProfessionalCard";
-import Calendar from "../Calendar";
 import BigCalendar from "../BigCalendar/index";
 import AppointmentContext from '../../context/appointments/appointmentContext';
 import ProfessionalContext from '../../context/professional/professionalContext';
@@ -16,27 +12,8 @@ const Profile = () => {
     const appointmentContext =  useContext(AppointmentContext);
     const professionalContext =  useContext(ProfessionalContext);
 
-    const { appointments, professionalAppointments, addAppointment, getProfessionalAppointments } = appointmentContext;
+    const { appointments, professionalAppointments, getProfessionalAppointments } = appointmentContext;
     const { professionalList, professional, getProfessional, getAllProfessionals } = professionalContext;
-    const [date, setDate] = useState(dayjs('2022-04-17'));
-    const [time, setTime] = useState();
-
-    const addNewAppointment = () => {
-        const appointment = {
-            id:  Math.floor(Math.random() * 100),
-            date_time: `${moment(date.$d).format('YYYY-MM-DD')}T${moment(time.$d).format('HH:mm:ss')}`,
-            invoice: 'nose que poner',
-            price: professional[0].appointment_price,
-            paid: false,
-            status: "Pendiente",
-            type: professional[0].appointment_modality,
-            therapist_user_name: professional[0].user_name,
-            patient_user_name: "pJuanetes",
-            // image: professional[0].foto
-        }
-        console.log(appointment);
-        addAppointment(appointment);
-    }
 
     useEffect(() => {
         getAllProfessionals();
@@ -47,7 +24,7 @@ const Profile = () => {
 
 
 
-    if (professionalList.length === 0) {
+    if (professionalList?.length === 0) {
         return (<p>Cargando...</p>)
     }
     if(!professional) return <p>Cargando...</p>;
@@ -58,7 +35,6 @@ const Profile = () => {
                 <div className="div_titulo_e_icono_pagina">
                     <Link to='/search' className="boton_atras">
                         <FiChevronLeft fontSize={36}/>
-                        {/* falta agregarle el comportamiento de que vuelva para atras */}
                     </Link>
                     <div className="div_titulo">
                         <h1 className="titulo">Información del profesional</h1>
@@ -69,22 +45,20 @@ const Profile = () => {
             <div className="div_informacion_profesional">
                 <div className="div_informacion">
                     <div className="div_carta_profesional_y_biografia">
-                        {professional && <ProfessionalCard professional={professional[0]} />}
+                        {professional && <ProfessionalCard professional={professional} />}
                         <div className="div_biografia">
-                            {/* la bio tambien se extrae del profesional X */}
                             <p className="texto_biografia">
-                            {professional[0].bio}
-                            (Biografía)</p>
-                    
+                            {professional.bio}
+                            </p>
                         </div>
                     </div>
                     <h1 className="texto_terapia">Terapia online</h1>
                     <div className="div_terapia_online">
                         <div className="div_calendario_y_cita">
                             <div className="div_calendario">
-                            {/* aca dentro va a ir el calendario */}
-                                {/* <Calendar date={date} setDate={setDate} time={time} setTime={setTime}/> */}
-                                <BigCalendar therapist_user_name={professional[0].user_name} professional={professional[0]} />
+                                <BigCalendar 
+                                    profesional={professional} 
+                                />
                             </div>
                             <div className="div_cita_y_contactar">
                                 {professionalAppointments.length !== 0 ?
@@ -92,7 +66,6 @@ const Profile = () => {
                                         <div className="div_cita">
                                             <div className="encuadre_cita">
                                                 <h1 className="texto_cita_programada_para">Cita programada para</h1>
-                                                {/* la hora y el dia de la cita surgen de que la persona apreta X dia y hora en el calendario */}
                                                 <h1 className="texto_fecha_que_se_eligio_en_calendario">{appointment.date_time.replace('T',' a las: ')}</h1>
                                             </div>
                                         </div>
@@ -101,14 +74,14 @@ const Profile = () => {
                                     null
                                 }
                            
-                                <div className="div_botones">
+                                {/* <div className="div_botones">
                                     <Button className="boton_contratar_profesional">
                                         Contactar profesional
                                     </Button>
                                     <Button disabled={professionalAppointments.length !== 0}          className="boton_pedir_cita" onClick={addNewAppointment}>
                                         Pedir cita
                                     </Button>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

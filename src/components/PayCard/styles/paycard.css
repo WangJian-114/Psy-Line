@@ -16,25 +16,11 @@
 }
 
 .div_borde_paycard{
-
-  box-sizing: border-box;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  margin-top: 25px;
   padding: 24px;
-  gap: 10px;
-
   width: 1054px;
-  height: 223px;
-
   border: 1px solid #2D7474;
   border-radius: 8px;
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-
 }
 
 .div_tarjeta_paycard{
@@ -88,25 +74,16 @@
 }
 
 .div_fondo_paycard{
-
-  position: absolute;
-  width: 1006px;
-  height: 174px;
-  left: 0px;
-  top: 0px;
-  
+  display: flex;
+  gap: 20px;
+  /* justify-content: space-between; */
   background: rgb(204 231 231);
   border-radius: 10px;
-
+  padding: 25px;
 }
 
 .nombre_psicologo_en_paycard{
 
-  position: absolute;
-  width: 497px;
-  height: 31px;
-  left: 199px;
-  top: 39px;
 
   font-family: 'Manrope';
   font-style: normal;
@@ -120,11 +97,6 @@
 
 .fecha_turno_en_pagos{
   
-  position: absolute;
-  width: 462px;
-  height: 22px;
-  left: 192px;
-  top: 70px;
 
   font-family: 'Manrope';
   font-style: normal;
@@ -137,12 +109,6 @@
 }
 
 .modalidad_turno_pagos{
-  
-  position: absolute;
-  width: 317px;
-  height: 22px;
-  left: 192px;
-  top: 92px;
 
   font-family: 'Manrope';
   font-style: normal;
@@ -155,12 +121,6 @@
 }
 
 .el_turno_es_confirmado_o_no{
-
-  position: absolute;
-  width: 317px;
-  height: 22px;
-  left: 192px;
-  top: 114px;
 
   font-family: 'Manrope';
   font-style: normal;
@@ -192,25 +152,18 @@
 }
 
 .titulo_boton_realizar_pago{
-
   width: 105px;
   height: 19px;
-
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
-
   color: #FFFFFF;
-
 }
 
 .imagen_psicologo_en_pagos{
-
-  position: relative;
   width: 130px;
-  height: 130px;
-  left: 26px;
-  top: 22px;
+  object-fit: cover;
+  border-radius: 8px;
 }

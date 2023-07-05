@@ -20,8 +20,27 @@ const CurrentSessions = () => {
               <h1 className="turnos_confirmados">Turnos confirmados</h1>
             </div>
             {/* aca van a ir los componentes de turnos confirmados, pongo 1 de ejemplo (se llama SessionCard) */}
-            {/* <SessionCard />
-            <SessionCard /> */}
+            <div className="div_borde_card">
+              <div className="div_borde_interno_card">
+                <div className="div_contenido_card">
+                  <div className="div_informacion_turno">
+                      <div className="div_background_turno">
+                        <div className="div_background_sombra_turno">
+                          {/* nombre del psicólogo, fecha, modalidad, hardcodeado*/}
+                          <h1 className="nombre_psicologo_card">Lic. Juan Perez</h1>
+            
+                          <h1 className="fecha_turno_card">•Fecha: 2023-07-03 a las: 14:00:00 </h1>
+
+                          <h1 className="modalidad_turno">•Modalidad: Virtual</h1>
+
+                          <h1 className="ha_sido_confimado_o_no">• Estado de turno: Confirmado</h1>
+
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+        </div>
 
           </div>
 

@@ -6,7 +6,7 @@ const GardenDesign = ({ ...props }) => {
   const [actividades, setActividadesPendientes] = useState([
     { id: 1, nombre: "1. Practica la atención plena durante al menos 10 minutos todos los días." },
     { id: 2, nombre: "2. Realiza una actividad física que te guste al menos tres veces durante esta semana (caminar, nadar, bailar, etc.)"},
-    { id: 3, nombre: "3. Dedica 10 minutos al día para escribir en un diario de gratitud, enfocándote en las cosas positivas de tu vida." },
+    { id: 3, nombre: "3. Dedica 10 minutos al día para escribir en el diario" },
     { id: 4, nombre: "4. Establece un objetivo específico y alcanzable para la semana y desarrolla un plan de acción para lograrlo." },
     { id: 5, nombre: "5. Dedica tiempo hoy para realizar una actividad creativa que te inspire (pintar, escribir, tocar música, etc.)"},
     { id: 6, nombre: "6. Identifica una creencia negativa que tengas sobre ti y trabaja en reemplazarla por una creencia más positiva." },

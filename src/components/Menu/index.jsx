@@ -16,11 +16,11 @@ const Menu = () => {
       <div className='div_menu'> 
         <div className='div_parte_icono'>
           <div className='fondo_foto'>
-            <img src="../img/p9.jpg" alt="" />
+            <img src="../img/123.jpeg" alt="" />
           </div>
           <div className='div_nombre'>
             <div className='div_texto'>
-              <p className='nombre'>Luis Tadeo</p>
+              <p className='nombre'>Jian Wang</p>
             </div>
           </div>
 

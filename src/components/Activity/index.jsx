@@ -23,12 +23,12 @@ const Activity = () => {
                 <h1 className="texto_cantidad"> {appointments.length}</h1> {/* esta hardcodeado */}
               </Link>
             </div>
-            <div className="div_boton_inferior">
+            {/* <div className="div_boton_inferior">
               <button className="boton_ultimo_ingreso_diario">
                 <h1 className="texto_ultimo_ingreso">Último ingreso al diario</h1>
-                {/* <h1 className="texto_fecha_ultimo_ingreso">25/03/2023</h1> esta hardcodeado */}
+
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
 

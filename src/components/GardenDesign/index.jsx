@@ -4,20 +4,20 @@ import ActivityForGarden from '../ActivityForGarden';
 const GardenDesign = ({ ...props }) => {
   const [completedTasks, setCompletedTasks] = useState(0);
   const [actividades, setActividadesPendientes] = useState([
-    { id: 1, nombre: "Tarea 1" },
-    { id: 2, nombre: "Tarea 2" },
-    { id: 3, nombre: "Tarea 3" },
-    { id: 4, nombre: "Tarea 4" },
-    { id: 5, nombre: "Tarea 5" },
-    { id: 6, nombre: "Tarea 6" },
-    { id: 7, nombre: "Tarea 7" },
-    { id: 8, nombre: "Tarea 8" },
-    { id: 9, nombre: "Tarea 9" },
-    { id: 10, nombre: "Tarea 10" },
-    { id: 11, nombre: "Tarea 11" },
-    { id: 12, nombre: "Tarea 12" },
-    { id: 13, nombre: "Tarea 13" },
-    { id: 14, nombre: "Tarea 14" }
+    { id: 1, nombre: "1. Practica la atención plena durante al menos 10 minutos todos los días." },
+    { id: 2, nombre: "2. Realiza una actividad física que te guste al menos tres veces durante esta semana (caminar, nadar, bailar, etc.)"},
+    { id: 3, nombre: "3. Dedica 10 minutos al día para escribir en un diario de gratitud, enfocándote en las cosas positivas de tu vida." },
+    { id: 4, nombre: "4. Establece un objetivo específico y alcanzable para la semana y desarrolla un plan de acción para lograrlo." },
+    { id: 5, nombre: "5. Dedica tiempo hoy para realizar una actividad creativa que te inspire (pintar, escribir, tocar música, etc.)"},
+    { id: 6, nombre: "6. Identifica una creencia negativa que tengas sobre ti y trabaja en reemplazarla por una creencia más positiva." },
+    { id: 7, nombre: "7. Realiza una buena acción o acto de amabilidad hacia alguien más hoy." },
+    { id: 8, nombre: "8. Practica la respiración profunda y la relajación muscular para reducir el estrés y la ansiedad unos minutos." },
+    { id: 9, nombre: "9. Establece límites saludables en tus relaciones y aprende a decir no cuando sea necesario." },
+    { id: 10, nombre: "10. Encuentra al menos 30 minutos al día para hacer algo que te apasione y te brinde una sensación de fluidez" },
+    { id: 11, nombre: "11. Reflexiona sobre tus intereses, pasiones y habilidades, y encuentra formas de integrarlos en tu vida diaria." },
+    { id: 12, nombre: "12. Identifica al menos una tarea en tu trabajo o vida cotidiana que te haga sentir significado y propósito." },
+    { id: 13, nombre: "13. Busca oportunidades para ayudar o hacer una diferencia positiva en la vida de otras personas.  " },
+    { id: 14, nombre: "14. Establece metas y combinando aquello que amas, en lo que eres bueno." }
   ]);
 
   const [actividadesSeleccionadas, setActividadesSeleccionadas] = useState([]);
@@ -51,11 +51,11 @@ const GardenDesign = ({ ...props }) => {
   const imagen = `${Math.min(actividadesEliminadas.length + 1, 14)}_jardin.png`;
 
   return (
-    <div>
+    <div className='garden_container'>
       <div className="jard-n">Jardín</div>
       <div className="frame-1374">
         <div className="frame-1371">
-          <div className="frame-1366"></div>
+          {/* <div className="frame-1366"></div> */}
           <img
             className="frame-29-1-1"
             src={`img/${imagen}`}
@@ -87,7 +87,7 @@ const GardenDesign = ({ ...props }) => {
       <button className="boton_guardar_actividades" onClick={handleGuardar}>
         <div className="guardar_actividades">Guardar</div>
       </button>
-      <div className="completed-tasks">Actividades completadas: {completedTasks}</div>
+      {/* <div className="completed-tasks">Actividades completadas: {completedTasks}</div> */}
     </div>
   );
 };

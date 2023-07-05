@@ -70,6 +70,7 @@
   width: 860px;
   height: 568px;
   position: relative;
+  top: 30px;
 }
 .frame-1377 {
   margin: -15px 0 0 0;
@@ -80,6 +81,8 @@
   justify-content: flex-start;
   flex-shrink: 0;
   position: relative;
+  left:-90px;
+  top:25px;
 }
 .frame-1375 {
   display: flex;
